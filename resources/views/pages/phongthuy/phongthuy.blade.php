@@ -9,6 +9,61 @@
 
 @section('content')
 
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({'event': 'pageInfo','cat': '21','dtk': 'null','ite': '','pag': '150','cit': 'null','dis':'null','war':'null','str':'null','pro':'null','pri':'null','mip':'null','map':'null','are':'null','mia':'null','maa':'null','dir':'null','rom':'null'});
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MMVJT5G');
+    </script>
+    <!-- End Google Tag Manager -->
+    <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="audience" content="general" />
+    <meta name="resource-type" content="document" />
+    <meta name="abstract" content="Thông tin nhà đất Việt Nam" />
+    <meta name="classification" content="Bất động sản Việt Nam" />
+    <meta name="area" content="Nhà đất và bất động sản" />
+    <meta name="placename" content="Việt Nam" />
+    <meta name="author" content="Batdongsan.com.vn" />
+    <meta name="copyright" content="©2007 Batdongsan.com.vn" />
+    <meta name="owner" content="Batdongsan.com.vn" />
+    <meta name="generator" content="Công ty Cổ phần PropertyGuru Việt Nam" />
+    <meta name="distribution" content="Global" />
+    <meta name='revisit-after' content='1 days' />
+            <meta name="robots" content="index,follow" />
+
+    <meta name="custom-apple-itunes-app" content="app-id=866492094" />
+    <meta name ='keywords' content = 'Phong, thủy, chuyên, trang, về, Phong, thủy, hàng, đầu' />
+<meta name ='description' content = 'Phong thủy, chuyên trang về Phong thủy hàng đầu tại Việt Nam. Mọi thông tin về lĩnh vực Phong thủy nhà ở, văn phòng, công trình. Kiến thức, tư vấn Phong thủy' />
+<title>Phong thủy | Chuyên trang về Phong thủy – bất động sản</title>
+<link rel="alternate" href="https://m.batdongsan.com.vn/phong-thuy" media="only screen and (max-width: 640px)"><link rel="alternate" href="https://m.batdongsan.com.vn/phong-thuy" media="handheld"><meta property="fb:app_id" content="302507473246792"><meta property="og:title" content="Phong thủy | Chuyên trang về Phong thủy – bất động sản"><meta property="og:description" content="Phong thủy, chuyên trang về Phong thủy hàng đầu tại Việt Nam. Mọi thông tin về lĩnh vực Phong thủy nhà ở, văn phòng, công trình. Kiến thức, tư vấn Phong thủy"><meta property="og:image" content="https://file4.batdongsan.com.vn/crop/600x315/2020/11/13/wxbwknn6/20201113101459-4710.jpg"><meta property="og:image:width" content="600"><meta property="og:image:height" content="315"><meta property="og:type" content="website"><meta property="og:url" content="https://batdongsan.com.vn/phong-thuy">
+        
+    
+        <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011131002.msvbds.FrontEnd.min.css" />
+    
+    
+</head>
+<body class="bg-site">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMVJT5G"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="form-content">
         <div class="adPosition" positionCode="BANNER_POSITION_BACKGROUND" style=""></div>
 <script type='text/javascript'> var bannerContext={"CateId":21,"PageId":null,"CityCode":null,"DistrictId":null,"CurrentPage":150};</script>
@@ -30,7 +85,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="popupMarking  save" style="display: none">
             <img src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_unsave.svg">
             <span> L&#x1B0;u tin th&#xE0;nh c&#xF4;ng</span>
@@ -43,18 +98,18 @@
                 
 
 <input type="hidden" value="3" id="activeTxtSelect" />
-<div id="MiddleSubMenu" style="margin-bottom: 5px;">
+<div id="MiddleSubMenu">
     <div class="home-top-search" style="padding-bottom: 10px !important;">
     <div class="home-top-search-keyword">
         <input type="text" placeholder="Nhập từ khóa để tìm theo cụm từ" id="txt1" class="txtKeyword" style="height:25px;">
     </div>
-    <div class="advance-select-box" id="home-top-search" style="margin-top: 4px;">
+    <div class="advance-select-box" id="home-top-search">
         <span class="select-text hasvalue">
             <span class="select-text-content" style="width: 100px;">Hỏi đáp</span>
         </span>
         <input type="hidden" id="cboTypeSearch" value="4">
     </div>
-    <div id="home-top-search-otions" class="advance-select-options advance-options" hddvalue="cboTypeSearch" ddlid="home-top-search" style="">
+    <div id="home-top-search-otions" style="margin-left: 555px;margin-top: 107px;" class="advance-select-options advance-options" hddvalue="cboTypeSearch" ddlid="home-top-search" style="">
         <ul class="advance-options" style="min-width: 125px;">
             <li vl="1" class="advance-options" style="min-width: 93px;">Nhà đất bán</li>
             <li vl="2" class="advance-options" style="min-width: 93px;">Nhà đất cho thuê</li>
@@ -64,7 +119,7 @@
             <li vl="7" class="advance-options" style="min-width: 93px;">Môi giới</li>
         </ul>
     </div>
-    <img src="https://file4.batdongsan.com.vn/images/header-bottom-button.jpg" onclick="SearchKeyword();" class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all" alt="Tìm kiếm" name="btnSearch" id="btnSearch" >
+    <img src="https://file4.batdongsan.com.vn/images/header-bottom-button.jpg" onclick="SearchKeyword();" class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all" alt="Tìm kiếm" name="btnSearch" id="btnSearch">
 </div>
 <div id="gglbody"></div>
 <div class="clear"></div>
@@ -389,13 +444,22 @@
     </div>
 <div class="tc-tin-3cot-tit1"><div class="parent-cate-news">            <div class="tc-tin-3cot-tit1-left">
 
-                <a title="Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?" href="/tu-van-phong-thuy/muon-xem-phong-thuy-hon-non-bo-can-cung-cap-nhung-thong-tin-gi-ar105455">
-                    <img class="bor_img" src="https://file4.batdongsan.com.vn/crop/260x220/2020/11/06/wxbwknn6/20201106140906-af7b.jpg">
+                <a title="C&#xE1;ch &#x111;o h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; chung c&#x1B0; chu&#x1EA9;n x&#xE1;c nh&#x1EA5;t" href="/tu-van-phong-thuy/cach-do-huong-can-ho-chung-cu-chuan-xac-nhat-ar105503">
+                    <img class="bor_img" src="https://file4.batdongsan.com.vn/crop/260x220/2020/11/13/wxbwknn6/20201113101459-4710.jpg">
                 </a>
                 <h3>
-                    <a class="font-link-box-item" href="/tu-van-phong-thuy/muon-xem-phong-thuy-hon-non-bo-can-cung-cap-nhung-thong-tin-gi-ar105455" title="Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?">Muốn xem phong thủy hòn non bộ cần cung cấp những thông tin gì?</a>
+                    <a class="font-link-box-item" href="/tu-van-phong-thuy/cach-do-huong-can-ho-chung-cu-chuan-xac-nhat-ar105503" title="C&#xE1;ch &#x111;o h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; chung c&#x1B0; chu&#x1EA9;n x&#xE1;c nh&#x1EA5;t">Cách đo hướng căn hộ chung cư chuẩn xác nhất<img class="news-image-video-icon" atl='' src='https://file4.batdongsan.com.vn/images/opt/bds-video.png' /></a>
                 </h3>
-                <p>H&#x1ECF;i: T&#xF4;i sinh n&#x103;m 1971, v&#x1EE3; sinh n&#x103;m 1974, xin h&#x1ECF;i ch&#xFA;ng t&#xF4;i n&#xEA;n &#x111;&#x1EB7;t h&#xF2;n non b&#x1ED9; nh&#x1B0; th&#x1EBF; n&#xE0;o cho h&#x1EE3;p phong th&#x1EE7;y? T&#xF4;i c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC; cho chuy&#xEA;n gia phong th&#x1EE7;y?</p>
+                <p>H&#x1B0;&#x1EDB;ng nh&#xE0;, h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; l&#xE0; ti&#xEA;u ch&#xED; quan tr&#x1ECD;ng &#x111;&#x1EC3; x&#xE1;c &#x111;&#x1ECB;nh c&#xE1;c v&#xF9;ng kh&#xF4;ng gian c&#xE1;t - hung trong nh&#xE0;, t&#x1EEB; &#x111;&#xF3; s&#x1EBD; c&#xF3; ph&#x1B0;&#x1A1;ng &#xE1;n b&#x1ED1; tr&#xED; c&#xE1;c khu ch&#x1EE9;c n&#x103;ng v&#xE0; n&#x1ED9;i th&#x1EA5;t ph&#xF9; h&#x1EE3;p. Tuy nhi&#xEA;n, n&#x1EBF;u kh&#xF4;ng bi&#x1EBF;t c&#xE1;ch &#x111;o h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; chung c&#x1B0; chu&#x1EA9;n x&#xE1;c s&#x1EBD; khi&#x1EBF;n k&#x1EBF;t qu&#x1EA3; &#x111;o c&#xF3; sai s&#x1ED1; l&#x1EDB;n.</p>
+            </div>
+            <div class="tc-tin-3cot-tit1-right">
+                <a href="/tu-van-phong-thuy/muon-xem-phong-thuy-hon-non-bo-can-cung-cap-nhung-thong-tin-gi-ar105455" title="Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?">
+                    <img class="bor_img" src="https://file4.batdongsan.com.vn/crop/70x53/2020/11/06/wxbwknn6/20201106140906-af7b.jpg" alt="Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?">
+                </a>
+                <h3 class="normal">
+                    <a class="tc-tin-3cot-tit1-right-link font-link-box-item" href="/tu-van-phong-thuy/muon-xem-phong-thuy-hon-non-bo-can-cung-cap-nhung-thong-tin-gi-ar105455" title="Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?">Muốn xem phong thủy hòn non bộ cần cung cấp những thông tin gì?</a>
+                </h3>
+                <div class="clear"></div>
             </div>
             <div class="tc-tin-3cot-tit1-right">
                 <a href="/tu-van-phong-thuy/tuoi-canh-ngo-1990-xay-nha-huong-tay-bac-ar105430" title="Tu&#x1ED5;i Canh Ng&#x1ECD; (1990) c&#xF3; n&#xEA;n x&#xE2;y nh&#xE0; h&#x1B0;&#x1EDB;ng T&#xE2;y B&#x1EAF;c kh&#xF4;ng?">
@@ -415,16 +479,13 @@
                 </h3>
                 <div class="clear"></div>
             </div>
-            <div class="tc-tin-3cot-tit1-right">
-                <a href="/tu-van-phong-thuy/chon-huong-can-ho-chung-cu-ar105207" title="V&#xEC; sao kh&#xF4;ng n&#xEA;n ch&#x1ECD;n h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; theo h&#x1B0;&#x1EDB;ng ban c&#xF4;ng?">
-                    <img class="bor_img" src="https://file4.batdongsan.com.vn/crop/70x53/2020/10/06/wxbwknn6/20201006162355-a796.jpg" alt="V&#xEC; sao kh&#xF4;ng n&#xEA;n ch&#x1ECD;n h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; theo h&#x1B0;&#x1EDB;ng ban c&#xF4;ng?">
-                </a>
-                <h3 class="normal">
-                    <a class="tc-tin-3cot-tit1-right-link font-link-box-item" href="/tu-van-phong-thuy/chon-huong-can-ho-chung-cu-ar105207" title="V&#xEC; sao kh&#xF4;ng n&#xEA;n ch&#x1ECD;n h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; theo h&#x1B0;&#x1EDB;ng ban c&#xF4;ng?">Vì sao không nên chọn hướng căn hộ theo hướng ban công?<img class="news-image-video-icon" atl='' src='https://file4.batdongsan.com.vn/images/opt/bds-video.png' /></a>
-                </h3>
-                <div class="clear"></div>
-            </div>
-<div class="tc-tin-3cot-tit1-right-link2">
+<div class="tc-tin-3cot-tit1-right-link2">            <ul>
+                <li>
+                    <h3 class="normal">
+                        <a href="/tu-van-phong-thuy/chon-huong-can-ho-chung-cu-ar105207" title="V&#xEC; sao kh&#xF4;ng n&#xEA;n ch&#x1ECD;n h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; theo h&#x1B0;&#x1EDB;ng ban c&#xF4;ng?">Vì sao không nên chọn hướng căn hộ theo hướng ban công?<img class="news-image-video-icon" atl='' src='https://file4.batdongsan.com.vn/images/opt/bds-video.png' /></a>
+                    </h3>
+                </li>
+            </ul>
             <ul>
                 <li>
                     <h3 class="normal">
@@ -436,13 +497,6 @@
                 <li>
                     <h3 class="normal">
                         <a href="/tu-van-phong-thuy/dung-guong-bat-quai-hoa-giai-huong-nha-xau-ar104970" title="C&#xF3; n&#xEA;n d&#xF9;ng g&#x1B0;&#x1A1;ng b&#xE1;t qu&#xE1;i h&#xF3;a gi&#x1EA3;i h&#x1B0;&#x1EDB;ng nh&#xE0; x&#x1EA5;u?">Có nên dùng gương bát quái hóa giải hướng nhà xấu?</a>
-                    </h3>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h3 class="normal">
-                        <a href="/tu-van-phong-thuy/phong-thuy-ban-lam-viec-cho-tuoi-quy-hoi-ar104925" title="Phong th&#x1EE7;y b&#xE0;n l&#xE0;m vi&#x1EC7;c cho tu&#x1ED5;i Qu&#xFD; H&#x1EE3;i">Phong thủy bàn làm việc cho tuổi Quý Hợi</a>
                     </h3>
                 </li>
             </ul>
@@ -613,7 +667,7 @@
                             </a>
                         </h3>
                         <br>
-                        <p>Nhi&#x1EC1;u ng&#x1B0;&#x1EDD;i c&#xF3; nhu c&#x1EA7;u t&#xEC;m hi&#x1EC3;u m&#x1EC7;nh Thu&#x1EF7; h&#x1EE3;p m&#xE0;u g&#xEC;, nh&#x1EA5;t l&#xE0; c&#xE1;c &#x111;&#x1ED1;i t&#x1B0;&#x1EE3;ng quan t&#xE2;m v&#x1EC1; phong th&#x1EE7;y. V&#x1EAD;y m&#x1EC7;nh th&#x1EE7;y h&#x1EE3;p v&#x1EDB;i m&#xE0;u g&#xEC; v&#xE0; k&#x1EF5; m&#xE0;u n&#xE0;o? B&#xE0;i vi&#x1EBF;t d&#x1B0;&#x1EDB;i &#x111;&#xE2;y s&#x1EBD; chia s&#x1EBB; nh&#x1EEF;ng th&##xF4;ng tin li&#xEA;n quan v&#xE0; ph&#x1EA7;n n&#xE0;o gi&#xFA;p b&#x1EA1;n ch&#x1ECD;n &#x111;&#x1B0;&#x1EE3;c gam m&#xE0;u h&#x1EE3;p v&#x1EDB;i b&#x1EA3;n m&#x1EC7;nh c&#x1EE7;a m&#xEC;nh nh&#x1EA5;t.</p>
+                        <p>Nhi&#x1EC1;u ng&#x1B0;&#x1EDD;i c&#xF3; nhu c&#x1EA7;u t&#xEC;m hi&#x1EC3;u m&#x1EC7;nh Thu&#x1EF7; h&#x1EE3;p m&#xE0;u g&#xEC;, nh&#x1EA5;t l&#xE0; c&#xE1;c &#x111;&#x1ED1;i t&#x1B0;&#x1EE3;ng quan t&#xE2;m v&#x1EC1; phong th&#x1EE7;y. V&#x1EAD;y m&#x1EC7;nh th&#x1EE7;y h&#x1EE3;p v&#x1EDB;i m&#xE0;u g&#xEC; v&#xE0; k&#x1EF5; m&#xE0;u n&#xE0;o? B&#xE0;i vi&#x1EBF;t d&#x1B0;&#x1EDB;i &#x111;&#xE2;y s&#x1EBD; chia s&#x1EBB; nh&#x1EEF;ng th&#xF4;ng tin li&#xEA;n quan v&#xE0; ph&#x1EA7;n n&#xE0;o gi&#xFA;p b&#x1EA1;n ch&#x1ECD;n &#x111;&#x1B0;&#x1EE3;c gam m&#xE0;u h&#x1EE3;p v&#x1EDB;i b&#x1EA3;n m&#x1EC7;nh c&#x1EE7;a m&#xEC;nh nh&#x1EA5;t.</p>
                     </div>
 <div class="tc-duan-tin-thumnai">                        <div class="tc-duan-tin-thumnai-row1">
                             <a class="tc-duan-tin-thumnai-img" title="Nh&#xE0; h&#x1B0;&#x1EDB;ng T&#xE2;y h&#x1EE3;p tu&#x1ED5;i n&#xE0;o v&#xE0; thi&#x1EBF;t k&#x1EBF; sao cho h&#x1EE3;p phong th&#x1EE7;y?" href="/tin-tuc-phong-thuy-theo-tuoi/nha-huong-tay-hop-tuoi-nao-va-thiet-ke-sao-cho-hop-phong-thuy-ar104257">
@@ -670,30 +724,38 @@
             </h2>
 
                     <div class="tintuc-row1 tc-tit">
-                        <a class="avatar" title="&#x110;&#x1B0;&#x1EDD;ng n&#x1B0;&#x1EDB;c th&#x1EA3;i b&#x1EC3; ph&#x1ED1;t &#x111;i qua ph&#xF2;ng ng&#x1EE7; c&#xF3; sao kh&#xF4;ng?" href="/tu-van-phong-thuy/duong-nuoc-thai-be-phot-di-qua-phong-ngu-co-sao-khong-ar104850">
-                            <img src="https://file4.batdongsan.com.vn/crop/120x100/2020/08/26/wxbwknn6/20200826094250-5069.jpg" alt="&#x110;&#x1B0;&#x1EDD;ng n&#x1B0;&#x1EDB;c th&#x1EA3;i b&#x1EC3; ph&#x1ED1;t &#x111;i qua ph&#xF2;ng ng&#x1EE7; c&#xF3; sao kh&#xF4;ng?">
+                        <a class="avatar" title="Phong th&#x1EE7;y b&#xE0;n l&#xE0;m vi&#x1EC7;c cho tu&#x1ED5;i Qu&#xFD; H&#x1EE3;i" href="/tu-van-phong-thuy/phong-thuy-ban-lam-viec-cho-tuoi-quy-hoi-ar104925">
+                            <img src="https://file4.batdongsan.com.vn/crop/120x100/2020/09/03/wxbwknn6/20200903142721-8f43.jpg" alt="Phong th&#x1EE7;y b&#xE0;n l&#xE0;m vi&#x1EC7;c cho tu&#x1ED5;i Qu&#xFD; H&#x1EE3;i">
                         </a>
                         <h3>
-                            <a class="font-link-news-parent" href="/tu-van-phong-thuy/duong-nuoc-thai-be-phot-di-qua-phong-ngu-co-sao-khong-ar104850" title="&#x110;&#x1B0;&#x1EDD;ng n&#x1B0;&#x1EDB;c th&#x1EA3;i b&#x1EC3; ph&#x1ED1;t &#x111;i qua ph&#xF2;ng ng&#x1EE7; c&#xF3; sao kh&#xF4;ng?">
+                            <a class="font-link-news-parent" href="/tu-van-phong-thuy/phong-thuy-ban-lam-viec-cho-tuoi-quy-hoi-ar104925" title="Phong th&#x1EE7;y b&#xE0;n l&#xE0;m vi&#x1EC7;c cho tu&#x1ED5;i Qu&#xFD; H&#x1EE3;i">
                                 <span class="title">
-                                    Đường nước thải bể phốt đi qua phòng ngủ có sao không?
+                                    Phong thủy bàn làm việc cho tuổi Quý Hợi
                                 </span>
                             </a>
                         </h3>
                         <br>
-                        <p>H&#x1ECF;i: Em ch&#xE0;o c&#xE1;c anh ch&#x1ECB;, em c&#xF3; v&#x1EA5;n &#x111;&#x1EC1; th&#x1EAF;c m&#x1EAF;c c&#x1EA7;n &#x111;&#x1B0;&#x1EE3;c t&#x1B0; v&#x1EA5;n. Nh&#xE0; em x&#xE2;y nh&#xE0; v&#x1EDB;i b&#x1ED1; c&#x1EE5;c l&#xE0; ph&#xF2;ng b&#x1EBF;p r&#x1ED3;i &#x111;&#x1EBF;n nh&#xE0; v&#x1EC7; sinh, ti&#x1EBF;p theo l&#xE0; ph&#xF2;ng ng&#x1EE7;. B&#x1EC3; ph&#x1ED1;t &#x111;&#x1EB7;t d&#x1B0;&#x1EDB;i nh&#xE0; v&#x1EC7; sinh nh&#x1B0;ng &#x111;&#x1B0;&#x1EDD;ng n&#x1B0;&#x1EDB;c th&#x1EA3;i t&#x1EEB; b&#x1EC3; ph&#x1ED1;t ra c&#x1ED1;ng n&#x1B0;&#x1EDB;c l&#x1EA1;i &#x111;i qua ph&#xF2;ng ng&#x1EE7;.</p>
+                        <p>H&#x1ECF;i: T&#xF4;i tu&#x1ED5;i Qu&#xFD; H&#x1EE3;i, m&#x1EA1;ng n&#x1EEF;, b&#xE0;n l&#xE0;m vi&#x1EC7;c &#x111;&#x1EB7;t h&#x1B0;&#x1EDB;ng ch&#xED;nh &#x111;&#xF4;ng, c&#x1EED;a ch&#xED;nh h&#x1B0;&#x1EDB;ng ch&#x1EBF;ch ph&#xED;a tay tr&#xE1;i. Xin ch&#x1EC9; gi&#xFA;p cho t&#xF4;i c&#xE1;ch n&#xE0;o h&#xF3;a gi&#x1EA3;i v&#x1EDB;i &#x1EA1;?</p>
                     </div>
 <div class="tc-duan-tin-thumnai">                        <div class="tc-duan-tin-thumnai-row1">
-                            <a class="tc-duan-tin-thumnai-img" title="H&#x1B0;&#x1EDB;ng b&#xE0;n ng&#x1ED3;i l&#xE0;m vi&#x1EC7;c t&#x1ED1;t cho tu&#x1ED5;i Qu&#xFD; M&#xE3;o" href="/tu-van-phong-thuy/huong-ban-ngoi-lam-viec-tot-cho-tuoi-quy-mao-ar104838">
-                                <img alt="H&#x1B0;&#x1EDB;ng b&#xE0;n ng&#x1ED3;i l&#xE0;m vi&#x1EC7;c t&#x1ED1;t cho tu&#x1ED5;i Qu&#xFD; M&#xE3;o" src="https://file4.batdongsan.com.vn/crop/132x100/2020/08/24/wxbwknn6/20200824093146-c162.jpg">
+                            <a class="tc-duan-tin-thumnai-img" title="&#x110;&#x1B0;&#x1EDD;ng n&#x1B0;&#x1EDB;c th&#x1EA3;i b&#x1EC3; ph&#x1ED1;t &#x111;i qua ph&#xF2;ng ng&#x1EE7; c&#xF3; sao kh&#xF4;ng?" href="/tu-van-phong-thuy/duong-nuoc-thai-be-phot-di-qua-phong-ngu-co-sao-khong-ar104850">
+                                <img alt="&#x110;&#x1B0;&#x1EDD;ng n&#x1B0;&#x1EDB;c th&#x1EA3;i b&#x1EC3; ph&#x1ED1;t &#x111;i qua ph&#xF2;ng ng&#x1EE7; c&#xF3; sao kh&#xF4;ng?" src="https://file4.batdongsan.com.vn/crop/132x100/2020/08/26/wxbwknn6/20200826094250-5069.jpg">
                             </a>
                             <h3>
-                                <a class="tc-duan-tin-thumnai-link" href="/tu-van-phong-thuy/huong-ban-ngoi-lam-viec-tot-cho-tuoi-quy-mao-ar104838" title="H&#x1B0;&#x1EDB;ng b&#xE0;n ng&#x1ED3;i l&#xE0;m vi&#x1EC7;c t&#x1ED1;t cho tu&#x1ED5;i Qu&#xFD; M&#xE3;o">
-                                    Hướng bàn ngồi làm việc tốt cho tuổi Quý Mão
+                                <a class="tc-duan-tin-thumnai-link" href="/tu-van-phong-thuy/duong-nuoc-thai-be-phot-di-qua-phong-ngu-co-sao-khong-ar104850" title="&#x110;&#x1B0;&#x1EDD;ng n&#x1B0;&#x1EDB;c th&#x1EA3;i b&#x1EC3; ph&#x1ED1;t &#x111;i qua ph&#xF2;ng ng&#x1EE7; c&#xF3; sao kh&#xF4;ng?">
+                                    Đường nước thải bể phốt đi qua phòng ngủ có sao không?
                                 </a>
                             </h3>
                         </div>
 <div class="tc-tin-3cot-tit1-right-link2"><ul>                            <li>
+                                <h3 class="normal">
+                                    <a class="font-link-box-item" href="/tu-van-phong-thuy/huong-ban-ngoi-lam-viec-tot-cho-tuoi-quy-mao-ar104838" title="H&#x1B0;&#x1EDB;ng b&#xE0;n ng&#x1ED3;i l&#xE0;m vi&#x1EC7;c t&#x1ED1;t cho tu&#x1ED5;i Qu&#xFD; M&#xE3;o">
+                                        Hướng bàn ngồi làm việc tốt cho tuổi Quý Mão
+                                    </a>
+                                </h3>
+                                <a class="font-link-box-item" href="/tu-van-phong-thuy/huong-ban-ngoi-lam-viec-tot-cho-tuoi-quy-mao-ar104838" title="H&#x1B0;&#x1EDB;ng b&#xE0;n ng&#x1ED3;i l&#xE0;m vi&#x1EC7;c t&#x1ED1;t cho tu&#x1ED5;i Qu&#xFD; M&#xE3;o"></a>
+                            </li>
+                            <li>
                                 <h3 class="normal">
                                     <a class="font-link-box-item" href="/tu-van-phong-thuy/hoa-giai-nha-huong-nam-cho-tuoi-1984-nhu-the-nao-ar104533" title="H&#xF3;a gi&#x1EA3;i nh&#xE0; h&#x1B0;&#x1EDB;ng Nam cho tu&#x1ED5;i 1984 nh&#x1B0; th&#x1EBF; n&#xE0;o?">
                                         Hóa giải nhà hướng Nam cho tuổi 1984 như thế nào?
@@ -716,14 +778,6 @@
                                     </a>
                                 </h3>
                                 <a class="font-link-box-item" href="/tu-van-phong-thuy/nha-huong-tay-bep-huong-nam-co-tot-voi-tuoi-1976-khong-ar104284" title="Nh&#xE0; h&#x1B0;&#x1EDB;ng T&#xE2;y, b&#x1EBF;p h&#x1B0;&#x1EDB;ng Nam c&#xF3; t&#x1ED1;t v&#x1EDB;i tu&#x1ED5;i 1976 kh&#xF4;ng?"></a>
-                            </li>
-                            <li>
-                                <h3 class="normal">
-                                    <a class="font-link-box-item" href="/tu-van-phong-thuy/chon-huong-cong-nao-tot-cho-tuoi-1980-ar104223" title="Ch&#x1ECD;n h&#x1B0;&#x1EDB;ng c&#x1ED5;ng n&#xE0;o t&#x1ED1;t cho tu&#x1ED5;i 1980?">
-                                        Chọn hướng cổng nào tốt cho tuổi 1980?
-                                    </a>
-                                </h3>
-                                <a class="font-link-box-item" href="/tu-van-phong-thuy/chon-huong-cong-nao-tot-cho-tuoi-1980-ar104223" title="Ch&#x1ECD;n h&#x1B0;&#x1EDB;ng c&#x1ED5;ng n&#xE0;o t&#x1ED1;t cho tu&#x1ED5;i 1980?"></a>
                             </li>
 </ul></div></div>            <div class="clear">
             </div>
@@ -848,6 +902,9 @@
 
             <div style="clear: both; margin-bottom: 10px;">
             </div>
+
+            
+
 
     <div class="container-common">
         <div class="box-header">
@@ -984,9 +1041,24 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 30px 75px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
                         <a class="controls-view-date-contents-link"  href="/tu-van-phong-thuy/phong-thuy-ban-lam-viec-cho-tuoi-quy-hoi-ar104925" title="Phong th&#x1EE7;y b&#xE0;n l&#xE0;m vi&#x1EC7;c cho tu&#x1ED5;i Qu&#xFD; H&#x1EE3;i">
                             Phong th&#x1EE7;y b&#xE0;n l&#xE0;m vi&#x1EC7;c cho tu&#x1ED5;i Qu&#xFD; H&#x1EE3;i
+                                                    </a>
+                    </p>
+                </div>
+                <div style="clear: both;"></div>
+                <div style="padding: 5px; width: 60px; height: 60px; float: left;">
+                    <div class="many-readers-title-icon">
+                        <a title="Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?"  href="/tu-van-phong-thuy/muon-xem-phong-thuy-hon-non-bo-can-cung-cap-nhung-thong-tin-gi-ar105455">
+                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/11/06/wxbwknn6/20201106140906-af7b.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="data-default-CSSClass">
+                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
+                        <a class="controls-view-date-contents-link"  href="/tu-van-phong-thuy/muon-xem-phong-thuy-hon-non-bo-can-cung-cap-nhung-thong-tin-gi-ar105455" title="Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?">
+                            Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?
                                                     </a>
                     </p>
                 </div>
@@ -999,7 +1071,7 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 10px 75px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
                         <a class="controls-view-date-contents-link"  href="/tu-van-phong-thuy/chon-huong-can-ho-chung-cu-ar105207" title="V&#xEC; sao kh&#xF4;ng n&#xEA;n ch&#x1ECD;n h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; theo h&#x1B0;&#x1EDB;ng ban c&#xF4;ng?">
                             V&#xEC; sao kh&#xF4;ng n&#xEA;n ch&#x1ECD;n h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; theo h&#x1B0;&#x1EDB;ng ban c&#xF4;ng?
                                 <img class="news-image-video-icon" atl="" src="https://file4.batdongsan.com.vn/images/opt/bds-video.png">
@@ -1015,7 +1087,7 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 10px 75px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
                         <a class="controls-view-date-contents-link"  href="/tu-van-phong-thuy/duong-nuoc-thai-be-phot-di-qua-phong-ngu-co-sao-khong-ar104850" title="&#x110;&#x1B0;&#x1EDD;ng n&#x1B0;&#x1EDB;c th&#x1EA3;i b&#x1EC3; ph&#x1ED1;t &#x111;i qua ph&#xF2;ng ng&#x1EE7; c&#xF3; sao kh&#xF4;ng?">
                             &#x110;&#x1B0;&#x1EDD;ng n&#x1B0;&#x1EDB;c th&#x1EA3;i b&#x1EC3; ph&#x1ED1;t &#x111;i qua ph&#xF2;ng ng&#x1EE7; c&#xF3; sao kh&#xF4;ng?
                                                     </a>
@@ -1030,7 +1102,7 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 10px 75px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
                         <a class="controls-view-date-contents-link"  href="/tu-van-phong-thuy/dung-guong-bat-quai-hoa-giai-huong-nha-xau-ar104970" title="C&#xF3; n&#xEA;n d&#xF9;ng g&#x1B0;&#x1A1;ng b&#xE1;t qu&#xE1;i h&#xF3;a gi&#x1EA3;i h&#x1B0;&#x1EDB;ng nh&#xE0; x&#x1EA5;u?">
                             C&#xF3; n&#xEA;n d&#xF9;ng g&#x1B0;&#x1A1;ng b&#xE1;t qu&#xE1;i h&#xF3;a gi&#x1EA3;i h&#x1B0;&#x1EDB;ng nh&#xE0; x&#x1EA5;u?
                                                     </a>
@@ -1039,30 +1111,16 @@
                 <div style="clear: both;"></div>
                 <div style="padding: 5px; width: 60px; height: 60px; float: left;">
                     <div class="many-readers-title-icon">
-                        <a title="Tu&#x1ED5;i Canh Ng&#x1ECD; (1990) c&#xF3; n&#xEA;n x&#xE2;y nh&#xE0; h&#x1B0;&#x1EDB;ng T&#xE2;y B&#x1EAF;c kh&#xF4;ng?"  href="/tu-van-phong-thuy/tuoi-canh-ngo-1990-xay-nha-huong-tay-bac-ar105430">
-                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/11/04/wxbwknn6/20201104135410-613a.jpg">
+                        <a title="C&#xE1;ch &#x111;o h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; chung c&#x1B0; chu&#x1EA9;n x&#xE1;c nh&#x1EA5;t"  href="/tu-van-phong-thuy/cach-do-huong-can-ho-chung-cu-chuan-xac-nhat-ar105503">
+                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/11/13/wxbwknn6/20201113101459-4710.jpg">
                         </a>
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 10px 75px;;">
-                        <a class="controls-view-date-contents-link"  href="/tu-van-phong-thuy/tuoi-canh-ngo-1990-xay-nha-huong-tay-bac-ar105430" title="Tu&#x1ED5;i Canh Ng&#x1ECD; (1990) c&#xF3; n&#xEA;n x&#xE2;y nh&#xE0; h&#x1B0;&#x1EDB;ng T&#xE2;y B&#x1EAF;c kh&#xF4;ng?">
-                            Tu&#x1ED5;i Canh Ng&#x1ECD; (1990) c&#xF3; n&#xEA;n x&#xE2;y nh&#xE0; h&#x1B0;&#x1EDB;ng T&#xE2;y B&#x1EAF;c kh&#xF4;ng?
-                                                    </a>
-                    </p>
-                </div>
-                <div style="clear: both;"></div>
-                <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-                    <div class="many-readers-title-icon">
-                        <a title="Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?"  href="/tu-van-phong-thuy/muon-xem-phong-thuy-hon-non-bo-can-cung-cap-nhung-thong-tin-gi-ar105455">
-                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/11/06/wxbwknn6/20201106140906-af7b.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 10px 75px;;">
-                        <a class="controls-view-date-contents-link"  href="/tu-van-phong-thuy/muon-xem-phong-thuy-hon-non-bo-can-cung-cap-nhung-thong-tin-gi-ar105455" title="Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?">
-                            Mu&#x1ED1;n xem phong th&#x1EE7;y h&#xF2;n non b&#x1ED9; c&#x1EA7;n cung c&#x1EA5;p nh&#x1EEF;ng th&#xF4;ng tin g&#xEC;?
+                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
+                        <a class="controls-view-date-contents-link"  href="/tu-van-phong-thuy/cach-do-huong-can-ho-chung-cu-chuan-xac-nhat-ar105503" title="C&#xE1;ch &#x111;o h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; chung c&#x1B0; chu&#x1EA9;n x&#xE1;c nh&#x1EA5;t">
+                            C&#xE1;ch &#x111;o h&#x1B0;&#x1EDB;ng c&#x103;n h&#x1ED9; chung c&#x1B0; chu&#x1EA9;n x&#xE1;c nh&#x1EA5;t
+                                <img class="news-image-video-icon" atl="" src="https://file4.batdongsan.com.vn/images/opt/bds-video.png">
                                                     </a>
                     </p>
                 </div>
@@ -1137,6 +1195,8 @@
             </div>
         </div>
 
+        
+
         <div class="modal fade" id="dialogPopup" role="dialog">
             <div class="nomodal"></div>
             <div class="modal-dialog">
@@ -1166,7 +1226,7 @@
     </div>
     
     
-            <script src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011121057.msvbds.FrontEnd.Common.min.js"></script>
+            <script src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011131002.msvbds.FrontEnd.Common.min.js"></script>
     
     <!--start BannerContext-->
     <script type='text/javascript'> var __bannerContext={"PageId":150,"CateId":21,"CityCode":null,"DistrictId":null,"CurrentPage":1};</script>
@@ -1216,7 +1276,7 @@
     
     
     
-        <script src="https://staticfile.batdongsan.com.vn/js/FengShui/filestatic.ver202011121057.msvbds.FrontEnd.FengShui.Home.min.js"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/FengShui/filestatic.ver202011131002.msvbds.FrontEnd.FengShui.Home.min.js"></script>
     
     <script type="text/javascript">
         //var bannerContext = { "cateId": null, "pageId": 218, "currentPage": 218, "cityCode": null, "districtId": null };
@@ -1292,6 +1352,10 @@
             }
         });
     </script>
+    
+</body>
+</html>
+
 
 
 @endsection
