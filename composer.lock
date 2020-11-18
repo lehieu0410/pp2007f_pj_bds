@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
     "content-hash": "949777168604ee2f5e931f02ca19c15c",
-=======
-    "content-hash": "d0cd3fbbbb8f629d79007e39a4867c0b",
->>>>>>> create_posts_database
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1851,7 +1847,6 @@
                 "source": "https://github.com/schmittjoh/php-option/tree/1.7.5"
             },
             "time": "2020-07-20T17:29:33+00:00"
-<<<<<<< HEAD
         },
         {
             "name": "psr/cache",
@@ -1898,8 +1893,6 @@
                 "psr-6"
             ],
             "time": "2016-08-06T20:24:11+00:00"
-=======
->>>>>>> create_posts_database
         },
         {
             "name": "psr/container",
@@ -4464,7 +4457,6 @@
                 "source": "https://github.com/symfony/var-dumper/tree/v5.1.8"
             },
             "time": "2020-10-27T10:11:13+00:00"
-<<<<<<< HEAD
         },
         {
             "name": "symfony/var-exporter",
@@ -4521,8 +4513,6 @@
                 "serialize"
             ],
             "time": "2020-10-24T12:01:57+00:00"
-=======
->>>>>>> create_posts_database
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -4691,15 +4681,7 @@
                 "clean",
                 "php"
             ],
-<<<<<<< HEAD
             "time": "2020-11-12T00:07:28+00:00"
-=======
-            "support": {
-                "issues": "https://github.com/voku/portable-ascii/issues",
-                "source": "https://github.com/voku/portable-ascii/tree/1.5.4"
-            },
-            "time": "2020-11-08T21:15:15+00:00"
->>>>>>> create_posts_database
         }
     ],
     "packages-dev": [
@@ -5219,15 +5201,7 @@
                 "object",
                 "object graph"
             ],
-<<<<<<< HEAD
             "time": "2020-11-13T09:40:50+00:00"
-=======
-            "support": {
-                "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.x"
-            },
-            "time": "2020-06-29T13:22:24+00:00"
->>>>>>> create_posts_database
         },
         {
             "name": "nunomaduro/collision",
