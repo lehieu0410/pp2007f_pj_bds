@@ -411,7 +411,7 @@
                         @foreach($banners as $banner)
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/storage/img/slides/{!! $banner->link!!}" class="d-block w-100" alt="...">
+                                <img src="/storage/img/slides/{!! $banner->link!!}" class="d-block w-100" alt="..." style="width: 100%;height: 480px;">
                             </div>
 
                         </div>
