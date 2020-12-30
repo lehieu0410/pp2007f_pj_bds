@@ -44,7 +44,8 @@
             "app/Helpers/rightMenu.php",
             "app/Helpers/ContactFunction.php",
             "app/Helpers/fn_menu_support.php",
-            "app/Helpers/EndFooter.php"
+            "app/Helpers/EndFooter.php",
+            "app/Helpers/FormatDate.php"
 
 
         ],

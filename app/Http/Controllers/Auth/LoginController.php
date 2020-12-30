@@ -77,12 +77,13 @@ class LoginController extends Controller
         else {
                 // Nếu dữ liệu hợp lệ sẽ kiểm tra trong csdl
                 $credentials = $request->only('email', 'password');
+                $remember_me = $request->has('remember_me') ? true : false;
                 $arr = ['email'=> $request['email'],'password' => $request['password']];
 
                     // dd(Auth::attempt(['email' => $email, 'password' =>$password]));
                 // if( Auth::attempt(['email' => $email, 'password' =>$password]))
                 // dd(Auth::attempt($credentials));
-                if (Auth::attempt($arr)) 
+                if (Auth::attempt($arr, $remember_me)) 
                 {
         
                     // Kiểm tra đúng email và mật khẩu sẽ chuyển trang
