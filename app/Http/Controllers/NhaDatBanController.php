@@ -46,7 +46,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at  
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at  
                             ORDER BY post_type_id DESC, products.created_at DESC'));
             $count_posts = count($result);
             return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
@@ -60,7 +60,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' '
                 . 'ORDER BY post_type_id DESC, products.created_at DESC'));
             $count_posts = count($result);
             $districts = District::where('parent_code', $_GET['province'])->get();
@@ -76,7 +76,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
                 . 'ORDER BY post_type_id DESC, products.created_at DESC'));
             $count_posts = count($result);
             return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
@@ -93,7 +93,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
@@ -108,7 +108,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
@@ -125,7 +125,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_atORDER BY post_type_id DESC, products.created_at DESC'));
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_atORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts'));
             }
@@ -138,7 +138,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 $districts = District::where('parent_code', $_GET['province'])->get();
@@ -153,7 +153,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district'] . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district'] . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 $districts = District::where('parent_code', $_GET['province'])->get();
@@ -170,7 +170,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district']  . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district']  . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 $districts = District::where('parent_code', $_GET['province'])->get();
@@ -187,7 +187,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 $districts = District::where('parent_code', $_GET['province'])->get();
@@ -208,7 +208,7 @@ class NhaDatBanController extends Controller
                                 INNER JOIN provinces ON provinces.code = products.province_code
                                 INNER JOIN districts ON districts.code = products.district_code
                                 INNER JOIN wards ON wards.code = products.ward_code
-                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                             . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
                             . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
@@ -228,7 +228,7 @@ class NhaDatBanController extends Controller
                                 INNER JOIN provinces ON provinces.code = products.province_code
                                 INNER JOIN districts ON districts.code = products.district_code
                                 INNER JOIN wards ON wards.code = products.ward_code
-                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                             . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
                             . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
@@ -249,7 +249,7 @@ class NhaDatBanController extends Controller
                                 INNER JOIN provinces ON provinces.code = products.province_code
                                 INNER JOIN districts ON districts.code = products.district_code
                                 INNER JOIN wards ON wards.code = products.ward_code
-                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
@@ -266,7 +266,7 @@ class NhaDatBanController extends Controller
                                 INNER JOIN provinces ON provinces.code = products.province_code
                                 INNER JOIN districts ON districts.code = products.district_code
                                 INNER JOIN wards ON wards.code = products.ward_code
-                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
@@ -283,7 +283,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
@@ -302,7 +302,7 @@ class NhaDatBanController extends Controller
                                 INNER JOIN provinces ON provinces.code = products.province_code
                                 INNER JOIN districts ON districts.code = products.district_code
                                 INNER JOIN wards ON wards.code = products.ward_code
-                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
@@ -319,7 +319,7 @@ class NhaDatBanController extends Controller
                                 INNER JOIN provinces ON provinces.code = products.province_code
                                 INNER JOIN districts ON districts.code = products.district_code
                                 INNER JOIN wards ON wards.code = products.ward_code
-                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
@@ -337,7 +337,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
@@ -352,7 +352,7 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
@@ -373,9 +373,9 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                             . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
-                            . ' AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district'] . ' '
+                            . ' AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district'] . ' '
                             . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
@@ -394,9 +394,9 @@ class NhaDatBanController extends Controller
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                             . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
-                            . ' AND status = 1 AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district'] . ' '
+                            . ' AND status = 1 AND deleted_at is null AND CURRENT_DATE() BETWEEN started_at AND expired_at AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district'] . ' '
                             . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
