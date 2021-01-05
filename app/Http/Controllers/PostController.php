@@ -213,33 +213,33 @@ class PostController extends Controller
         //                            ->where('name','Admin')
         //                            ->select('users.*')
                                    ; // id user này sẻ nhận được thông báo
-        // $users = Role::where('name','Admin')->first()->users;
-        // // dd($users);
-        // // dd($users);
-        // $data = $request->only([
-        //     'title',
-        //     'content',
-        // ]);
+        $users = Role::where('name','Admin')->first()->users;
+        // dd($users);
+        // dd($users);
+        $data = $request->only([
+            'title',
+            'content',
+        ]);
 
-        // foreach($users as $user) {
+        foreach($users as $user) {
 
-        //     $user->notify(new PostNotification($data));
-        // };
+            $user->notify(new PostNotification($data));
+        };
 
-        // $options = array(
-        //     'cluster' => env('PUSHER_APP_CLUSTER'),
-        //     'encrypted' => true
-        // );
+        $options = array(
+            'cluster' => env('PUSHER_APP_CLUSTER'),
+            'encrypted' => true
+        );
 
-        // $pusher = new Pusher(
-        //     env('PUSHER_APP_KEY'),
-        //     env('PUSHER_APP_SECRET'),
-        //     env('PUSHER_APP_ID'),
-        //     $options
-        // );
-        // // dd($pusher);
+        $pusher = new Pusher(
+            env('PUSHER_APP_KEY'),
+            env('PUSHER_APP_SECRET'),
+            env('PUSHER_APP_ID'),
+            $options
+        );
+        // dd($pusher);
 
-        // $pusher->trigger('PostEvent', 'send-message', $data);
+        $pusher->trigger('PostEvent', 'send-message', $data);
         // dd($pusher->trigger('PostEvent', 'send-message', $data));
 
         if($request->hasfile('filename'))
