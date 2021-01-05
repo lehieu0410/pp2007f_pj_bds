@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RenameBusinessesTable extends Migration
+class AddGoogleIdColumnInUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,9 @@ class RenameBusinessesTable extends Migration
      */
     public function up()
     {
-        Schema::rename('business', 'businesses');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('google_id')->after('provider_id')->nullable();
+        });
     }
 
     /**
@@ -23,6 +25,8 @@ class RenameBusinessesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }

@@ -233,5 +233,8 @@ Route::get('test', function(){
     return view('test');
 });
 // Fb login
-Route::get('/facebook-login/{provider}', 'Auth\SocialController@redirect')->name('redirect');
-Route::get('facebook-callback/{provider}', 'Auth\SocialController@callback')->name('callback');
+Route::get('/facebook-login/{provider}', 'Auth\SocialController@facebookRedirect')->name('fbRedirect');
+Route::get('facebook-callback/{provider}', 'Auth\SocialController@facebookCallback')->name('fbCallback');
+// gg login
+Route::get('/google-login', 'Auth\SocialController@googleRedirect')->name('ggRedirect');
+Route::get('google-callback', 'Auth\SocialController@googleCallback')->name('ggCallback');

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUserSoftDelete extends Migration
+class RenameBusinessTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,7 @@ class AddUserSoftDelete extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->softDeletes();
-        });
+        Schema::rename('business', 'businesses');
     }
 
     /**
@@ -25,9 +23,6 @@ class AddUserSoftDelete extends Migration
      */
     public function down()
     {
-        
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropSoftDeletes();
-        });
+        Schema::dropIfExists('businesses');
     }
 }

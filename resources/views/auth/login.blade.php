@@ -90,7 +90,12 @@
                                         <h3 style="text-align: center">- OR -</h3>
                                         <div class="form-group row mb-0">
                                             <div class="col-md-8 offset-md-4">
-                                                <a href="{{ route('redirect', ['facebook']) }}" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</a>
+                                                <a href="{{ route('fbRedirect', ['facebook']) }}" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mb-0">
+                                            <div class="col-md-8 offset-md-4">
+                                                <a href="{{ route('ggRedirect', ['google']) }}" class="btn btn-danger"><i class="fa fa-google"></i> Google</a>
                                             </div>
                                         </div>
                                 </div>
