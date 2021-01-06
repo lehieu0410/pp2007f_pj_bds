@@ -5,20 +5,32 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class MailController extends Controller
 {
     //
     public function sendemail() 
-    {
-        $mail = User::get('email');
+    {     
+        $yesterday = Carbon::now('Asia/Ho_Chi_Minh')->subDay()->toDateString();
 
+        $total_dby = DB::table('users')->whereDate('updated_at', '<=', Carbon::now('Asia/Ho_Chi_Minh')
+        ->subDays(2)->toDateString())->get()->sum('account');     
+           
+        $total_yd = DB::table('users')->whereDate('updated_at', '<=', Carbon::now('Asia/Ho_Chi_Minh')
+        ->subDay()->toDateString())->get()->sum('account');
+
+        // $change = $total_yd - $total_dby;
         $details = [
-            'title' => 'Mail from PP-2007',
-            'body' => 'This is for testing email using smtp'
+            'day' => $yesterday,
+            'total_dby' => $total_dby,
+            'total_yd' =>  $total_yd,
+            'change'=> $total_yd - $total_dby
+
         ];
-    
-        \Mail::to('garunemo3@gmail.com')->send(new \App\Mail\MyTestMail($details));
+        $to = [ 'sng198x@gmail.com' , 'garunemo3@gmail.com' ];
+        \Mail::to($to)->send(new \App\Mail\MyTestMail($details));
     
         echo "Email is Sent.";
     }
