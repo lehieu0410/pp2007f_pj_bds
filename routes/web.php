@@ -151,7 +151,14 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
         });
     // admin
         // Dashboard
-        Route::get('/index','UserController@dashIndex')->name('dash');
+        Route::get('/index','UserControll
+        Did you mean this?
+                status
+        pr@framgia:/opt/lampp/htdocs/pp2007f_pj_bds$ git status
+        On branch emails_routine
+        nothing to commit, working directory clean
+        pr@framgia:/opt/lampp/htdocs/pp2007f_pj_bds$ 
+        er@dashIndex')->name('dash');
 
 
 
@@ -169,7 +176,7 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
         Route::get('/user/restoretrashed/{id}','UserController@restoreTrashed')->name('restoreTrashed');
         Route::get('/user/forcetrashed/{id}','UserController@forceTrashed')->name('forceTrashed');
 
-        Route::get('/user/transactionHistory','UserController@transactionHistory')->name('transactionHistory');
+        Route::get('/user/transactionHistory','UserController@tHistoransactionHistory')->name('transactionHistory');
         
         // user -post
 

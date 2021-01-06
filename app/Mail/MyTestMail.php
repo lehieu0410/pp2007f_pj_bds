@@ -12,6 +12,11 @@ class MyTestMail extends Mailable
     use Queueable, SerializesModels;
 
     public $details;
+    public $total_dby;
+    public $total_yd;
+    public $yesterday;
+
+
 
 
     /**
@@ -32,7 +37,7 @@ class MyTestMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail from PP2007')
+        return $this->subject('DAILY ACCOUNT MOVEMENT REPORT')
                     ->view('emails.myTestMail');
     }
 }
