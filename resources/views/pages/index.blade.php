@@ -309,6 +309,7 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="/storage/img/slides/{!!  $sidebar->link !!}" class="d-block w-100" alt="...">
+                                    <br>
                                 </div>
 
                             </div>

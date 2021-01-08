@@ -76,9 +76,16 @@ route::get('/vi-tri-ha-tang', 'ProjectController@viTriHaTang')->name('viTriHaTan
 
 Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
 Route::get('/nhamoigioi{id}', 'DanhbaController@singlepost1')->name('singlepost1');
-Route::get('/doanhnghiep{id}', 'DanhbaController@singlepost2')->name('singlepost2');
 
-Route::get('/nha-moi-gioi1', 'DanhbaController@getBrokerAjax')->name('ajax');
+
+Route::get('search', 'DanhbaController@getSearch')->name('search');
+Route::get('/nha-moi-gioi-province{id}', 'DanhbaController@searchProvince')->name('searchProvince');
+Route::get('/nha-moi-gioi/distric', 'DanhbaController@searchProvinceAjax')->name('searchProvinceAjax');
+
+
+
+Route::get('/doanhnghiep{id}', 'DanhbaController@singlepost2')->name('singlepost2');
+// Route::get('/nha-moi-gioi1', 'DanhbaController@getBrokerAjax')->name('ajax');
 
 
 //TinTucController
@@ -115,8 +122,7 @@ Route::get('/nha-dat-cho-thue{id}', 'NhaDatChoThueController@nhaDatChoThueSingle
 
 
 //Danh ba
-Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
-Route ::get('search', 'DanhbaController@getSearch')->name('search');
+
 
 //Doanh nghiep
 Route::get('/doanh-nghiep', 'DanhbaController@index1')->name('doanhnghiep');

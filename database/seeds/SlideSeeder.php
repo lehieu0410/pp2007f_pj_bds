@@ -16,7 +16,7 @@ class SlideSeeder extends Seeder
         DB::table('slides')->insert([
             'link'=>'banner1.png',
             'name'=>'masterisehomes',
-            'slug'=>'https://masterisehomes.com/masteri-waterfront/?utm_source=Nv_BDShotbanner_MASS_B01V&utm_medium=CPD&utm_campaign=nv_masteri_waterfront#intro',
+            'slug'=>'https://file4.batdongsan.com.vn/Banners/PhuongNTM/PhuongNTM/1920x560/20201106-0955/',
             'type'=>'banner',
             'width'=>'1920',
             'height'=>'560',
@@ -25,41 +25,7 @@ class SlideSeeder extends Seeder
             'updated_at'=>date('Y-m-d H:i:s'),
         ]);
 
-        DB::table('slides')->insert([
-            'link'=>'banner2.jpg',
-            'name'=>'citylandparkhills.cityland',
-            'slug'=>'https://citylandparkhills.cityland.com.vn/?utm_source=batdongsan&utm_medium=HotBanner&utm_campaign=bannerT11',
-            'type'=>'banner',
-            'width'=>'1920',
-            'height'=>'560',
-            'order'=>'2',
-            'created_at'=>date('Y-m-d H:i:s'),
-            'updated_at'=>date('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('slides')->insert([
-            'link'=>'banner3.jpeg',
-            'name'=>'masterisehomes',
-            'slug'=>'https://masterisehomes.com/masteri-waterfront/?utm_source=Nv_BDShotbanner_MASS_B01V&utm_medium=CPD&utm_campaign=nv_masteri_waterfront',
-            'type'=>'banner',
-            'width'=>'1920',
-            'height'=>'560',
-            'order'=>'3',
-            'created_at'=>date('Y-m-d H:i:s'),
-            'updated_at'=>date('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('slides')->insert([
-            'link'=>'banner4.jpg',
-            'name'=>'batdongsan.com',
-            'slug'=>'https://citylandparkhills.cityland.com.vn/?utm_source=batdongsan&utm_medium=HotBanner&utm_campaign=bannerT11',
-            'type'=>'banner',
-            'width'=>'1920',
-            'height'=>'560',
-            'order'=>'4',
-            'created_at'=>date('Y-m-d H:i:s'),
-            'updated_at'=>date('Y-m-d H:i:s'),
-        ]);
+    
 
         DB::table('slides')->insert([
             'link'=>'banner5.jpg',
@@ -68,7 +34,7 @@ class SlideSeeder extends Seeder
             'type'=>'banner',
             'width'=>'1920',
             'height'=>'560',
-            'order'=>'5',
+            'order'=>'2',
             'created_at'=>date('Y-m-d H:i:s'),
             'updated_at'=>date('Y-m-d H:i:s'),
         ]);

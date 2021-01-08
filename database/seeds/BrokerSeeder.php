@@ -209,7 +209,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'broker_images' =>'https://file1.batdongsan.com.vn/thumb200x200.2424.doanh-nghiep-thai-ha-hung.jpg',
+            'broker_images' =>'https://file4.batdongsan.com.vn/images/broker/man.png',
             'name' => 'Doanh nghiệp Thái Hà Hưng',
             'type' => '1',
             'address' => 'Xã Bạch Sam, Mỹ Hòa, Hưng Yên',
@@ -374,7 +374,7 @@ class BrokerSeeder extends Seeder
 
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'broker_images' =>'https://file4.batdongsan.com.vn/resize/200x200/2020/12/01/PGsxuI1y/20201201134813-7e48.jpg',
+            'broker_images' =>'https://file4.batdongsan.com.vn/resize/200x200/2020/11/25/RUFz0fap/20201125085112-f4e4.jpg',
             'name' => 'Hoàng Thị Thúy Vân',
             'type' => '2',
             'address' => 'Dương Đông, Phú Quốc, Kiên Giang, Việt Nam',
@@ -419,7 +419,7 @@ class BrokerSeeder extends Seeder
 
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'broker_images' =>'https://file4.batdongsan.com.vn/resize/200x200/2020/11/23/PGsxuI1y/20201123142309-84a6.jpg',
+            'broker_images' =>'https://file4.batdongsan.com.vn/resize/200x200/2020/11/18/20201118122156-8b4d.jpg',
             'name' => 'Triệu Bửu Phước',
             'type' => '2',
             'address' => 'Lạc Long Quân, 10, Quận 11, Hồ Chí Minh, Việt Nam',
