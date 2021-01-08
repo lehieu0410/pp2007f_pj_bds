@@ -227,7 +227,7 @@
                                         @if (isset($arr_menu[$mp['id']]))
                                             @foreach ($arr_menu[$mp['id']] as $mp_c1)
                                                 <li class="lv1"><a href="{{ $mp_c1['slug'] }}"
-                                                        class="haslink ">{{ $mp_c1['name'] }}</a>
+                                                        class="haslink">{{ $mp_c1['name'] }}</a>
                                                     <ul>
                                                         @if (isset($arr_menu[$mp_c1['id']]))
                                                             @foreach ($arr_menu[$mp_c1['id']] as $mp_c2)
