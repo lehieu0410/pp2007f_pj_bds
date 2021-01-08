@@ -227,17 +227,16 @@ class PostController extends Controller
         };
 
         $options = array(
-            'cluster' => env('PUSHER_APP_CLUSTER'),
+            'cluster' => 'ap1',
             'encrypted' => true
         );
 
         $pusher = new Pusher(
-            env('PUSHER_APP_KEY'),
-            env('PUSHER_APP_SECRET'),
-            env('PUSHER_APP_ID'),
+            '9f08d9c0efa4ca8ec17f',
+            '79e9faaaff38dd0157a7',
+            '1128691',
             $options
         );
-        // dd($pusher);
 
         $pusher->trigger('PostEvent', 'send-message', $data);
         // dd($pusher->trigger('PostEvent', 'send-message', $data));
