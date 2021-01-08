@@ -63,6 +63,7 @@
             <div class="select-control city-control">
                 <div class="select-control-label">
                     <div class="dropbox-label">Tỉnh, thành phố</div>
+                    <br>
                     <select name="province" id="filter-province" class="province">
                         
                         <option value="0" class="province">Toàn quốc</option>

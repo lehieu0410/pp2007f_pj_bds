@@ -258,9 +258,13 @@
 
                         <div class="broker-top-select">
 
-                            <a href="javascripts:;" did="1" class="company">Công ty môi giới</a>
+                            <a href="javascripts:;" did="1" @if(isset($id))
+                            code ={{$id}}
+                            @endif class="company">Công ty môi giới</a>
 
-                            <a href="javascripts:;" did="2" class="person">Cá nhân môi giới</a>
+                            <a href="javascripts:;" did="2" @if(isset($id))
+                            code ={{$id}}
+                            @endif class="company">Cá nhân môi giới</a>
                         </div>
 
 
@@ -313,79 +317,7 @@
                 };
             </script>
             <div class="clear"></div>
-            <div class="container-default">
-                <div>
-
-                    <div id='broker-by-category'>
-                        <div class='broker-top-by-cate'>
-                            <h2><span>Theo loại BDS</span></h2>
-                        </div>
-                        <ul>
-                            <li class='menu-inactive'>
-                                <h3><a href='moi-gioi-nha-dat-ban' title='Nhà đất bán'>Nhà đất bán (5662)</a></h3>
-                                <ul>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-ban-dat-nen-du-an' title='Bán đất nền dự án'>Bán đất nền dự án (2063)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-ban-nha-rieng' title='Bán nhà riêng'>Bán nhà riêng (1462)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-ban-trang-trai-khu-nghi-duong' title='Bán trang trại, khu nghỉ dưỡng'>Bán trang trại, khu nghỉ dưỡng (67)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-ban-kho-nha-xuong' title='Bán kho, nhà xưởng'>Bán kho, nhà xưởng (70)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-ban-loai-bat-dong-san-khac' title='Bán loại bất động sản khác'>Bán loại bất động sản khác (95)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-ban-nha-mat-pho' title='Bán nhà mặt phố'>Bán nhà mặt phố (1233)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-ban-dat' title='Bán đất'>Bán đất (1736)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-ban-can-ho-chung-cu' title='Bán căn hộ chung cư'>Bán căn hộ chung cư (2840)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-ban-nha-biet-thu-lien-ke' title='Bán nhà biệt thự, liền kề'>Bán nhà biệt thự, liền kề (970)</a></div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class='menu-inactive'>
-                                <h3><a href='moi-gioi-nha-dat-cho-thue' title='Nhà đất cho thuê'>Nhà đất cho thuê (961)</a></h3>
-                                <ul>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-cho-thue-can-ho-chung-cu' title='Cho thuê căn hộ chung cư'>Cho thuê căn hộ chung cư (496)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-cho-thue-van-phong' title='Cho thuê văn phòng'>Cho thuê văn phòng (185)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-cho-thue-nha-mat-pho' title='Cho thuê nhà mặt phố'>Cho thuê nhà mặt phố (199)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-cho-thue-nha-rieng' title='Cho thuê nhà riêng'>Cho thuê nhà riêng (213)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-cho-thue-kho-nha-xuong-dat' title='Cho thuê kho, nhà xưởng, đất'>Cho thuê kho, nhà xưởng, đất (71)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-cho-thue-cua-hang-ki-ot' title='Cho thuê cửa hàng, ki ốt'>Cho thuê cửa hàng, ki ốt (31)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-cho-thue-loai-bat-dong-san-khac' title='Cho thuê loại bất động sản khác'>Cho thuê loại bất động sản khác (22)</a></div>
-                                    </li>
-                                    <li>
-                                        <div><a style='font-weight: normal;' href='moi-gioi-cho-thue-nha-tro-phong-tro' title='Cho thuê nhà trọ, phòng trọ'>Cho thuê nhà trọ, phòng trọ (43)</a></div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+           
             <div class="container-default">
                 <div>
 
@@ -393,6 +325,33 @@
 
                     <div id="broker-typical">
                         <div class="broker-top-by-cate">
+                        <div id="broker-by-city">
+                        <div class="broker-top-by-cate">
+                            <h2>TÌM KIẾM NHÀ MÔI GIỚI THEO TỈNH / TP</h2>
+                            <span></span>
+                        </div>
+                        <div class="ulbox">
+                            <ul>
+                                @foreach( $provinces as $province)
+                                <li>
+                                    <a href="{{Route('searchProvince',$province->code)}} " title="{{ $province->name }}" p_code="{{ $province->code }}" class="province" >
+                                        {{ $province->name }} ({{ $province->count_companies }})
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+
+                            <div class="viewmore-prd">
+                                <a href="javascript:void(0)" rel="nofollow" class="vmore">
+                                    Xem thêm <img src="https://file4.batdongsan.com.vn/images/Icons/down_arrow.png">
+                                </a>
+                                <a href="javascript:void(0)" rel="nofollow" class="vless" style="display: none;">
+                                    Ẩn <img src="https://file4.batdongsan.com.vn/images/Icons/up_arrow.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
                             <h2><span>Nhà môi giới tiêu biểu</span></h2>
                         </div>
                         <div id="dntb" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 714px;">
@@ -617,32 +576,7 @@
                 <div>
 
 
-                    <div id="broker-by-city">
-                        <div class="broker-top-by-cate">
-                            <h2>THEO TỈNH / TP</h2>
-                            <span></span>
-                        </div>
-                        <div class="ulbox">
-                            <ul>
-                                @foreach( $provinces as $province)
-                                <li>
-                                    <a href="?province={{ $province->code }}" title="{{ $province->name }}">
-                                        {{ $province->name }} ({{ $province->count_companies }})
-                                    </a>
-                                </li>
-                                @endforeach
-                            </ul>
-
-                            <div class="viewmore-prd">
-                                <a href="javascript:void(0)" rel="nofollow" class="vmore">
-                                    Xem thêm <img src="https://file4.batdongsan.com.vn/images/Icons/down_arrow.png">
-                                </a>
-                                <a href="javascript:void(0)" rel="nofollow" class="vless" style="display: none;">
-                                    Ẩn <img src="https://file4.batdongsan.com.vn/images/Icons/up_arrow.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                 </div>
             </div>
@@ -992,14 +926,15 @@ input.addEventListener("keyup", function(event) {
 
 @endsection
 @section('scripts')
+
 <script>
+   
     $(document).ready(function() {
-        $('.company').click(function() {
+        $('.company').on('click',function(){
             var type = $(this).attr('did');
-
             $.ajax({
                 type: "GET",
-                url: "/nha-moi-gioi",
+                url: "/nha-moi-gioi/distric",
                 data: {
                     type: type
                 },
@@ -1010,25 +945,71 @@ input.addEventListener("keyup", function(event) {
 
             });
         });
-    })
+        // $('.province').click(function() {
+        //     var code = $(this).attr('p_code');
+        //     $.ajax({
+        //         type: "GET",
+        //         url: "/nha-moi-gioi",
+        //         data: {
+        //             code: code
+        //         },
+        //         dataType: 'html',
+        //         success: function(data) {}
+        //     }).done(function(data) {
+        //         $('#contentPage').html(data);
 
+        //     });
+        // });
+        // $('.person').click(function() {
+        //     var type = $(this).attr('did');
+
+        //     $.ajax({
+        //         type: "GET",
+        //         url: "/nha-moi-gioi",
+        //         data: {
+        //             type: type
+        //         },
+        //         dataType: 'html',
+        //         success: function(data) {}
+        //     }).done(function(data) {
+        //         $('#contentPage').html(data);
+
+        //     });
+        // });
+    })
+    </script>
+    <script>
+    
     $(document).ready(function() {
-        $('.person').click(function() {
+        // $('.province').on('click',function(){
+        //     var p_code = $(this).attr('p_code');
+            
+            $('.company').on('click',function(){
             var type = $(this).attr('did');
+            var p_code = $(this).attr('code');
+    
 
             $.ajax({
-                type: "GET",
-                url: "/nha-moi-gioi",
-                data: {
-                    type: type
-                },
-                dataType: 'html',
-                success: function(data) {}
-            }).done(function(data) {
-                $('#contentPage').html(data);
+                    type: "GET",
+                    url: "/nha-moi-gioi/distric",
+                    data: {
+                        type: type,
+                        code: p_code,
+                    },
+                    dataType: 'html',
+                    success: function(data) {}
+                }).done(function(data) {
+                    $('#contentPage').html(data);
 
+                });
             });
-        });
-    })
+
+    // });
+
+
+    
+
+});
 </script>
+
 @endsection
