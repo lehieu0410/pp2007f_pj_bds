@@ -1430,6 +1430,7 @@
 
 
     <script src="/assets/js/app.min.js"></script>
+
     <script>
         $(document).ready(function() {
             $('.filter-nha-dat').click(function() {
@@ -1441,6 +1442,15 @@
             $('#link-reset').click(function() {
                 $('#boxSearchForm')[0].reset();
             })
+        });
+
+        $(document).ready(function() {
+            $(".lv0").hover(function() {
+                $(".lv0 ul").css('display','block');
+                },
+                function() {
+                $(".lv0 ul").css('display','none');
+                });
         });
 
     </script>
