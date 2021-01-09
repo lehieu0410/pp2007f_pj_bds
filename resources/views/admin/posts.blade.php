@@ -100,7 +100,7 @@
                                             class="badge badge-pill badge-gradient-success">{{ $post->post_type['name'] }}</span>
                                     </td>
                                     <td>{{ $post->id }}</td>
-                                    <td>{{ formatDate($post->created_at) }}</td>
+                                    <td>{{ $post->created_at }}</td>
                                     @if ($post->status == 0)
                                     <td id="status">Waiting</td>
                                     @elseif ($post->status == 1)
