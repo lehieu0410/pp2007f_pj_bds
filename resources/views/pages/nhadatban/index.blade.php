@@ -265,32 +265,6 @@
 
             </div>
 
-            <div class="product-nav-bar pad-top-8 clearfix">
-                <ul class="ul-tab fl mar-right-16">
-                    <li class="list-display actived">Danh sách</li>
-                    <!-- phần này xử lý bỏ tabIndex. xử lý ở đây để về sau nếu sửa page bản đồ thì sẽ bỏ phần ở đây cho đơn giản, kg cam thiệt vào code trong controller -->
-                    <li><a title="Xem trên bản đồ" href="https://batdongsan.com.vn/ban-do-nha-dat-ban">Bản đồ</a></li>
-                </ul>
-                <div class="fr">
-                    <div class="custom-drop-control sort-control">
-                        <div class="custom-control-label">
-                            Sắp xếp
-                        </div>
-                        <div class="custom-dropbox hiding" id="divSort">
-                            <div id="divSortOptions">
-                                <ul class="advance-options">
-                                    <li vl="0" class="actived">Thông thường</li>
-                                    <li vl="1">Tin mới nhất</li>
-                                    <li vl="2">Giá thấp đến cao</li>
-                                    <li vl="3">Giá cao đến thấp</li>
-                                    <li vl="4">Diện tích bé đến lớn</li>
-                                    <li vl="5">Diện tích lớn đến bé</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="product-lists mar-top-16" id="product-lists-web" style="display:block">
 
                 @foreach ($result as $product)

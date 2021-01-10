@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use App\Models\Broker;
 use App\Models\District;
 use App\Models\Image;
 use App\Models\Products;
@@ -441,7 +443,9 @@ class NhaDatBanController extends Controller
             $products_area = $this->productRepository->relatedPost($id);
             $images = $this->imageRepository->relatedImage($id);
             $images_area = $this->imageRepository->getAll();
-            $cache_view = view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area', 'provinces'))->render();
+            $brokers = Broker::paginate(10);
+            $news = Article::paginate(10);
+            $cache_view = view("pages.nhadatban.single_post", compact('news', 'brokers','products', 'images_area', 'images', 'products_area', 'provinces'))->render();
             Cache::put($key, $cache_view, 10000);
             return $cache_view;
         }
