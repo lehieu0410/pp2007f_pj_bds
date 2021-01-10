@@ -309,18 +309,6 @@
         <div class="btn-border-grey text-center"><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072#divSendContact" id="btnSendContact">Yêu cầu liên hệ lại</a></div>               
     </div>       
 
-        <!--start product seo tag-->
-            <div class="product-seo-tag">
-                <h4 class="seo-tag-title">Tìm kiếm theo từ khóa</h4>
-                <ul class="ul-round clearfix">
-                        <li><a href="https://batdongsan.com.vn/tags/ban/ban-dat-nen-gan-cong-vien-xanh-tuoi-mat-thanh-pho-bien-hoa" title="Bán đất nền gần công viên xanh tươi mát Thành phố Biên Hòa">Bán đất nền gần công viên xanh tươi mát Thành phố Biên Hòa</a></li>
-                        <li><a href="https://batdongsan.com.vn/tags/ban/ban-dat-nen-gan-cau-dong-nai-thanh-pho-bien-hoa" title="Bán đất nền gần Cầu Đồng Nai Thành phố Biên Hòa">Bán đất nền gần Cầu Đồng Nai Thành phố Biên Hòa</a></li>
-                        <li><a href="https://batdongsan.com.vn/tags/ban/ban-dat-nen-bien-hoa-new-city" title="Bán đất nền Biên Hòa New City">Bán đất nền Biên Hòa New City</a></li>
-                        <li><a href="https://batdongsan.com.vn/tags/ban/ban-dat-nen-thanh-pho-bien-hoa" title="Bán đất nền Thành phố Biên Hòa">Bán đất nền Thành phố Biên Hòa</a></li>
-                        <li><a href="https://batdongsan.com.vn/tags/ban/ban-dat-nen-gan-cau-vam-thanh-pho-bien-hoa" title="Bán đất nền gần Cầu Vàm Thành phố Biên Hòa">Bán đất nền gần Cầu Vàm Thành phố Biên Hòa</a></li>
-                </ul>
-            </div>
-        <!--end product seo tag-->
         <div class="divide">&nbsp;</div>
         <div class="product-config pad-16">
             <ul class="short-detail-2 list2 clearfix">
@@ -456,7 +444,7 @@
                                     <div class="pro-m2">{!! $product['area'] !!} m²</div>
                                 <div class="pro-adress"> {!! $product->district['path_with_type'] !!}</div>
                                 <div class="date">
-                                    {{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}
+                                    {{ \Carbon\Carbon::parse($product['started_at'])->format('d/m/Y')}}
                                     <span class="tooltip-time">{{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}</span>
                                 </div>
                                 <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
@@ -497,495 +485,53 @@
                             <img src="{!! $products->user['avatar'] !!}">
                     </div>
                                     <div class="name" title="{!! $products->user['name'] !!}">
-                                        {!! $products->user['name'] !!}
+                                        {!! $products->user['username'] !!}
                     </div>
-                                <div class="phone text-center"><span>{!! $products->user['phonenumber'] !!}</span></div>
+                                <div class="phone text-center"><span>Phone: {!! $products->user['phonenumber'] !!}</span></div>
                     <div class="mail btn-border-grey text-center">
                         <a id="email" class="email-copy">{!! $products->user['email'] !!}</a>
-                    </div>
-                <div class="btn-border-grey text-center div-send-contact"><a href="#divSendContact" id="btnSendContact">Yêu cầu liên hệ lại</a></div>
+                    </div>                
             </div>
         </div> 
         
-    <div class="divide-full"></div>
-    <div class="box-common box-common-filled box-max-item-cate">
-        <h2 class="box-title">Bán đất nền dự án theo dự án tại Thành phố Biên Hòa</h2>
-
-        <div class="box-content link-hover-blue">
-            <ul>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-bien-hoa-golden-town" title="Bán đất nền dự án Biên Hòa Golden Town">
-                                Biên Hòa Golden Town (12)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-bien-hoa-new-city" title="Bán đất nền dự án Biên Hòa New City">
-                                Biên Hòa New City (184)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-bien-hoa-new-town" title="Bán đất nền dự án Biên Hòa New Town">
-                                Biên Hòa New Town (16)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-dreamland-city" title="Bán đất nền dự án Dreamland City">
-                                Dreamland City (45)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-golden-center-city-3" title="Bán đất nền dự án Golden Center City 3">
-                                Golden Center City 3 (20)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-khu-dan-cu-duong-5-noi-dai" title="Bán đất nền dự án Khu dân cư đường 5 nối dài">
-                                Khu dân cư đường 5 nối dài (27)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-paradise-riverside" title="Bán đất nền dự án Paradise Riverside">
-                                Paradise Riverside (30)
-                            </a>
-                        </h3>
-                    </li>
-            </ul>
-        </div>
-    </div>
-
-        
-    <div class="divide-full"></div>
-    <div class="box-common box-common-filled box-max-item-keyword">
-        <h4 class="box-title">Bất động sản nổi bật</h4>
-
-        <div class="box-content link-hover-blue">
-            <ul>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/nha-dat-ban-ba-dinh" title="Nhà đất Ba Đình">
-                                    Nhà đất Ba Đình
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/nha-dat-ban-bien-hoa-dna" title="Nhà đất Biên Hòa">
-                                    Nhà đất Biên Hòa
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/ban-kho-nha-xuong-bien-hoa-dna" title="Bán nhà xưởng Biên Hòa">
-                                    Bán nhà xưởng Biên Hòa
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/cho-thue-kho-nha-xuong-dat-bien-hoa-dna" title="Cho thuê kho xưởng Biên Hòa">
-                                    Cho thuê kho xưởng Biên Hòa
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/cho-thue-nha-tro-phong-tro-bien-hoa-dna" title="Cho thuê phòng trọ Biên Hòa">
-                                    Cho thuê phòng trọ Biên Hòa
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/nha-dat-ban-hai-duong" title="Mua bán nhà đất Hải Dương">
-                                    Mua bán nhà đất Hải Dương
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-bien-hoa-dna" title="Bán đất nền Biên Hòa">
-                                    Bán đất nền Biên Hòa
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/cho-thue-cua-hang-ki-ot-duong-pham-van-thuan-245" title="Cho thuê cửa hàng Phạm Văn Thuận">
-                                    Cho thuê cửa hàng Phạm Văn Thuận
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/nha-dat-ban-quan-1" title="Bán nhà Quận 1">
-                                    Bán nhà Quận 1
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/nha-dat-ban-xa-an-hoa-10" title="Bán nhà An Hòa">
-                                    Bán nhà An Hòa
-                                </a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://batdongsan.com.vn/nha-dat-ban-phuong-24" title="Bán nhà Phường 24 Bình Thạnh">
-                                    Bán nhà Phường 24 Bình Thạnh
-                                </a>
-                            </h3>
-                        </li>
-                                            </ul>
-        </div>
-    </div>
-
-        <div class="box-common box-common-filled box-utility link-hover-blue">
-    <h4 class="box-title">Hỗ trợ tiện ích</h4>
-    <div class="box-content">
-        <ul>
-            <li>
-                <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-xem-huong-nha" title="Tư vấn phong thủy" rel="nofollow">
-                    Tư vấn phong thủy
-                </a>
-            </li>
-            <li>
-                <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-du-toan-chi-tiet" title="Dự tính chi phí làm nhà" rel="nofollow">
-                    Dự tính chi phí làm nhà
-                </a>
-            </li>
-            <li>
-                <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-tinh-lai-suat" title="Tính lãi suất" rel="nofollow">
-                    Tính lãi suất
-                </a>
-            </li>
-            <li>
-                <a href="https://batdongsan.com.vn/quy-trinh-xay-nha" title="Quy trình xây nhà" rel="nofollow">Quy trình xây nhà</a>
-            </li>
-            <li>
-                <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-xem-tuoi-xay-nha" title="Xem tuổi làm nhà" rel="nofollow">Xem tuổi làm nhà</a>
-            </li>
-        </ul>
-    </div>
-</div>
-                <div class="product-detail-scroll" style="opacity: 0; top: 0px; display: none;">
-            <div class="scroll-wrap clearfix">
-                <div class="scroll-info" style="width: auto;">
-                    <label>1.45 tỷ</label>
-                        <span class="dot">·</span><label>100 m²</label>
-                                        <div class="scroll-address ellipsis">Dự án Biên Hòa New City, Phố Nam Cao, Phường Phước Tân, Biên Hòa, Đồng Nai</div>
-                </div>
-                <div class="scroll-contact clearfix" style="">
-                        <div class="avatar">
-                                    <span>L</span>
-                        </div>
-                                            <div class="name" title="Thái Bá Lợi">
-                            Lợi
-                        </div>
-                    <div class="btn-border-grey"><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072#divSendContact" id="btnSendContact">Yêu cầu liên hệ lại</a></div>
-                    <div class="phone phoneEvent" raw="0946722227" moblie="0946 722 *** · Hiện số09467222270946722227">0946 722 ***&nbsp;·&nbsp;Hiện số</div>
-                </div>
-            </div>
-        </div>
-        <div class="product-detail-fix">
-            <div class="fix-wrap">
-                    <a href="mailto:bdscamranh@gmail.com?subject=Kha%CC%81ch%20ha%CC%80ng%20Batdongsan.com%20quan%20t%C3%A2m%20t%C6%A1%CC%81i%20tin%20%C4%91%C4%83ng&amp;body=T%C3%B4i%20co%CC%81%20quan%20t%C3%A2m%20t%C6%A1%CC%81i%20tin%20%C4%91%C4%83ng%20na%CC%80y%20https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" class="link_mail" target="_blank" rel="nofollow">
-                        Gửi email
-                    </a>
-                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072#" data-href="sms://0946722227/?body=Toi co quan tam den tin dang nay https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" rel="nofollow" class="link_sms">Nhắn tin</a>
-            </div>
-            <div class="phone text-center"><span class="phoneEvent" raw="0946722227" moblie="0946 722 *** · Hiện số0946 722 *** · Hiện số0946722227">0946 722 ***&nbsp;·&nbsp;Hiện số</span></div>
-        </div>
-
-        
-
-    <div class="divide-full"></div>
     <div class="box-common box-common-filled box-broker">
         <h4 class="box-title">Nhà môi giới trong khu vực</h4>
         <div class="box-content">
             <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-928px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="3" style="width: 232px;"><div class="broker-wrap">
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 232px;">
+                        @foreach ($brokers as $broker)
+                        <div class="broker-wrap">
                             <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/c-ty-tnhh-xay-dung-thuong-mai-moi-gioi-bat-dong-san-dat-viet-eb2712" rel="nofollow">
-                                                                            <img src="/assets/image/20190531173625-b770.jpg">
+                                <a href="{!! Route('singlepost1', $broker->id) !!}" rel="nofollow">
+                                                                            <img src="{!! $broker->broker_images !!}">
                                 </a>
                             </div>
                             <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/c-ty-tnhh-xay-dung-thuong-mai-moi-gioi-bat-dong-san-dat-viet-eb2712" rel="nofollow">C TY TNHH XÂY DỰNG THƯƠNG MẠI MÔI GIỚI BẤT ĐỘNG SẢN ĐẤT VIỆT</a></div>
-                                <div class="broker-phone">0914920202</div>
+                                <div class="broker-name"><a href="{!! Route('singlepost1', $broker->id) !!}" rel="nofollow">{!! $broker->name !!}</a></div>
+                                <div class="broker-phone">{!! $broker->mobile !!}</div>
                             </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/cong-ty-co-phan-dv-tm-xd-dia-oc-kim-oanh-eb2466" rel="nofollow">
-                                                                            <img src="/assets/image/20180104105026-5581.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/cong-ty-co-phan-dv-tm-xd-dia-oc-kim-oanh-eb2466" rel="nofollow">Công ty Cổ phần DV-TM &amp; XD Địa Ốc Kim Oanh</a></div>
-                                <div class="broker-phone">0933733655</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/cong-ty-co-phan-dau-tu-viet-hung-phat-eb2420" rel="nofollow">
-                                                                            <img src="/assets/image/20170825163101-f2fb.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/cong-ty-co-phan-dau-tu-viet-hung-phat-eb2420" rel="nofollow">Công Ty Cổ Phần Đầu Tư Việt Hưng Phát</a></div>
-                                <div class="broker-phone"></div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/cong-ty-tnhh-dich-vu-bat-dong-san-dong-a-eb946" rel="nofollow">
-                                                                            <img src="/assets/image/thumb200x200.2306.cong-ty-tnhh-dich-vu-bat-dong-san-dong-a.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/cong-ty-tnhh-dich-vu-bat-dong-san-dong-a-eb946" rel="nofollow">Công ty TNHH Dịch vụ Bất động sản Đông Á</a></div>
-                                <div class="broker-phone">0919951010</div>
-                            </div>
-                        </div></div>
-                        <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 232px;"><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/cong-ty-cp-kinh-doanh-dia-oc-dat-moi-eb2588" rel="nofollow">
-                                                                            <img src="/assets/image/20180817111042-29df.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/cong-ty-cp-kinh-doanh-dia-oc-dat-moi-eb2588" rel="nofollow">Công ty CP Kinh doanh Địa ốc Đất Mới</a></div>
-                                <div class="broker-phone">0934579676</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/vpdd-cong-ty-cppt-dia-oc-van-xuan-eb2538" rel="nofollow">
-                                                                            <img src="/assets/image/20180618174008-4ee6.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/vpdd-cong-ty-cppt-dia-oc-van-xuan-eb2538" rel="nofollow">VPĐD Công ty CPPT Địa Ốc Vạn Xuân</a></div>
-                                <div class="broker-phone">0937437613</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohuhappyland-eb2512" rel="nofollow">
-                                                                            <img src="/assets/image/20180510151049-8b4b.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohuhappyland-eb2512" rel="nofollow">Sàn giao dịch Dohuhappyland</a></div>
-                                <div class="broker-phone">0906031033</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohuinternational-eb2511" rel="nofollow">
-                                                                            <img src="/assets/image/20180510142917-d740.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohuinternational-eb2511" rel="nofollow">Sàn giao dịch Dohuinternational</a></div>
-                                <div class="broker-phone">0938150151</div>
-                            </div>
-                        </div></div>
-                        
-                        
-                        
-                        <div class="swiper-slide" data-swiper-slide-index="1" style="width: 232px;"><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohudona-eb2510" rel="nofollow">
-                                                                            <img src="/assets/image/20180510141326-909b.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohudona-eb2510" rel="nofollow">Sàn giao dịch Dohudona</a></div>
-                                <div class="broker-phone">0939233433</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohuhousing-eb2509" rel="nofollow">
-                                                                            <img src="/assets/image/20180510141042-e71d.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohuhousing-eb2509" rel="nofollow">Sàn giao dịch Dohuhousing</a></div>
-                                <div class="broker-phone">0932086088</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohuhcm-eb2508" rel="nofollow">
-                                                                            <img src="/assets/image/20180510140751-1857.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohuhcm-eb2508" rel="nofollow">Sàn giao dịch Dohuhcm</a></div>
-                                <div class="broker-phone">0938967796</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohumiennam-eb2507" rel="nofollow">
-                                                                            <img src="/assets/image/20180510140422-59d2.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohumiennam-eb2507" rel="nofollow">Sàn giao dịch Dohumiennam</a></div>
-                                <div class="broker-phone">0915565639</div>
-                            </div>
-                        </div></div>
-                        
-                        
-                        
-                        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 232px;"><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohumiendong-eb2506" rel="nofollow">
-                                                                            <img src="/assets/image/20180510120438-a0e5.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohumiendong-eb2506" rel="nofollow">Sàn giao dịch Dohumiendong</a></div>
-                                <div class="broker-phone">0901890891</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohureal-eb2505" rel="nofollow">
-                                                                            <img src="/assets/image/20180510113359-da64.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohureal-eb2505" rel="nofollow">Sàn giao dịch Dohureal</a></div>
-                                <div class="broker-phone">0934077477</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohuland-eb1100" rel="nofollow">
-                                                                            <img src="/assets/image/20180510143557-2bfd.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohuland-eb1100" rel="nofollow">Sàn giao dịch Dohuland</a></div>
-                                <div class="broker-phone">0937777247</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/cong-ty-tnhh-xay-dung-thuong-mai-moi-gioi-bat-dong-san-dat-viet-eb2762" rel="nofollow">
-                                                                            <img src="/assets/image/20191207111310-b5e7.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/cong-ty-tnhh-xay-dung-thuong-mai-moi-gioi-bat-dong-san-dat-viet-eb2762" rel="nofollow">CÔNG TY TNHH XÂY DỰNG THƯƠNG MẠI MÔI GIỚI BẤT ĐỘNG SẢN ĐẤT VIỆT</a></div>
-                                <div class="broker-phone">0914920202</div>
-                            </div>
-                        </div></div>
-                        
-                        
-                        
-                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 232px;"><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/c-ty-tnhh-xay-dung-thuong-mai-moi-gioi-bat-dong-san-dat-viet-eb2712" rel="nofollow">
-                                                                            <img src="/assets/image/20190531173625-b770.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/c-ty-tnhh-xay-dung-thuong-mai-moi-gioi-bat-dong-san-dat-viet-eb2712" rel="nofollow">C TY TNHH XÂY DỰNG THƯƠNG MẠI MÔI GIỚI BẤT ĐỘNG SẢN ĐẤT VIỆT</a></div>
-                                <div class="broker-phone">0914920202</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/cong-ty-co-phan-dv-tm-xd-dia-oc-kim-oanh-eb2466" rel="nofollow">
-                                                                            <img src="/assets/image/20180104105026-5581.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/cong-ty-co-phan-dv-tm-xd-dia-oc-kim-oanh-eb2466" rel="nofollow">Công ty Cổ phần DV-TM &amp; XD Địa Ốc Kim Oanh</a></div>
-                                <div class="broker-phone">0933733655</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/cong-ty-co-phan-dau-tu-viet-hung-phat-eb2420" rel="nofollow">
-                                                                            <img src="/assets/image/20170825163101-f2fb.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/cong-ty-co-phan-dau-tu-viet-hung-phat-eb2420" rel="nofollow">Công Ty Cổ Phần Đầu Tư Việt Hưng Phát</a></div>
-                                <div class="broker-phone"></div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/cong-ty-tnhh-dich-vu-bat-dong-san-dong-a-eb946" rel="nofollow">
-                                                                            <img src="/assets/image/thumb200x200.2306.cong-ty-tnhh-dich-vu-bat-dong-san-dong-a.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/cong-ty-tnhh-dich-vu-bat-dong-san-dong-a-eb946" rel="nofollow">Công ty TNHH Dịch vụ Bất động sản Đông Á</a></div>
-                                <div class="broker-phone">0919951010</div>
-                            </div>
-                        </div></div>
-                        
-                        
-                        
-                <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 232px;"><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/cong-ty-cp-kinh-doanh-dia-oc-dat-moi-eb2588" rel="nofollow">
-                                                                            <img src="/assets/image/20180817111042-29df.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/cong-ty-cp-kinh-doanh-dia-oc-dat-moi-eb2588" rel="nofollow">Công ty CP Kinh doanh Địa ốc Đất Mới</a></div>
-                                <div class="broker-phone">0934579676</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/vpdd-cong-ty-cppt-dia-oc-van-xuan-eb2538" rel="nofollow">
-                                                                            <img src="/assets/image/20180618174008-4ee6.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/vpdd-cong-ty-cppt-dia-oc-van-xuan-eb2538" rel="nofollow">VPĐD Công ty CPPT Địa Ốc Vạn Xuân</a></div>
-                                <div class="broker-phone">0937437613</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohuhappyland-eb2512" rel="nofollow">
-                                                                            <img src="/assets/image/20180510151049-8b4b.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohuhappyland-eb2512" rel="nofollow">Sàn giao dịch Dohuhappyland</a></div>
-                                <div class="broker-phone">0906031033</div>
-                            </div>
-                        </div><div class="broker-wrap">
-                            <div class="broker-avatar">
-                                <a href="https://batdongsan.com.vn/san-giao-dich-dohuinternational-eb2511" rel="nofollow">
-                                                                            <img src="/assets/image/20180510142917-d740.jpg">
-                                </a>
-                            </div>
-                            <div class="broker-info">
-                                <div class="broker-name"><a href="https://batdongsan.com.vn/san-giao-dich-dohuinternational-eb2511" rel="nofollow">Sàn giao dịch Dohuinternational</a></div>
-                                <div class="broker-phone">0938150151</div>
-                            </div>
-                        </div></div></div>
+                        </div>
+                        @endforeach
+                    </div>
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-            <div class="broker-pagination">
-                <!-- Add Pagination -->
-                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
-                <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
-            </div>
+            
         </div>
     </div>
+        <div class="box-common box-common-filled box-utility link-hover-blue">
+            <h4 class="box-title">Tin tức</h4>
+            <div class="box-content">
+                <ul>
+                    @foreach ($news as $new)
+                    <li>
+                        <a href="{!! Route('tintuc_single_post', $new->id) !!}" title="{!! $new->title !!}" rel="nofollow">
+                            {!! $new->title !!}
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    <div class="divide-full"></div>
     </div>
 </div>
 <!-- end product-detail-->
