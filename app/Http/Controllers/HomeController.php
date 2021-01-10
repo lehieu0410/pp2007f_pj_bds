@@ -17,13 +17,7 @@ class HomeController extends Controller
 {
     public function index() {
         
-        if (Cache::has('home_page')) {
-            Cache::flush('home_page');
-            return Cache::get('home_page');
-            
-
-        } else 
-        {
+        
             
             $articles = Article::limit(6)->orderBy('id','DESC')->get();
             $i = 0;
@@ -40,16 +34,8 @@ class HomeController extends Controller
             $province1 = Province::orderBy('count_posts', 'desc')->limit(1)->get();
             $province2 = Province::orderBy('count_posts', 'desc')->skip(1)->take(2)->get();
             $province3 = Province::orderBy('count_posts', 'desc')->skip(3)->take(2)->get();
-            $homepage = view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','banners', 'sidebars', 'province1', 'province2', 'province3'))->render();
-            
-            Cache::put('home_page', $homepage, 10000);
-
-            return $homepage;
-        }
-
-        
-        
-        
+            return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','banners', 'sidebars', 'province1', 'province2', 'province3'));
+                    
     }
 
     public function welcome()
