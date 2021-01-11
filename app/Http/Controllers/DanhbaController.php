@@ -72,14 +72,14 @@ class DanhBaController extends Controller
     //     return view ('pages.danhba.doanhnghiep', compact('business'));
     // }
 
-    public function getSearch(Request $req) {
-        $provinces = Province::get()->sortByDesc('count_companies');
-        $brokers = Broker::where('name', 'like', '%'.$req->key.'%')
-                            ->orwhere('address', 'like', '%'.$req->key.'%')->Paginate(10);
+    // public function getSearch(Request $req) {
+    //     $provinces = Province::get()->sortByDesc('count_companies');
+    //     $brokers = Broker::where('name', 'like', '%'.$req->key.'%')
+    //                         ->orwhere('address', 'like', '%'.$req->key.'%')->Paginate(10);
         
-        $sidebars = Slide::where('name','AVPE')->get();
-        return view ('pages.danhba.nhamoigioi', compact('brokers', 'sidebars', 'provinces'));
-    }
+    //     $sidebars = Slide::where('name','AVPE')->get();
+    //     return view ('pages.danhba.nhamoigioi', compact('brokers', 'sidebars', 'provinces'));
+    // }
 
     public function singlepost1($id) {
         $brokers = Broker::where('id', '=', $id)->get();
@@ -117,6 +117,15 @@ class DanhBaController extends Controller
         $brokers = Broker::where('type',$request->type)->paginate(10);
         echo view ('pages.danhba.resuitl', compact('brokers'));
         }
+    }
+
+    public function fullTextSearch (Request $request) {
+        $provinces = Province::get()->sortByDesc('count_companies');
+        $sidebars = Slide::where('name','AVPE')->get();
+        $brokers = Broker::search($request->key)->paginate(10);
+        return view ('pages.danhba.nhamoigioi', compact('brokers', 'sidebars', 'provinces'));
+        
+
     }
     
 }
