@@ -7,6 +7,30 @@
 @endsection
 
 @section('content')
+<form action="{{ Route('dashAjax') }}" method="get">
+    <div class="form-group col-md-6">
+        
+            <label class="control-label">Select Year</label>
+            <select class="form-control" name="year">
+                @for ($i = 0; $i <= 5; $i++)
+                    <option class="year" year="{{ $year - $i }}">{{ $year - $i }}</option>
+
+                @endfor
+            </select>
+    </div>
+    <div class="form-group col-md-2">
+            <button>Submit</button>
+       
+    </div>
+</form>
+    @if (session('mess'))
+    <div class = "alert alert-danger">
+                    {{ session('mess') }}
+                    
+    
+    </div>
+    @endif
+    <div id="show"></div>
     <div class="row">
         <div class="col-md-12">
             <div id="chart_div" style="height:500px"></div>
@@ -54,4 +78,6 @@
         }
 
     </script>
+
+
 @endsection

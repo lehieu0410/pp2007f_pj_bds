@@ -158,6 +158,7 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
     // admin
         // Dashboard
         Route::get('/index','UserController@dashIndex')->name('dash');
+        Route::get('/indexajax','UserController@dashIndexAjax')->name('dashAjax');
 
 
 
