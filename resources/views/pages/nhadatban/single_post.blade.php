@@ -442,7 +442,7 @@
                                 <div class="pro-price">{!! $product['price'] !!} {!! $product['unit'] !!} </div>
                                     <span class="ic_dot">·</span>
                                     <div class="pro-m2">{!! $product['area'] !!} m²</div>
-                                <div class="pro-adress"> {!! $product->district['path_with_type'] !!}</div>
+                                <div class="pro-adress">@if (isset($product->district)) {!! $product->district['path_with_type'] !!} @endif</div>
                                 <div class="date">
                                     {{ \Carbon\Carbon::parse($product['started_at'])->format('d/m/Y')}}
                                     <span class="tooltip-time">{{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}</span>
