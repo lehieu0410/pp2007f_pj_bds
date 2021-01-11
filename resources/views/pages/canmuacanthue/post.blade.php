@@ -13,29 +13,17 @@
         <link rel="stylesheet" type="text/css" href="https://staticfile.batdongsan.com.vn/css/box.css" />
         <div id="MiddleSubMenu">
             <div class="home-top-search" style="padding-bottom: 10px !important;">
-                <div class="home-top-search-keyword">
-                    <input type="text" placeholder="Nhập từ khóa để tìm theo cụm từ" id="txt1" class="txtKeyword">
-                </div>
-                <div class="advance-select-box" id="home-top-search">
-                    <span class="select-text hasvalue">
-                        <span class="select-text-content" style="width: 100px;">Hỏi đáp</span>
-                    </span>
-                    <input type="hidden" id="cboTypeSearch" value="4">
-                </div>
-                <div id="home-top-search-otions" class="advance-select-options advance-options" hddvalue="cboTypeSearch"
-                    ddlid="home-top-search" style="">
-                    <ul class="advance-options" style="min-width: 125px;">
-                        <li vl="1" class="advance-options" style="min-width: 93px;">Nhà đất bán</li>
-                        <li vl="2" class="advance-options" style="min-width: 93px;">Nhà đất cho thuê</li>
-                        <li vl="3" class="advance-options" style="min-width: 93px;">Tin tức</li>
-                        <li vl="5" class="advance-options" style="min-width: 93px;">Dự án</li>
-                        <li vl="6" class="advance-options" style="min-width: 93px;">Doanh nghiệp</li>
-                        <li vl="7" class="advance-options" style="min-width: 93px;">Môi giới</li>
-                    </ul>
-                </div>
-                <img src="https://file4.batdongsan.com.vn/images/header-bottom-button.jpg" onclick="SearchKeyword();"
-                    class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all" alt="Tìm kiếm"
-                    name="btnSearch" id="btnSearch">
+                <form class="form-group" method="GET" action="{{ Route('buyerSellerSearch') }}">
+                    <div class="input-group row-md-12">
+                        <input type="text" class="form-control col-md-9 btn-outline-success" placeholder="Search for..." name="search">
+
+                        
+                        <button class="btn btn-outline-success col-md-2 form-control" type="submit" style="margin-left: 5px">   Search   <i class="fa fa-search" aria-hidden="true"></i> </button>
+
+                        
+                    </div>
+
+                </form>
             </div>
             <div id="gglbody"></div>
             <div class="clear"></div>
@@ -58,15 +46,14 @@
                         <div id="product-detail" uid="153939">
                             <div class="pm-title">
                                 <h1>
-                                    C&#x1EA7;n t&#xEC;m mua nh&#xE0; ch&#xED;nh ch&#x1EE7; gi&#xE1; t&#x1ED1;t t&#x1EA1;i
-                                    c&#xE1;c qu&#x1EAD;n TP HCM
+                                    C&#x1EA7;n t&#xEC;m mua nh&#xE0; ch&#xED;nh ch&#x1EE7; gi&#xE1; t&#x1ED1;t t&#x1EA1;i {{ $buyerSeller->district->name }}
                                 </h1>
                             </div>
                             <div class="kqchitiet">
                                 <span class="diadiem - title mar - right - 15"><b> Khu vực:&nbsp;</b><strong
                                         class="greencolor">Mua nhà mặt phố</strong> tại <a
-                                        href="/mua-nha-mat-pho-binh-thanh"
-                                        title="Bình Thạnh">{{ $buyerSeller->district->name }}</a> {{ $buyerSeller->district->path }}</span></br><span style="display: inline-block;"><span
+                                        href="#"
+                                        title="Bình Thạnh"></a> {{ $buyerSeller->district->path }}</span></br><span style="display: inline-block;"><span
                                         class="gia-title mar-right-15"><b>Giá: </b><strong>{{ $buyerSeller->price }} </strong> tỷ</span>
                                         <span class="gia-title"><b>Diện tích: </b><strong>{{ $buyerSeller->buyerSellerArea->name }}</strong></span></span>
                             </div>
@@ -340,7 +327,7 @@
                                 <div class="Header">
                                     <div class="Left">
                                     </div>
-                                    <div class="Repeat">
+                                    <div class="Repeat" style="height: 31px;">
                                         <h2>
                                             Mua nhà mặt phố tại {{ $buyerSeller->district->path }}
                                         </h2>

@@ -14,7 +14,7 @@ class BuyerSellerController extends Controller
     public function index(Request $request) {
         if(Cache::has('buyer_seller_cache'.'page'.($request->get('page')))){
             // dd(Cache::get('buyer_seller_cache'.($request->get('page'))));
-
+            Cache::flush('buyer_seller_cache'.'page'.($request->get('page')));
             return Cache::get('buyer_seller_cache'.'page'.($request->get('page')));
 
         } else {
@@ -58,11 +58,21 @@ class BuyerSellerController extends Controller
     }
 
     public function post($id) {
+
         $buyerSeller=BuyerSeller::with(['imageDemo','disTrict','buyerSellerArea'])->find($id);
         $buyerSellers=BuyerSeller::all()->where('district_id',$buyerSeller->district_id);
         $provinces = Province::all();
 
         return view ('pages.canmuacanthue.post',compact('buyerSeller','buyerSellers','provinces'));
+    }
+
+    public function search(Request $request) {
+
+        $buyersellercost = BuyerSeller::search($request->search)->get();
+        $buyerSellers = BuyerSeller::search($request->search)->paginate(10);
+        $provinces = Province::all();
+
+        return view ('pages.canmuacanthue.index',compact('buyerSellers','buyersellercost','provinces'));
     }
 
 
