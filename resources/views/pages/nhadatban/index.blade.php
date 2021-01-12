@@ -47,15 +47,11 @@
                 <div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>
             </div>
             <ul class="search-bar-tab mar-left-16 pad-top-8 mar-right-16">
-                <li class="filter-nha-dat actived" ptype="38" style="width: 70px;" name="nha-dat-ban">Bán</li>
-                <li class="filter-nha-dat" ptype="49" style="width: 100px;" name="nha-dat-cho-thue">Cho thuê</li>
             </ul>
             <!-- <input data-val="true" data-val-required="The CateId field is required." id="type" name="CateId" type="hidden" value="38"> -->
 
             <div class="search-bar-suggestion pad-top-8 mar-right-16">
-                <input type="hidden" id="suggestionTemp">
-                <input id="Keyword" name="Keyword" type="hidden" value="">
-                <input type="text" placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                <input name="search" type="text" placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
                 <span class="icon-close hiding">
                     <img src="./assets/image/ic_close.png">
                 </span>
@@ -66,7 +62,7 @@
                     <br>
                     <select name="province" id="filter-province" class="province">
                         
-                        <option value="0" class="province">Toàn quốc</option>
+                        <option value="" class="province">Toàn quốc</option>
                         @foreach($provinces as $province)
                         <option value="{!! $province->code !!}" id="province-item" class="province"
                         @if(!isset($_GET['province']) || $_GET['province'] == 0)
@@ -84,7 +80,7 @@
                 <div class="select-control-label">
                     <div class="dropbox-label">Quận, huyện</div>
                     <select name="district" id="filter-district" class="district">
-                        <option value="0" class="district" >Tất cả</option>
+                        <option value="" class="district" >Tất cả</option>
                         @if(!isset($_GET['province']) || $_GET['province'] == 0)
                         @else
                         @foreach($districts as $district)
@@ -103,7 +99,7 @@
                 <div class="select-control-label">
                     <div class="dropbox-label">Mức giá</div>
                     <select name="price" id="filter-price">
-                        <option value="0"@if(!isset($_GET['price']) || $_GET['price'] == 0) selected @endif>Tất cả</option>
+                        <option value=""@if(!isset($_GET['price']) || $_GET['price'] == 0) selected @endif>Tất cả</option>
                         <option value="12" @if(!isset($_GET['price']) || $_GET['price'] == 0)
                     @elseif($_GET['price'] == 12)
                         selected
@@ -120,10 +116,10 @@
                     @elseif($_GET['price'] == 57)
                         selected
                     @endif >5 - 7 tỷ</option>
-                        <option value="710" @if(!isset($_GET['price']) || $_GET['price'] == 0)
-                    @elseif($_GET['price'] == 710)
+                        <option value="71000" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                    @elseif($_GET['price'] == 71000)
                         selected
-                    @endif >7 - 10 tỷ</option>
+                    @endif >Trên 7 tỷ</option>
                     
                     </select>
                 </div>
@@ -132,7 +128,7 @@
                 <div class="select-control-label">
                     <div class="dropbox-label">Diện tích</div>
                     <select name="area" id="filter-area">
-                        <option value="0" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                        <option value="" @if(!isset($_GET['area']) || $_GET['area'] == 0)
                         selected
                     @endif  >Tất cả</option>
                         <option value="0030" @if(!isset($_GET['area']) || $_GET['area'] == 0)
@@ -147,18 +143,10 @@
                     @elseif($_GET['area'] == 5080)
                         selected
                     @endif  >50 - 80 m2</option>
-                        <option value="80100" @if(!isset($_GET['area']) || $_GET['area'] == 0)
-                    @elseif($_GET['area'] == 80100)
+                        <option value="80100000" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                    @elseif($_GET['area'] == 80100000)
                         selected
-                    @endif  >80 - 100 m2</option>
-                        <option value="100150" @if(!isset($_GET['area']) || $_GET['area'] == 0)
-                    @elseif($_GET['area'] == 100150)
-                        selected
-                    @endif  >100 - 150 m2</option>
-                        <option value="150200" @if(!isset($_GET['area']) || $_GET['area'] == 0)
-                    @elseif($_GET['area'] == 150200)
-                        selected
-                    @endif  >150 - 200 m2</option>
+                    @endif  >Trên 80 m2</option>
                     </select>
                 </div>
 
@@ -269,8 +257,6 @@
 
                 @foreach ($result as $product)
                 <div class="vip0 product-item clearfix" uid="649852">
-{{-- 
-                    @foreach (($product->link) as $a) --}}
                     <div class="product-image ">
                         <a class="product-avatar" href="{!! Route('nhadatban_single_post', $product->id) !!}" title="{!! $product->title !!}" onclick="">
                             <img class="product-avatar-img" alt="{!! $product->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" 
@@ -279,8 +265,6 @@
                         <span class="product-feature">
                         </span>
                     </div>
-                    {{-- @break
-                            @endforeach --}}
                     <div class="product-main">
                         <h3 class="product-title">
                             @if ($product->post_type_id == 4)
@@ -326,22 +310,6 @@
             </div>
 
 
-
-
-
-
-            <div class="divide">&nbsp;</div>
-            <div class="product-seo-tag">
-                <h4 class="seo-tag-title">Tìm kiếm theo từ khóa</h4>
-                <ul class="ul-round clearfix">
-                    <li><a title="Bán đất gần làng đại học Thủ Đức" href="https://batdongsan.com.vn/tags/ban/ban-dat-gan-lang-dai-hoc-thu-duc">Bán đất gần làng đại học Thủ Đức</a></li>
-                    <li><a title="Bán nhà chính chủ" href="https://batdongsan.com.vn/tags/ban/ban-nha-chinh-chu">Bán nhà chính chủ</a></li>
-                    <li><a title="Bán nhà gần công viên Lê Thị Riêng" href="https://batdongsan.com.vn/tags/ban/ban-nha-gan-cong-vien-le-thi-rieng">Bán nhà gần công viên Lê Thị Riêng</a></li>
-                    <li><a title="Bán chung cư chính chủ" href="https://batdongsan.com.vn/tags/ban/ban-chung-cu-chinh-chu">Bán chung cư chính chủ</a></li>
-                    <li><a title="Bán đất chính chủ" href="https://batdongsan.com.vn/tags/ban/ban-dat-chinh-chu">Bán đất chính chủ</a></li>
-                    <li><a title="Bán nhà mặt phố gIÁ RẺ" href="https://batdongsan.com.vn/tags/ban/ban-nha-mat-pho-gia-re">Bán nhà mặt phố gIÁ RẺ</a></li>
-                </ul>
-            </div>
             <div class="divide">&nbsp;</div>
             <div class="product-seo-text">
                 <div>Hàng nghìn tin đăng <strong>mua bán nhà đất tại Việt Nam</strong> được rao trên <strong>Batdongsan.com.vn</strong>
@@ -396,7 +364,7 @@
                         <li><a href="?price=23" title="Nhà đất cho thuê toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
                         <li><a href="?price=35" title="Nhà đất cho thuê toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
                         <li><a href="?price=57" title="Nhà đất cho thuê toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
-                        <li><a href="?price=710" title="Nhà đất cho thuê toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
+                        <li><a href="?price=71000" title="Nhà đất cho thuê toàn quốc giá 7 - 10 tỷ">Trên 7 tỷ</a></li>
                     </ul>
                 </div>
             </div>
@@ -410,9 +378,7 @@
                         <li><a href="?area=0030" title="Nhà đất cho thuê toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
                         <li><a href="?area=3050" title="Nhà đất cho thuê toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
                         <li><a href="?area=5080" title="Nhà đất cho thuê toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
-                        <li><a href="?area=80100" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
-                        <li><a href="?area=100150" title="Nhà đất cho thuê toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
-                        <li><a href="?area=150200" title="Nhà đất cho thuê toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
+                        <li><a href="?area=80100000" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">Trên 80 m2</a></li>
                     </ul>
                 </div>
             </div>
@@ -434,37 +400,6 @@
                             </h3>
                         </li>
                         @endforeach
-                    </ul>
-                </div>
-            </div>
-
-
-
-            <div class="box-common box-common-filled box-utility link-hover-blue">
-                <h4 class="box-title">Hỗ trợ tiện ích</h4>
-                <div class="box-content">
-                    <ul>
-                        <li>
-                            <a href="/ho-tro-tien-ich/ht-xem-huong-nha" title="Tư vấn phong thủy" rel="nofollow">
-                                Tư vấn phong thủy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ho-tro-tien-ich/ht-du-toan-chi-tiet" title="Dự tính chi phí làm nhà" rel="nofollow">
-                                Dự tính chi phí làm nhà
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ho-tro-tien-ich/ht-tinh-lai-suat" title="Tính lãi suất" rel="nofollow">
-                                Tính lãi suất
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/quy-trinh-xay-nha" title="Quy trình xây nhà" rel="nofollow">Quy trình xây nhà</a>
-                        </li>
-                        <li>
-                            <a href="/ho-tro-tien-ich/ht-xem-tuoi-xay-nha" title="Xem tuổi làm nhà" rel="nofollow">Xem tuổi làm nhà</a>
-                        </li>
                     </ul>
                 </div>
             </div>
