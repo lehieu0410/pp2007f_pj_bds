@@ -136,7 +136,7 @@ Route::get('/can-mua-can-thue/', 'BuyerSellerController@index')->name('buyersell
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
 Route::get('/can-mua-can-thue-post{id}', 'BuyerSellerController@post')->name('buyersellerpost');
-
+Route::get('/can-mua-can-thue/search', 'BuyerSellerController@search')->name('buyerSellerSearch');
 
 
 //Phong Thuy
@@ -158,6 +158,7 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
     // admin
         // Dashboard
         Route::get('/index','UserController@dashIndex')->name('dash');
+        Route::get('/indexajax','UserController@dashIndexAjax')->name('dashAjax');
 
 
 

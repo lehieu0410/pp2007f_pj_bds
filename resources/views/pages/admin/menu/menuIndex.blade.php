@@ -26,6 +26,7 @@
                                 <label for="selectable1"></label>
                             </div>
                         </th>
+                        <th>STT</th>
                         <th>Name</th>
                         <th>Parent_id</th>
                         <th>Slug</th>
@@ -42,6 +43,9 @@
                                 <input id="{{ $menu->id }}" type="checkbox" value="{{ $menu->id }}">
                                 <label for="{{ $menu->id }}"></label>
                             </div>
+                        </td>
+                        <td>
+                            {{$menu->id}}
                         </td>
                         <td>
                             {{$menu->name}}

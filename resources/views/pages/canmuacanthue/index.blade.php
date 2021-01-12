@@ -2,6 +2,8 @@
 @section('title', 'Nhà đất cho thuê, cho thuê nhà Việt Nam | Nhà đất cho thuê, cho thuê nhà tại Việt Nam')
 @section('style-libraries')
     <link rel="stylesheet" type="text/css" href="/assets/css/box.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
     <style>
         ul.pagination li {
             display: inline;
@@ -17,33 +19,27 @@
         <input type="hidden" value="1" id="activeTxtSelect">
         <div id="MiddleSubMenu">
             <div class="home-top-search" style="padding-bottom: 10px !important;">
-                <div class="home-top-search-keyword">
-                    <input type="text" placeholder="Nhập từ khóa để tìm theo cụm từ" id="txt1" class="txtKeyword">
-                </div>
-                <div class="advance-select-box" id="home-top-search">
-                    <span class="select-text">
-                        <span class="select-text-content" style="width: 100.778px;">Nhà đất bán</span>
-                    </span>
-                    <input type="hidden" id="cboTypeSearch" value="1">
-                </div>
-                <div id="home-top-search-otions" class="advance-select-options advance-options" hddvalue="cboTypeSearch"
-                    ddlid="home-top-search" style="">
-                    <ul class="advance-options" style="min-width: 124px;">
-                        <li vl="1" class="advance-options current" style="min-width: 92px;">Nhà đất bán</li>
-                        <li vl="2" class="advance-options" style="min-width: 92px;">Nhà đất cho thuê</li>
-                        <li vl="3" class="advance-options" style="min-width: 92px;">Tin tức</li>
-                        <li vl="5" class="advance-options" style="min-width: 92px;">Dự án</li>
-                        <li vl="6" class="advance-options" style="min-width: 92px;">Doanh nghiệp</li>
-                        <li vl="7" class="advance-options" style="min-width: 92px;">Môi giới</li>
-                    </ul>
-                </div>
-                <img src="/assets/image/header-bottom-button.jpg" onclick="SearchKeyword();"
-                    class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all" alt="Tìm kiếm"
-                    name="btnSearch" id="btnSearch">
+                <form class="form-group" method="GET" action="{{ Route('buyerSellerSearch') }}">
+                    <div class="input-group row-md-12">
+                        <input type="text" class="form-control col-md-9 btn-outline-success" placeholder="Search for..." name="search">
+
+                        
+                        <button class="btn btn-outline-success col-md-2 form-control" type="submit" style="margin-left: 5px">   Search   <i class="fa fa-search" aria-hidden="true"></i> </button>
+
+                        
+                    </div>
+
+                </form>
+
+
+
+
+
             </div>
             <div id="gglbody"></div>
             <div class="clear"></div>
         </div>
+        <div class = "col-md-12" style="height: 50px"></div>
         <div class="body-left">
             <div id="Breadcrumb"></div>
             <div id="TopContent"></div>
@@ -70,7 +66,7 @@
                             <div class="Main">
                                 <div class="Header">
                                     <div class="Left"></div>
-                                    <div class="Repeat">
+                                    <div class="Repeat" style="height: 31px;">
                                         <h2>
                                             Nhà đất Cần mua - Cần thuê tại Việt Nam
                                         </h2>

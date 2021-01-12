@@ -64,7 +64,7 @@ class MenuController extends Controller
         if($menu->save()){
             $mess = 'Update menu successfull!';
         }
-        return view('pages.admin.menu.editMenu', compact('menu'))->with('mess', $mess);
+        return redirect()->back()->with('mess', $mess);
     }
 
     public function delete(Request $request, $id)

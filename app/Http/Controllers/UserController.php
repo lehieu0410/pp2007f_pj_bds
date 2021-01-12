@@ -12,6 +12,7 @@ use App\Models\Ward;
 use App\Models\Products;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
@@ -177,7 +178,55 @@ class UserController extends Controller
 
         $users = User::onlyTrashed()->get();
         
-        return view ('admin.dashboard.index',compact('user','products','users','sales','reve','item'));
+        return view ('admin.dashboard.index',compact('user','products','users','sales','reve','item','year'));
+    }
+
+    public function dashIndexAjax(Request $request) {
+        $user = Auth::user();
+        $year1 = $request->year;
+        $year = Date('Y');
+        if($year = $year1) {
+            return redirect()->route('dash');
+        }
+        elseif(DB::table('products')->whereYear(('created_at'), $year1)->get()->count()==0)
+        {
+            return redirect()->route('dash')->with('mess','No data Number');
+        } else {
+
+        
+        $item[0] = ['month','Sales', 'Revenues'];
+        $products = DB::table('products')->orderBy('created_at','DESC')->whereYear(('created_at'), $year1)->get()->toArray();
+        $productNews=[];
+        foreach ($products as $product)
+            {   
+                $monthp = strtotime($product->created_at);
+                $product->created_at = date('m', $monthp);
+                $productNews[$product->created_at][] = $product;
+            };
+            sort($productNews);
+            for ($i=1; $i<= 12; $i++) {
+
+                $sales = (int)count($productNews[$i-1]);
+                $reve =0;
+                foreach ($productNews[$i-1] as $productNew)
+                {
+                    $reve += ($reve + $productNew->post_price)/100000;
+                };
+                
+                $item[$i] = [$i.'/'.$year1, $sales, $reve];
+    
+            }
+     
+
+
+        $item = json_encode($item);
+
+        
+
+        $users = User::onlyTrashed()->get();
+        
+        return view ('admin.dashboard.index',compact('user','users','sales','reve','item','year'));
+        }
     }
 
     public function memberEditUser($id) {
