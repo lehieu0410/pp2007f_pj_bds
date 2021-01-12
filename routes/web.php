@@ -78,9 +78,10 @@ Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
 Route::get('/nhamoigioi{id}', 'DanhbaController@singlepost1')->name('singlepost1');
 
 
-Route::get('search', 'DanhbaController@getSearch')->name('search');
+// Route::get('search', 'DanhbaController@getSearch')->name('search');
 Route::get('/nha-moi-gioi-province{id}', 'DanhbaController@searchProvince')->name('searchProvince');
 Route::get('/nha-moi-gioi/distric', 'DanhbaController@searchProvinceAjax')->name('searchProvinceAjax');
+Route::get('fullTextSearch', 'DanhbaController@fullTextSearch')->name('fullTextsearch');
 
 
 
