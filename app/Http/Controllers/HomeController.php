@@ -12,6 +12,7 @@ use App\Models\District;
 use App\Models\Province;
 use App\Models\Slide;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -19,13 +20,16 @@ class HomeController extends Controller
         
         
             
-            $articles = Article::limit(6)->orderBy('id','DESC')->get();
+            $articles = Article::limit(6)->orderBy('id','DESC')->SELECT(DB::raw('*, DATEDIFF(CURDATE(), created_at)*24 AS hours'))->get();
+
             $i = 0;
             $j = 0;
             $k = 0;
             $l = 0;
+
             $districs = District::all();
             $provinces = Province::all();
+            $date = date("d/m/Y");
     
             $banners = Slide::where('type','banner')->get();
             $sidebars = Slide::where('type','sidebar')->get();
@@ -34,7 +38,7 @@ class HomeController extends Controller
             $province1 = Province::orderBy('count_posts', 'desc')->limit(1)->get();
             $province2 = Province::orderBy('count_posts', 'desc')->skip(1)->take(2)->get();
             $province3 = Province::orderBy('count_posts', 'desc')->skip(3)->take(2)->get();
-            return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','banners', 'sidebars', 'province1', 'province2', 'province3'));
+            return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','banners', 'sidebars', 'province1', 'province2', 'province3','date'));
                     
     }
 
