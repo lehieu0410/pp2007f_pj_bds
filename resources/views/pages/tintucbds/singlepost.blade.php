@@ -92,29 +92,6 @@
         <div class="date-first">
             {!!$articles->updated_at!!}
         </div>
-        <div>
-            <div>
-                    <div class="inasub">
-                        <strong>Tin liên quan: </strong>
-                        <a href="/tin-tuc"> {!!$articles->title!!} </a>
-                    </div>
-
-                    <div class="subinart">
-                            <div class="artlist">
-                                    <a href="/tin-tuc" class="line">{!!$articles->title!!}</a>
-                            </div>
-                            <div class="artlist">
-                                    <a href="/tin-tuc">{!!$articles->title!!} </a>
-                            </div>
-                    </div>
-            </div>
-        </div>
-
-        <div class="detailsView-contents-style">
-            <h2 class="summary">
-                {!!$articles->title!!}
-            </h2>
-        </div>
 
         <div id="divContents" class="detailsView-contents-style detail-article-content">
             
@@ -124,8 +101,6 @@
 <em style="text-align: center;">{!!$articles->title!!}</em></p>
 
 
-<p><span style="font-size:18px;"><strong>&gt;&gt;&nbsp;<a href="/tin-tuc" style="text-align: justify;" target="_blank">{!!$articles->title!!}</a><br>
-&gt;&gt;&nbsp;<a href="/tin-tuc" target="_blank">{!!$articles->title!!}</a></strong></span></p>
         </div>
             <div class="article-dmca">
                 <a href="//www.dmca.com/Protection/Status.aspx?ID=d420f34f-74fa-421f-9dfe-b8aaf8392825" target="_blank" title="DMCA.com Protection Status" class="dmca-badge">
@@ -238,32 +213,9 @@
 
     </div>
 </div>
-<div id="RightMainContent" class="body-right">
+<div id="RightMainContent" class="body-right" style="width: 300px;float: right;margin-right: -60px; margin-top: 50px">
     <div>
             <div class="container-common">
-        <div>
-            <div>
-                <div class="newsletter-form-small">
-                    <div class="mb5">
-                        <div class="fl">
-                            <img src="https://file4.batdongsan.com.vn/images/icon-newsletter-small.jpg">
-                        </div>
-                        <div class="fl news-text">Nhận bản tin từ Batdongsan.com.vn</div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="newsletter-content">
-                        <div class="newsletter-bound">
-                            <div class="fl input">
-                                <input type="text" id="email" placeholder="Nhập email của bạn">
-                            </div>
-                            <div class="fl a"><a href="#" class="newsletter-register" id="newsletterRegister">Đăng ký</a></div>
-                            <div class="clear">&nbsp;</div>
-                            <div id="emailValid"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     </div>
@@ -279,87 +231,54 @@
     <div class="bor_box">
         <div class="list">
             <ul>
-                        <li>
-                            <a href="/Covid-19" title="B&#x110;S &amp; Covid-19">
-                                <span class="faq-name">
-                                    B&#x110;S &amp; Covid-19
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/kinh-nghiem-mua-ban-nha" title="Kinh nghi&#x1EC7;m mua b&#xE1;n nh&#xE0;">
-                                <span class="faq-name">
-                                    Kinh nghi&#x1EC7;m mua b&#xE1;n nh&#xE0;
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/bao-cao-thi-truong-batdongsancomvn" title="B&#xE1;o c&#xE1;o th&#x1ECB; tr&#x1B0;&#x1EDD;ng Batdongsan.com.vn">
-                                <span class="faq-name">
-                                    B&#xE1;o c&#xE1;o th&#x1ECB; tr&#x1B0;&#x1EDD;ng Batdongsan.com.vn
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/co-hen-voi-chuyen-gia-bat-dong-san" title="C&#xF3; h&#x1EB9;n v&#x1EDB;i chuy&#xEA;n gia b&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n">
-                                <span class="faq-name">
-                                    C&#xF3; h&#x1EB9;n v&#x1EDB;i chuy&#xEA;n gia b&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/dien-bien-thi-truong-bds-nam-2020" title="Di&#x1EC5;n bi&#x1EBF;n th&#x1ECB; tr&#x1B0;&#x1EDD;ng B&#x110;S n&#x103;m 2020">
-                                <span class="faq-name">
-                                    Di&#x1EC5;n bi&#x1EBF;n th&#x1ECB; tr&#x1B0;&#x1EDD;ng B&#x110;S n&#x103;m 2020
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/bao-ve-nguoi-mua-nha-dat" title="B&#x1EA3;o v&#x1EC7; ng&#x1B0;&#x1EDD;i mua nh&#xE0;, &#x111;&#x1EA5;t">
-                                <span class="faq-name">
-                                    B&#x1EA3;o v&#x1EC7; ng&#x1B0;&#x1EDD;i mua nh&#xE0;, &#x111;&#x1EA5;t
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/bai-infographic" title="Infographic">
-                                <span class="faq-name">
-                                    Infographic
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/bat-dong-san-tai-cac-dac-khu-kinh-te" title="B&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n t&#x1EA1;i c&#xE1;c &quot;&#x111;&#x1EB7;c khu&quot; kinh t&#x1EBF;">
-                                <span class="faq-name">
-                                    B&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n t&#x1EA1;i c&#xE1;c &quot;&#x111;&#x1EB7;c khu&quot; kinh t&#x1EBF;
-                                </span>
-                            </a>
-                        </li>
+                <li>    
+                    <button onclick="topic('kinh nghiem')">Kinh nghiệm mua bán nhà</button>
+                </li>
+
+                <li>    
+                    <button onclick="topic('bao cao')">Báo cáo thị trường ThangLongland.vn</button>
+
+                </li>
+
+                <li>    
+                    <button onclick="topic('tu van')">Có hẹn với chuyên gia bất động sản</button>
+
+                </li>
+
+                <li>    
+                    <button onclick="topic('tinh hinh')">Diễn biến thị trường BĐS năm 2020</button>
+
+                </li>
+
+                <li>    
+                    <button onclick="topic('chinh sach')">Bảo vệ người mua nhà, đất</button>
+
+                </li>
+
+                <li>    
+                    <button onclick="topic('bieu do')">Infographic</button>
+
+                </li>
+
+                <li>    
+                    <button onclick="topic('covid')">BĐS & Covid-19</button>
+
+                </li>
+
+                <li>    
+                    <button onclick="topic('du an')">Dự án mới</button>
+
+                </li>
+                
+                    
             </ul>
         </div>
             <div style="padding-left: 20px; padding-top: 5px; border-top: 1px solid #ccc; margin-top: 10px;">
-                <a href="/chu-de-trong-chu-de-ve-thong-tin-thi-truong" class="linktoall">Xem tất cả</a>
+                <a href="/chu-de-trong-chu-de-ve-thong-tin-thi-truong" class="linktoall"></a>
             </div>
     </div>
 </div>
-    <div style="clear: both; margin-bottom: 10px;">
-    </div>
-    <div class="box1">
-    <h2 class="h1">
-        Dành cho người xây nhà
-    </h2>
-    <ul>
-        <li>
-            <a href="/quy-trinh-xay-nha" title="Quy tr&#xEC;nh x&#xE2;y nh&#xE0;" rel="nofollow">Quy tr&#xEC;nh x&#xE2;y nh&#xE0;</a>
-        </li>
-        <li class="last">
-            <a href="/ho-tro-tien-ich/ht-xem-tuoi-xay-nha" title="Xem tu&#x1ED5;i x&#xE2;y nh&#xE0;" rel="nofollow">Xem tu&#x1ED5;i x&#xE2;y nh&#xE0;</a>
-        </li>
-    </ul>
-    <div class="clear">
-    </div>
-</div>
-
+    <div style="clear: both; margin-bottom: 10px;">   </div>
     <div style="clear:both;"></div>
     <div class="box-tien-ich">
         <div class="box-tien-ich">
@@ -390,22 +309,6 @@
     <div class="clear10"></div>
     <div style="clear:both;"></div>
     
-    <div style="clear:both;"></div>
-    <div class="fb-fanpage">
-    <div id="fb-root"></div>    
-    <script>
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=302507473246792";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-    <div class="fb-page" data-href="https://www.facebook.com/Batdongsandv/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-        <blockquote cite="https://www.facebook.com/Batdongsandv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Batdongsandv/">Batdongsan.com.vn</a></blockquote>
-    </div>
-</div>
 
     <div style="clear:both;"></div>
 </div>
@@ -612,6 +515,14 @@
     </script>
     
 </body>
+<script>
+    function topic(key) {
+      document.getElementById('searchnews').value= key;
+      document.getElementById('searchform').submit();
+    }
+
+
+</script>
 
 @endsection
 

@@ -7,7 +7,7 @@ class ArticleRepository implements ArticleRepositoryInterface
 {
     public function index()
     {
-        return Article::orderBy('id', 'desc')->limit(15)->get();
+        return Article::orderBy('id', 'desc')->simplePaginate(15);
     }
 
     public function articles($id)
