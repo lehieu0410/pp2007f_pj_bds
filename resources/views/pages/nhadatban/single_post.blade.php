@@ -63,15 +63,11 @@
                 <div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>
             </div>
             <ul class="search-bar-tab mar-left-16 pad-top-8 mar-right-16">
-                <li class="filter-nha-dat actived" ptype="38" style="width: 70px;" name="nha-dat-ban">Bán</li>
-                <li class="filter-nha-dat" ptype="49" style="width: 100px;" name="nha-dat-cho-thue">Cho thuê</li>
             </ul>
             <!-- <input data-val="true" data-val-required="The CateId field is required." id="type" name="CateId" type="hidden" value="38"> -->
 
             <div class="search-bar-suggestion pad-top-8 mar-right-16">
-                <input type="hidden" id="suggestionTemp">
-                <input id="Keyword" name="Keyword" type="hidden" value="">
-                <input type="text" placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                <input name="search" type="text" placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
                 <span class="icon-close hiding">
                     <img src="./assets/image/ic_close.png">
                 </span>
@@ -79,9 +75,10 @@
             <div class="select-control city-control">
                 <div class="select-control-label">
                     <div class="dropbox-label">Tỉnh, thành phố</div>
+                    <br>
                     <select name="province" id="filter-province" class="province">
                         
-                        <option value="0" class="province">Toàn quốc</option>
+                        <option value="" class="province">Toàn quốc</option>
                         @foreach($provinces as $province)
                         <option value="{!! $province->code !!}" id="province-item" class="province"
                         @if(!isset($_GET['province']) || $_GET['province'] == 0)
@@ -99,7 +96,7 @@
                 <div class="select-control-label">
                     <div class="dropbox-label">Quận, huyện</div>
                     <select name="district" id="filter-district" class="district">
-                        <option value="0" class="district" >Tất cả</option>
+                        <option value="" class="district" >Tất cả</option>
                         @if(!isset($_GET['province']) || $_GET['province'] == 0)
                         @else
                         @foreach($districts as $district)
@@ -118,7 +115,7 @@
                 <div class="select-control-label">
                     <div class="dropbox-label">Mức giá</div>
                     <select name="price" id="filter-price">
-                        <option value="0"@if(!isset($_GET['price']) || $_GET['price'] == 0) selected @endif>Tất cả</option>
+                        <option value=""@if(!isset($_GET['price']) || $_GET['price'] == 0) selected @endif>Tất cả</option>
                         <option value="12" @if(!isset($_GET['price']) || $_GET['price'] == 0)
                     @elseif($_GET['price'] == 12)
                         selected
@@ -135,10 +132,10 @@
                     @elseif($_GET['price'] == 57)
                         selected
                     @endif >5 - 7 tỷ</option>
-                        <option value="710" @if(!isset($_GET['price']) || $_GET['price'] == 0)
-                    @elseif($_GET['price'] == 710)
+                        <option value="71000" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                    @elseif($_GET['price'] == 71000)
                         selected
-                    @endif >7 - 10 tỷ</option>
+                    @endif >Trên 7 tỷ</option>
                     
                     </select>
                 </div>
@@ -147,7 +144,7 @@
                 <div class="select-control-label">
                     <div class="dropbox-label">Diện tích</div>
                     <select name="area" id="filter-area">
-                        <option value="0" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                        <option value="" @if(!isset($_GET['area']) || $_GET['area'] == 0)
                         selected
                     @endif  >Tất cả</option>
                         <option value="0030" @if(!isset($_GET['area']) || $_GET['area'] == 0)
@@ -162,18 +159,10 @@
                     @elseif($_GET['area'] == 5080)
                         selected
                     @endif  >50 - 80 m2</option>
-                        <option value="80100" @if(!isset($_GET['area']) || $_GET['area'] == 0)
-                    @elseif($_GET['area'] == 80100)
+                        <option value="80100000" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                    @elseif($_GET['area'] == 80100000)
                         selected
-                    @endif  >80 - 100 m2</option>
-                        <option value="100150" @if(!isset($_GET['area']) || $_GET['area'] == 0)
-                    @elseif($_GET['area'] == 100150)
-                        selected
-                    @endif  >100 - 150 m2</option>
-                        <option value="150200" @if(!isset($_GET['area']) || $_GET['area'] == 0)
-                    @elseif($_GET['area'] == 150200)
-                        selected
-                    @endif  >150 - 200 m2</option>
+                    @endif  >Trên 80 m2</option>
                     </select>
                 </div>
 
@@ -554,3 +543,47 @@
         </div>
     
         @endsection
+        @section('scripts')
+    <script>
+
+        $(document).ready(function() {
+            $('.filter-nha-dat').click(function() {
+                $(this).addClass('actived').siblings().removeClass('actived');
+            });
+
+
+            // clear filter
+            $('#link-reset').bind('click', function() {
+                $('#filter-province').val('0');
+                $('#filter-district').val('0');
+                $('#filter-price').val('0');
+                $('#filter-area').val('0');
+            });
+
+            $(".province").on('change', function() {
+                var id = $(this).val();
+                $.ajax({
+                    type: "get",
+                    url: "/getDistrict",
+                    data: {
+                        parent_code: id
+                    },
+                    dataType: "html",
+                    success: function(data) {
+
+                    }
+                }).done(function(data) {
+                    $('.district').html(data);
+                });
+            });
+
+            $('.custom-control-label').click(function(){
+                if($('.custom-dropbox').hasClass('hiding')){
+                    $('.custom-dropbox').removeClass('hiding');
+                }else{
+                    $('.custom-dropbox').addClass('hiding');
+                }               
+            })
+        });
+    </script>
+    @endsection

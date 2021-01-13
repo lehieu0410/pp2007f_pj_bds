@@ -70,26 +70,6 @@
         <div class="menu-bar pushmenu pushmenu-right">
 
             <div class="control-menu">
-                <div class="clearfix">
-                    <div class="login-group" style="" aria-label="Danh sách tin đã lưu" data-microtip-position="bottom"
-                        role="tooltip">
-                        <span class="notification" id="notiSave">
-                            <img class="iconNotiSave" src="/assets/image/ic_shortlist_002.svg">
-                            <i class="mnu-notify-icon-unread nqv" style="display: none"></i>
-                            <div class="listSave" style="display: none;">
-                                <div class="header">Tin đăng đã lưu</div>
-                                <div class="content">
-                                    <p class="center" style="padding: 80px 0 80px;"><img
-                                            src="/assets/image/EmptyState.svg" alt="no data"></p>
-                                </div>
-                                <div class="footer" style="display: none !important;">
-                                    <a class="marked-products-view-more" href="https://batdongsan.com.vn/tin-da-luu"
-                                        title="Xem tất cả">Xem tất cả</a>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                </div>
                 @guest
                     <div id="divUserStt" class="clearfix">
                         <div class="join-group">
@@ -103,7 +83,7 @@
                         </div>
                     </div>
                     <div id="Header_UserControl_divPostProduct">
-                        <a href="https://batdongsan.com.vn/dang-tin-rao-vat-ban-nha-dat" id="linkPostProduct"
+                        <a href="{{ route('login') }}" id="linkPostProduct"
                             class="btn-border-grey">Đăng tin</a>
                     </div>
 
@@ -223,7 +203,7 @@
                                                 src="/assets/image/ic_for_sale.svg"></span><span
                                             class="text">{{ $mp['name'] }}</span></a>
                                     <div class="arrrow"></div>
-                                    <ul>
+                                    {{-- <ul>
                                         @if (isset($arr_menu[$mp['id']]))
                                             @foreach ($arr_menu[$mp['id']] as $mp_c1)
                                                 <li class="lv1"><a href="{{ $mp_c1['slug'] }}"
@@ -241,7 +221,7 @@
                                                 </li>
                                             @endforeach
                                         @endif
-                                    </ul>
+                                    </ul> --}}
                                 </li>
 
                             @endforeach

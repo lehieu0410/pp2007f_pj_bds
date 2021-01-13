@@ -41,57 +41,58 @@
     <div class="new-home-2020">
         <div class="home-center">
             <div class="banner-home-slide">
-                <form id="boxSearchForm" action="{{ route('nha_dat_ban_post') }}" method="get" novalidate="novalidate">
-                    @csrf
+                <form id="boxSearchForm" action="{{ route('nha_dat_ban') }}" method="get" novalidate="novalidate">
                     <div class="search-bar shadow-lv-1 clearfix">
                         <div class="search-guide" style="left: 1274.5px; top: 64px; display: block;">
                             <div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>
                         </div>
                         <ul class="search-bar-tab mar-left-16 pad-top-8 mar-right-16">
-                            <li class="filter-nha-dat actived" ptype="38" style="width: 70px;" name="nha-dat-ban">Bán</li>
-                            <li class="filter-nha-dat" ptype="49" style="width: 100px;" name="nha-dat-cho-thue">Cho thuê
-                            </li>
                         </ul>
-                        <input data-val="true" data-val-required="The CateId field is required." id="type" name="CateId"
-                            type="hidden" value="38">
-
+                        <!-- <input data-val="true" data-val-required="The CateId field is required." id="type" name="CateId" type="hidden" value="38"> -->
+            
                         <div class="search-bar-suggestion pad-top-8 mar-right-16">
-                            <input type="hidden" id="suggestionTemp">
-                            <input id="Keyword" name="Keyword" type="hidden" value="">
-                            <input type="text" placeholder="Tìm kiếm địa điểm, khu vực"
-                                class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off"
-                                role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        <input name="search" type="text" @if (isset($_GET['search'])) value="{{ $_GET['search'] }}" @endif
+                             placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
                             <span class="icon-close hiding">
                                 <img src="./assets/image/ic_close.png">
                             </span>
                         </div>
                         <div class="select-control city-control">
                             <div class="select-control-label">
-                                <div class="dropbox-label">Khu vực</div>
-                                <select name="province" id="filter-province" class="province" data-type="province">
-                                    <option value="toan-quoc" name="toan-quoc" selected>Toàn quốc</option>
-                                    @foreach ($provinces as $province)
-                                        <option value="{!!  $province->slug !!}" name="$province->slug"
-                                            id="$province->code">{!! $province->name !!}</option>
+                                <div class="dropbox-label">Tỉnh, thành phố</div>
+                                <br>
+                                <select name="province" id="filter-province" class="province">
+                                    
+                                    <option value="" class="province">Toàn quốc</option>
+                                    @foreach($provinces as $province)
+                                    <option value="{!! $province->code !!}" id="province-item" class="province"
+                                    @if(!isset($_GET['province']) || $_GET['province'] == 0)
+                                    @elseif($_GET['province'] == $province->code)
+                                    selected
+                                    @endif
+                                    >{!! $province->name !!}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <!-- list tp cu~ -->
                         </div>
+                        
                         <div class="select-control district-control">
                             <div class="select-control-label">
                                 <div class="dropbox-label">Quận, huyện</div>
-                                <br>
-                                <select name="district" id="filter-district">
-                                    <option value="toan-quoc" selected>
-                                        Tất cả
-                                    </option>
-                                    <option value="1">
-                                        Test 1
-                                    </option>
-                                    <option value="2">
-                                        Test 2
-                                    </option>
+                                <select name="district" id="filter-district" class="district">
+                                    <option value="" class="district" >Tất cả</option>
+                                    @if(!isset($_GET['province']) || $_GET['province'] == 0)
+                                    @else
+                                    @foreach($districts as $district)
+                                    <option value="{!! $district->code !!}" class="district" 
+                                    @if(!isset($_GET['district']) || $_GET['district'] == 0)
+                                    @elseif($_GET['district'] == $district->code)
+                                    selected
+                                    @endif
+                                    >{!! $district->name !!}</option>
+                                    @endforeach
+                                    @endif
                                 </select>
                             </div>
                         </div>
@@ -99,34 +100,61 @@
                             <div class="select-control-label">
                                 <div class="dropbox-label">Mức giá</div>
                                 <select name="price" id="filter-price">
-                                    <option value="" selected>Tất cả</option>
-                                    <option value="1">1 - 2 tỷ</option>
-                                    <option value="2">2 - 3 tỷ</option>
-                                    <option value="3">3 - 5 tỷ</option>
-                                    <option value="4">5 - 7 tỷ</option>
-                                    <option value="5">7 - 10 tỷ</option>
+                                    <option value=""@if(!isset($_GET['price']) || $_GET['price'] == 0) selected @endif>Tất cả</option>
+                                    <option value="12" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                                @elseif($_GET['price'] == 12)
+                                    selected
+                                @endif >1 - 2 tỷ</option>
+                                    <option value="23" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                                @elseif($_GET['price'] == 23)
+                                    selected
+                                @endif >2 - 3 tỷ</option>
+                                    <option value="35" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                                @elseif($_GET['price'] == 35)
+                                    selected
+                                @endif >3 - 5 tỷ</option>
+                                    <option value="57" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                                @elseif($_GET['price'] == 57)
+                                    selected
+                                @endif >5 - 7 tỷ</option>
+                                    <option value="71000" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                                @elseif($_GET['price'] == 71000)
+                                    selected
+                                @endif >Trên 7 tỷ</option>
+                                
                                 </select>
                             </div>
                         </div>
                         <div class="select-control area-control">
                             <div class="select-control-label">
                                 <div class="dropbox-label">Diện tích</div>
-                                <select name="price" id="filter-area">
-                                    <option value="" selected>Tất cả</option>
-                                    <option value="1">1 - 2 tỷ</option>
-                                    <option value="2">30 - 50 m2</option>
-                                    <option value="3">50 - 80 m2</option>
-                                    <option value="4">80 - 100 m2</option>
-                                    <option value="5">100 - 150 m2</option>
-                                    <option value="6">150 - 200 m2</option>
+                                <select name="area" id="filter-area">
+                                    <option value="" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                                    selected
+                                @endif  >Tất cả</option>
+                                    <option value="0030" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                                @elseif($_GET['area'] == 0030)
+                                    selected
+                                @endif  >< 30 m2</option>
+                                    <option value="3050" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                                @elseif($_GET['area'] == 3050)
+                                    selected
+                                @endif  >30 - 50 m2</option>
+                                    <option value="5080" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                                @elseif($_GET['area'] == 5080)
+                                    selected
+                                @endif  >50 - 80 m2</option>
+                                    <option value="80100000" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                                @elseif($_GET['area'] == 80100000)
+                                    selected
+                                @endif  >Trên 80 m2</option>
                                 </select>
                             </div>
-
+            
                         </div>
-
+            
                         <input type="submit" id="btnSearch" class="btn-blue-7" value="Tìm kiếm">
-                        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left"
-                            role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
+                        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
                     </div>
                 </form>
 
@@ -1492,5 +1520,48 @@
                     });
             });
 
-        </script>
-    @endsection
+    </script>
+
+<script>
+
+    $(document).ready(function() {
+        $('.filter-nha-dat').click(function() {
+            $(this).addClass('actived').siblings().removeClass('actived');
+        });
+
+
+        // clear filter
+        $('#link-reset').bind('click', function() {
+            $('#filter-province').val('0');
+            $('#filter-district').val('0');
+            $('#filter-price').val('0');
+            $('#filter-area').val('0');
+        });
+
+        $(".province").on('change', function() {
+            var id = $(this).val();
+            $.ajax({
+                type: "get",
+                url: "/getDistrict",
+                data: {
+                    parent_code: id
+                },
+                dataType: "html",
+                success: function(data) {
+
+                }
+            }).done(function(data) {
+                $('.district').html(data);
+            });
+        });
+
+        $('.custom-control-label').click(function(){
+            if($('.custom-dropbox').hasClass('hiding')){
+                $('.custom-dropbox').removeClass('hiding');
+            }else{
+                $('.custom-dropbox').addClass('hiding');
+            }               
+        })
+    });
+</script>
+@endsection
