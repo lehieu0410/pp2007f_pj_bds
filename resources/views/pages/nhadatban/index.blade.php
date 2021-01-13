@@ -51,7 +51,8 @@
             <!-- <input data-val="true" data-val-required="The CateId field is required." id="type" name="CateId" type="hidden" value="38"> -->
 
             <div class="search-bar-suggestion pad-top-8 mar-right-16">
-                <input name="search" type="text" placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+            <input name="search" type="text" @if (isset($_GET['search'])) value="{{ $_GET['search'] }}" @endif
+                 placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
                 <span class="icon-close hiding">
                     <img src="./assets/image/ic_close.png">
                 </span>

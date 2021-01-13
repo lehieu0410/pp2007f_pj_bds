@@ -66,8 +66,14 @@ class NhaDatBanController extends Controller
             $area_max = substr($_GET['area'], 2);
             $condition_area = 'AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max ;
         } 
-        $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
-            $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type as p_name, 
+        
+        $search = isset($_GET['search']) ? $_GET['search'] : '';
+        $condition_search = '';
+        if($search != '') {
+            $condition_search = "AND title LIKE '%$search%' " ;
+        }
+
+            $result = DB::select(DB::raw("SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type as p_name, 
             provinces.code, provinces.count_posts, districts.name_with_type as d_name,wards.name_with_type, images.link 
                 FROM products
                 INNER JOIN provinces ON provinces.code = products.province_code
@@ -76,25 +82,23 @@ class NhaDatBanController extends Controller
                 INNER JOIN images ON images.products_id = products.id
                 WHERE menu_category_id IN (1,2,3) AND status = 1 AND deleted_at is null 
                 AND CURRENT_DATE() BETWEEN started_at AND expired_at 
-                ' . $condition_province . '
-                ' . $condition_district . '
-                ' . $condition_price . '
-                ' . $condition_area . '
+                $condition_province $condition_district $condition_price $condition_area  $condition_search 
                 GROUP BY products.id  
-                ORDER BY post_type_id DESC, products.created_at DESC'));
+                ORDER BY post_type_id DESC, products.created_at DESC"));
             $districts = District::where('parent_code', $province)->get();
             $province_name = Province::where('code', $province)->get('name');
+            $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
             $count_posts = count($result);
             return view("pages.nhadatban.index", compact('districts','result', 'provinces', 'count_posts', 'province_name'));
         }
 
     public function nhaDatBanSinglePost($id)
     {
-        $key = 'singlePost';
-        $key .= $id;
-        if (Cache::has($id)) {
-            return (Cache::get($id));
-        } else {
+        // $key = 'singlePost';
+        // $key .= $id;
+        // if (Cache::has($id)) {
+        //     return (Cache::get($id));
+        // } else {
             $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
             $products = $this->productRepository->singlePost($id);
             $products_area = $this->productRepository->relatedPost($id);
@@ -102,10 +106,11 @@ class NhaDatBanController extends Controller
             $images_area = $this->imageRepository->getAll();
             $brokers = Broker::paginate(10);
             $news = Article::paginate(10);
-            $cache_view = view("pages.nhadatban.single_post", compact('news', 'brokers','products', 'images_area', 'images', 'products_area', 'provinces'))->render();
-            Cache::put($key, $cache_view, 10000);
-            return $cache_view;
-        }
+            return view("pages.nhadatban.single_post", compact('news', 'brokers','products', 'images_area', 'images', 'products_area', 'provinces'));
+        //     $cache_view = view("pages.nhadatban.single_post", compact('news', 'brokers','products', 'images_area', 'images', 'products_area', 'provinces'))->render();
+        //     Cache::put($key, $cache_view, 10000);
+        //     return $cache_view;
+        // }
     }
 
     public function banCanHoChungCu()
