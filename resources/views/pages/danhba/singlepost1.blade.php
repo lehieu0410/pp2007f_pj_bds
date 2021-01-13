@@ -1,4 +1,5 @@
 @foreach ($brokers as $brokers)
+@foreach ($provinces as $provinces)
 @extends('layouts.master')
 
 @section('title', )
@@ -9,6 +10,8 @@
 <link rel="stylesheet" type="text/css" href="https://staticfile.batdongsan.com.vn/css/Broker/broker.min.css" media="all">
 <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
 <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
+<!-- Laravel Mix -->
+<link rel="stylesheet" href="{{asset('css/app.css')}}">
 @endsection
 @section('content')
   
@@ -56,7 +59,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div class="form-content">
-        <div class="adPosition" positionCode="BANNER_POSITION_BACKGROUND" style=""></div>
+        <div class="adPosition" positionCode="BANNER_POSITION_BACKGROUND"></div>
 <script type='text/javascript'> var bannerContext={"CateId":null,"PageId":209,"CityCode":null,"DistrictId":null,"CurrentPage":232};</script>
 
         <div id="staticDomain" statsDomain="https://statistic.batdongsan.com.vn" data-fileimg="https://file4.batdongsan.com.vn" data-web="https://batdongsan.com.vn" data-msvrouter="/microservice-architecture-router" data-msvrouter-personal="/microservice-architecture-router-personal" data-cssServer="https://staticfile.batdongsan.com.vn" data-oldsystem="https://batdongsan.com.vn" data-content="https://batdongsan.com.vn" data-domainorigin="batdongsan.com.vn" data-sug-sell="https://suggestion1.batdongsan.com.vn/" data-sug-rent="https://suggestion2.batdongsan.com.vn/" class="hide"></div>
@@ -89,7 +92,44 @@
             <div class="site-center">
                 
 
+            <div id="SiteLeft" class="banner-left">
+        <div class="container-default">
+            <div>
+                <div id="ban_wide_left" class="ban_wide_scroll" style="display: block; top: 146px; position: absolute; left: 4.5px; bottom: inherit;width:180px">
+                    <div class="adPosition" positioncode="BANNER_POSITION_WIDE_LEFT" style="margin-bottom: 0px">
+                        <div class="adshared" rt="">
+                            <div class="adshareditem aditem" time="15" style="display: none;" src="https://file4.batdongsan.com.vn/2020/11/02/UVSXfqBy/20201102142443-d843.jpg" altsrc="https://file4.batdongsan.com.vn/images/no-photo1.jpg" link="http://experttalk.batdongsan.com.vn/khac/adapt-2-change-3-giu-lua-kinh-doanh-vuot-qua-covid-ev134?utm_source=BDS&amp;utm_medium=banner&amp;utm_campaign=A2C%233" bid="11037" tip="" tp="7" w="160" h="600" isbg="false" clr="false" k=""><a href="/microservice-architecture-router/Systems/Banner/Click?bannerid=11037" target="_blank" title="" rel="nofollow"><img src="https://file4.batdongsan.com.vn/2020/11/02/UVSXfqBy/20201102142443-d843.jpg" style="max-width: 100%; height:600px;"></a></div>
+                            @foreach($sidebars as $sidebar)
+                            <div class="adshareditem aditem" time="15" style="display: block;" src="https://file4.batdongsan.com.vn/2020/11/11/ZBfLmblA/20201111093910-ba2f.jpg" altsrc="https://file4.batdongsan.com.vn/images/no-photo1.jpg" link="https://avpe.propertyguru.com.my/?lang=vn" bid="11057" tip="" tp="7" w="160" h="600" isbg="false" clr="false" k=""><a href="/microservice-architecture-router/Systems/Banner/Click?bannerid=11057" target="_blank" title="" rel="nofollow"><img src="/storage/img/slides/{!! $sidebar->link!!}" style="max-width:100%; height:500px;"></a></div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        var bannerContext = {
+                            "CateId": null,
+                            "PageId": 404,
+                            "CityCode": null,
+                            "DistrictId": null,
+                            "CurrentPage": 404
+                        };
+                    </script>
+                </div>
 
+                <div id="ban_left" class="ban_scroll" style="display: block; top: 146px; position: absolute; left: 44.5px; bottom: inherit;">
+                    <div class="adPosition" positioncode="BANNER_POSITION_LEFT" style="margin-bottom: 0px"></div>
+                    <script type="text/javascript">
+                        var bannerContext = {
+                            "CateId": null,
+                            "PageId": 404,
+                            "CityCode": null,
+                            "DistrictId": null,
+                            "CurrentPage": 404
+                        };
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
 <div id="MiddleSubMenu">
     
 
@@ -98,143 +138,21 @@
         <div class="col1">
             <div class="label_search">Tìm kiếm môi giới</div>
         </div>
+        <form role="search" method="get" id="searchform" action="{{route('fullTextsearch')}}">
         <div class="col2">
             <div style="position: relative;">
-                <input type="text" id="txtKeyword" class="suggest" placeholder="Nhập từ khóa tìm kiếm" maxlength="100">
+                <input type="text" id="txtKeyword" name="key" class="suggest"  placeholder="Nhập từ khóa tìm kiếm" maxlength="100">
             </div>
         </div>
         <div class="clear"></div>
         <div id="searchcontrol">
-            <div class="col1">
-                <div id="divBrCategory" class="comboboxs advance-select-box mr10">
-                    <span class="select-text hasvalue">
-                        <span class="select-text-content" style="width: 135px;"> Lo&#x1EA1;i giao d&#x1ECB;ch</span>
-                    </span>
-                    <input type="hidden" name="ddlCategoriess" id="hdBrCategory" runat="server" clientidmode="Static" />
-                    <div id="divBrCategoryOptions" class="advance-select-options advance-options">
-                        <ul class="advance-options" style="min-width: 160px;">
-                            <li vl="" class="advance-options current" style="min-width: 128px;">Loại giao dịch</li>
-                            <li vl="38" data-value="nha-dat-ban" class="advance-options " style="min-width: 128px;">Nhà đất bán</li>
-                            <li vl="49" data-value="nha-dat-cho-thue" class="advance-options " style="min-width: 128px;">Nhà đất cho thuê</li>
-                        </ul>
-                    </div>
-                </div>                
-            </div>
-            <div class="col2">
-                <div id="divSubCategory" class="comboboxs advance-select-box mr10">
-                    <span class="select-text">
-                        <span class="select-text-content" style="width: 135px;">Loại nhà đất</span>
-                    </span>
-                    <input type="hidden" id="hdSubCategory" value="0">
-                    <div id="divSubCategoryOptions" class="advance-select-options advance-options" style="min-width: 192px;">
-                        <ul class="advance-options" style="min-width: 160px;">
-                            <li vl="" class="advance-options">Loại nhà đất</li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="divBrCity" class="comboboxs advance-select-box mr10">
-                    <span class="select-text hasvalue">
-                        <span class="select-text-content" style="width: 135px;">Tỉnh/Thành phố</span>
-                    </span>
-                    <input type="hidden" id="hdBrCity" value="HN">
-                    <div id="divBrCityOptions" class="advance-select-options advance-options">
-                    <ul class="advance-options" style="min-width: 160px;">
-                        <li vl="" class="advance-options" style="min-width: 128px;">Tỉnh/Thành phố</li>
-                                <li vl="SG" data-value="tp-hcm" class="advance-options" style="min-width: 128px;">H&#x1ED3; Ch&#xED; Minh</li>
-                                <li vl="HN" data-value="ha-noi" class="advance-options" style="min-width: 128px;">H&#xE0; N&#x1ED9;i</li>
-                                <li vl="DDN" data-value="da-nang" class="advance-options" style="min-width: 128px;">&#x110;&#xE0; N&#x1EB5;ng</li>
-                                <li vl="BD" data-value="binh-duong" class="advance-options" style="min-width: 128px;">B&#xEC;nh D&#x1B0;&#x1A1;ng</li>
-                                <li vl="DNA" data-value="dong-nai" class="advance-options" style="min-width: 128px;">&#x110;&#x1ED3;ng Nai</li>
-                                <li vl="KH" data-value="khanh-hoa" class="advance-options" style="min-width: 128px;">Kh&#xE1;nh H&#xF2;a</li>
-                                <li vl="HP" data-value="hai-phong" class="advance-options" style="min-width: 128px;">H&#x1EA3;i Ph&#xF2;ng</li>
-                                <li vl="LA" data-value="long-an" class="advance-options" style="min-width: 128px;">Long An</li>
-                                <li vl="QNA" data-value="quang-nam" class="advance-options" style="min-width: 128px;">Qu&#x1EA3;ng Nam</li>
-                                <li vl="VT" data-value="ba-ria-vung-tau" class="advance-options" style="min-width: 128px;">B&#xE0; R&#x1ECB;a V&#x169;ng T&#xE0;u</li>
-                                <li vl="DDL" data-value="dak-lak" class="advance-options" style="min-width: 128px;">&#x110;&#x1EAF;k L&#x1EAF;k</li>
-                                <li vl="CT" data-value="can-tho" class="advance-options" style="min-width: 128px;">C&#x1EA7;n Th&#x1A1;</li>
-                                <li vl="BTH" data-value="binh-thuan" class="advance-options" style="min-width: 128px;">B&#xEC;nh Thu&#x1EAD;n  </li>
-                                <li vl="LDD" data-value="lam-dong" class="advance-options" style="min-width: 128px;">L&#xE2;m &#x110;&#x1ED3;ng</li>
-                                <li vl="TTH" data-value="thua-thien-hue" class="advance-options" style="min-width: 128px;">Th&#x1EEB;a Thi&#xEA;n Hu&#x1EBF;</li>
-                                <li vl="KG" data-value="kien-giang" class="advance-options" style="min-width: 128px;">Ki&#xEA;n Giang</li>
-                                <li vl="BN" data-value="bac-ninh" class="advance-options" style="min-width: 128px;">B&#x1EAF;c Ninh</li>
-                                <li vl="QNI" data-value="quang-ninh" class="advance-options" style="min-width: 128px;">Qu&#x1EA3;ng Ninh</li>
-                                <li vl="TH" data-value="thanh-hoa" class="advance-options" style="min-width: 128px;">Thanh H&#xF3;a</li>
-                                <li vl="NA" data-value="nghe-an" class="advance-options" style="min-width: 128px;">Ngh&#x1EC7; An</li>
-                                <li vl="HD" data-value="hai-duong" class="advance-options" style="min-width: 128px;">H&#x1EA3;i D&#x1B0;&#x1A1;ng</li>
-                                <li vl="GL" data-value="gia-lai" class="advance-options" style="min-width: 128px;">Gia Lai</li>
-                                <li vl="BP" data-value="binh-phuoc" class="advance-options" style="min-width: 128px;">B&#xEC;nh Ph&#x1B0;&#x1EDB;c</li>
-                                <li vl="HY" data-value="hung-yen" class="advance-options" style="min-width: 128px;">H&#x1B0;ng Y&#xEA;n</li>
-                                <li vl="BDD" data-value="binh-dinh" class="advance-options" style="min-width: 128px;">B&#xEC;nh &#x110;&#x1ECB;nh</li>
-                                <li vl="TG" data-value="tien-giang" class="advance-options" style="min-width: 128px;">Ti&#x1EC1;n Giang</li>
-                                <li vl="TB" data-value="thai-binh" class="advance-options" style="min-width: 128px;">Th&#xE1;i B&#xEC;nh</li>
-                                <li vl="BG" data-value="bac-giang" class="advance-options" style="min-width: 128px;">B&#x1EAF;c Giang</li>
-                                <li vl="HB" data-value="hoa-binh" class="advance-options" style="min-width: 128px;">H&#xF2;a B&#xEC;nh</li>
-                                <li vl="AG" data-value="an-giang" class="advance-options" style="min-width: 128px;">An Giang</li>
-                                <li vl="VP" data-value="vinh-phuc" class="advance-options" style="min-width: 128px;">V&#x129;nh Ph&#xFA;c</li>
-                                <li vl="TNI" data-value="tay-ninh" class="advance-options" style="min-width: 128px;">T&#xE2;y Ninh</li>
-                                <li vl="TN" data-value="thai-nguyen" class="advance-options" style="min-width: 128px;">Th&#xE1;i Nguy&#xEA;n</li>
-                                <li vl="LCA" data-value="lao-cai" class="advance-options" style="min-width: 128px;">L&#xE0;o Cai</li>
-                                <li vl="NDD" data-value="nam-dinh" class="advance-options" style="min-width: 128px;">Nam &#x110;&#x1ECB;nh</li>
-                                <li vl="QNG" data-value="quang-ngai" class="advance-options" style="min-width: 128px;">Qu&#x1EA3;ng Ng&#xE3;i</li>
-                                <li vl="BTR" data-value="ben-tre" class="advance-options" style="min-width: 128px;">B&#x1EBF;n Tre</li>
-                                <li vl="DNO" data-value="dak-nong" class="advance-options" style="min-width: 128px;">&#x110;&#x1EAF;k N&#xF4;ng</li>
-                                <li vl="CM" data-value="ca-mau" class="advance-options" style="min-width: 128px;">C&#xE0; Mau</li>
-                                <li vl="VL" data-value="vinh-long" class="advance-options" style="min-width: 128px;">V&#x129;nh Long</li>
-                                <li vl="NB" data-value="ninh-binh" class="advance-options" style="min-width: 128px;">Ninh B&#xEC;nh</li>
-                                <li vl="PT" data-value="phu-tho" class="advance-options" style="min-width: 128px;">Ph&#xFA; Th&#x1ECD;</li>
-                                <li vl="NT" data-value="ninh-thuan" class="advance-options" style="min-width: 128px;">Ninh Thu&#x1EAD;n</li>
-                                <li vl="PY" data-value="phu-yen" class="advance-options" style="min-width: 128px;">Ph&#xFA; Y&#xEA;n</li>
-                                <li vl="HNA" data-value="ha-nam" class="advance-options" style="min-width: 128px;">H&#xE0; Nam</li>
-                                <li vl="HT" data-value="ha-tinh" class="advance-options" style="min-width: 128px;">H&#xE0; T&#x129;nh</li>
-                                <li vl="DDT" data-value="dong-thap" class="advance-options" style="min-width: 128px;">&#x110;&#x1ED3;ng Th&#xE1;p</li>
-                                <li vl="ST" data-value="soc-trang" class="advance-options" style="min-width: 128px;">S&#xF3;c Tr&#x103;ng</li>
-                                <li vl="KT" data-value="kon-tum" class="advance-options" style="min-width: 128px;">Kon Tum</li>
-                                <li vl="QB" data-value="quang-binh" class="advance-options" style="min-width: 128px;">Qu&#x1EA3;ng B&#xEC;nh</li>
-                                <li vl="QT" data-value="quang-tri" class="advance-options" style="min-width: 128px;">Qu&#x1EA3;ng Tr&#x1ECB;</li>
-                                <li vl="TV" data-value="tra-vinh" class="advance-options" style="min-width: 128px;">Tr&#xE0; Vinh</li>
-                                <li vl="HGI" data-value="hau-giang" class="advance-options" style="min-width: 128px;">H&#x1EAD;u Giang</li>
-                                <li vl="SL" data-value="son-la" class="advance-options" style="min-width: 128px;">S&#x1A1;n La</li>
-                                <li vl="BL" data-value="bac-lieu" class="advance-options" style="min-width: 128px;">B&#x1EA1;c Li&#xEA;u</li>
-                                <li vl="YB" data-value="yen-bai" class="advance-options" style="min-width: 128px;">Y&#xEA;n B&#xE1;i</li>
-                                <li vl="TQ" data-value="tuyen-quang" class="advance-options" style="min-width: 128px;">Tuy&#xEA;n Quang</li>
-                                <li vl="DDB" data-value="dien-bien" class="advance-options" style="min-width: 128px;">&#x110;i&#x1EC7;n Bi&#xEA;n</li>
-                                <li vl="LCH" data-value="lai-chau" class="advance-options" style="min-width: 128px;">Lai Ch&#xE2;u</li>
-                                <li vl="LS" data-value="lang-son" class="advance-options" style="min-width: 128px;">L&#x1EA1;ng S&#x1A1;n</li>
-                                <li vl="HG" data-value="ha-giang" class="advance-options" style="min-width: 128px;">H&#xE0; Giang</li>
-                                <li vl="BK" data-value="bac-kan" class="advance-options" style="min-width: 128px;">B&#x1EAF;c K&#x1EA1;n</li>
-                                <li vl="CB" data-value="cao-bang" class="advance-options" style="min-width: 128px;">Cao B&#x1EB1;ng</li>
-                    </ul>
-                </div>
-                </div>                
-                <div id="divBrDistrict" class="comboboxs advance-select-box mr10">
-                    <span class="select-text hasvalue">
-                        <span class="select-text-content" style="width: 135px;">Quận/Huyện</span>
-                    </span>
-                    <input type="hidden" id="hdBrDistrict">
-                    <div id="divBrDistrictOptions" class="advance-select-options advance-options">
-                        <ul class="advance-options" style="min-width: 160px;">
-                            <li vl="" class="advance-options" style="min-width: 128px;">Quận/Huyện</li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="divBrProject" class="comboboxs advance-select-box mr10">
-                    <span class="select-text">
-                        <span class="select-text-content" style="width: 135px;">Dự án</span>
-                    </span>
-                    <input type="hidden" id="hdBrProject" value="0">
-                    <div id="divBrProjectOptions" class="advance-select-options advance-options" style="min-width: 192px;">
-                        <ul class="advance-options" style="min-width: 160px;">
-                            <li vl="" class="advance-options">Dự án</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col3">
-            <input type="submit" value="Tìm kiếm" id="btnSearch" class="search">
+            
+        <div class="col3" style="margin-top: -34px;">
+            <input type="submit" value="Tìm kiếm" id="btnSearch" class="search" >
         </div>
         <div class="clear"></div>
     </div>
+    </form>
     <div class="clear"></div>
 
 </div>
@@ -307,7 +225,7 @@
                         {!! $brokers->name !!} môi giới ở những khu vực sau:
                         </div>
                         <ul>
-                                        <li><span>Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ph&#x1ED1; &#x1EDF; Qu&#x1EAD;n 1, H&#x1ED3; Ch&#xED; Minh</span></li>
+                                        <li><span>Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ph&#x1ED1; &#x1EDF; {!! $provinces->name_with_type !!}</span></li>
                                         <li><span>Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ph&#x1ED1; &#x1EDF; Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh</span></li>
                                         <li><span>Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ph&#x1ED1; &#x1EDF; T&#xE2;n B&#xEC;nh, H&#x1ED3; Ch&#xED; Minh</span></li>
                         </ul>
@@ -315,15 +233,17 @@
                     <div class="introtitle">
                         <h2>Về chúng tôi</h2>
                     </div>
+                   
                     <p class="introcontent">
 <p>
 	 Ch&uacute;ng t&ocirc;i hoạt động trong lĩnh vực dịch vụ m&ocirc;i giới Bất động sản cho thu&ecirc;, được điều h&agrave;nh bởi đội ngũ d&agrave;y dặn kinh nghiệm trong nhiều năm v&agrave; lu&ocirc;n thấu hiểu được sự trăn trở của kh&aacute;ch h&agrave;ng.</p>
 <p>
-	Với hơn 10,000 căn nh&agrave; cho thu&ecirc; khắp khu vực TP. Hồ Ch&iacute; Minh v&agrave; nguồn dữ liệu kh&aacute;ch h&agrave;ng tin cậy v&agrave; h&ugrave;ng hậu. Được sự t&iacute;n nhiệm v&agrave; trao cơ hội ch&uacute;ng t&ocirc;i đang ng&agrave;y c&agrave;ng nắm bắt thị trường v&agrave; cố gắng đem đến ch&uacute; Q&uacute;y Kh&aacute;ch h&agrave;ng một sự chọn lựa dịch vụ hiệu quả nhất.</p>
+	Với hơn 10,000 căn nh&agrave; cho thu&ecirc; khắp khu vực {!! $provinces->name_with_type !!} v&agrave; nguồn dữ liệu kh&aacute;ch h&agrave;ng tin cậy v&agrave; h&ugrave;ng hậu. Được sự t&iacute;n nhiệm v&agrave; trao cơ hội ch&uacute;ng t&ocirc;i đang ng&agrave;y c&agrave;ng nắm bắt thị trường v&agrave; cố gắng đem đến ch&uacute; Q&uacute;y Kh&aacute;ch h&agrave;ng một sự chọn lựa dịch vụ hiệu quả nhất.</p>
 <p>
 	V&igrave; vậy {!! $brokers->name !!} lu&ocirc;n n&ecirc;u cao khẩu hiệu &ldquo;ĐỐI T&Aacute;C CHUY&Ecirc;N NGHIỆP&rdquo; với mục ti&ecirc;u l&agrave; một đối t&aacute;c tin cậy mang lại cho kh&aacute;ch h&agrave;ng những dịch vụ m&ocirc;i giới tốt nhất, sản phẩm ph&ugrave; hợp nhất một c&aacute;ch nhanh ch&oacute;ng v&agrave; ch&iacute;nh x&aacute;c, đảm bảo t&iacute;nh ph&aacute;p l&yacute;, r&otilde; r&agrave;ng, minh bạch.</p>
 <p>
 	Tr&acirc;n trọng cảm ơn qu&yacute; kh&aacute;ch v&agrave; hy vọng sự hợp t&aacute;c tốt đẹp!</p>
+            
                     </p>
                 </div>
             </div>
@@ -1117,97 +1037,7 @@
         <div>
             
 
-    <div id="broker-by-city">
-        <div class="broker-top-by-cate">
-            <h2>CÁC NHÀ MÔI GIỚI Ở H&#x1ED3; Ch&#xED; Minh THEO QUẬN HUYỆN</h2>
-            <span></span>
-        </div>
-        <div class="ulbox">
-            <ul>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-1" title="Qu&#x1EAD;n 1">Qu&#x1EAD;n 1 (300)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-2" title="Qu&#x1EAD;n 2">Qu&#x1EAD;n 2 (431)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-3" title="Qu&#x1EAD;n 3">Qu&#x1EAD;n 3 (216)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-4" title="Qu&#x1EAD;n 4">Qu&#x1EAD;n 4 (97)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-5" title="Qu&#x1EAD;n 5">Qu&#x1EAD;n 5 (82)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-6" title="Qu&#x1EAD;n 6">Qu&#x1EAD;n 6 (51)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-7" title="Qu&#x1EAD;n 7">Qu&#x1EAD;n 7 (660)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-8" title="Qu&#x1EAD;n 8">Qu&#x1EAD;n 8 (144)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-9" title="Qu&#x1EAD;n 9">Qu&#x1EAD;n 9 (475)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-10" title="Qu&#x1EAD;n 10">Qu&#x1EAD;n 10 (149)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-11" title="Qu&#x1EAD;n 11">Qu&#x1EAD;n 11 (55)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-quan-12" title="Qu&#x1EAD;n 12">Qu&#x1EAD;n 12 (153)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-binh-tan" title="B&#xEC;nh T&#xE2;n">B&#xEC;nh T&#xE2;n (179)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-binh-thanh" title="B&#xEC;nh Th&#x1EA1;nh">B&#xEC;nh Th&#x1EA1;nh (339)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-go-vap" title="G&#xF2; V&#x1EA5;p">G&#xF2; V&#x1EA5;p (166)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-phu-nhuan" title="Ph&#xFA; Nhu&#x1EAD;n">Ph&#xFA; Nhu&#x1EAD;n (135)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-tan-binh" title="T&#xE2;n B&#xEC;nh">T&#xE2;n B&#xEC;nh (239)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-tan-phu" title="T&#xE2;n Ph&#xFA;">T&#xE2;n Ph&#xFA; (198)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-thu-duc" title="Th&#x1EE7; &#x110;&#x1EE9;c">Th&#x1EE7; &#x110;&#x1EE9;c (254)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-binh-chanh" title="B&#xEC;nh Ch&#xE1;nh">B&#xEC;nh Ch&#xE1;nh (209)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-can-gio" title="C&#x1EA7;n Gi&#x1EDD;">C&#x1EA7;n Gi&#x1EDD; (4)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-cu-chi" title="C&#x1EE7; Chi">C&#x1EE7; Chi (41)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-hoc-mon" title="H&#xF3;c M&#xF4;n">H&#xF3;c M&#xF4;n (87)</a>
-                    </li>
-                    <li>
-                        <a href="/nha-moi-gioi-nha-be" title="Nh&#xE0; B&#xE8;">Nh&#xE0; B&#xE8; (138)</a>
-                    </li>
-            </ul>
-
-            <div class="viewmore-prd">
-                <a href="javascript:void(0)" rel="nofollow" class="vmore">
-                    Xem thêm <img src="https://file4.batdongsan.com.vn/images/Icons/down_arrow.png">
-                </a>
-                <a href="javascript:void(0)" rel="nofollow" class="vless" style="display: none;">
-                    Ẩn <img src="https://file4.batdongsan.com.vn/images/Icons/up_arrow.png">
-                </a>
-            </div>
-        </div>
-    </div>
+   
 
 
             <div style="clear:both;"></div>
@@ -1551,7 +1381,7 @@
             </div>
         </div>
 
-        <div class="adPosition" positionCode="BANNER_POSITION_FLOADING_BOTTOM" style=""></div>
+        <div class="adPosition" positionCode="BANNER_POSITION_FLOADING_BOTTOM"></div>
 <script type='text/javascript'> var bannerContext={"CateId":null,"PageId":209,"CityCode":null,"DistrictId":null,"CurrentPage":232};</script>
 
         <div class="hide" id="domainUserInfo" data-value="https://batdongsan.com.vn"></div>
@@ -1724,4 +1554,5 @@
 </html>
 
 @endsection
+@endforeach
 @endforeach

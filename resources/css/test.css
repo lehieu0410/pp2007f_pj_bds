@@ -2,3 +2,8 @@
 #MiddleSubMenu .label_search{
     color: red;
 }
+
+@import singlepost1.blade;
+#MiddleSubMenu .label_search{
+    color: red;
+}

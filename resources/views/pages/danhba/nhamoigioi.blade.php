@@ -210,9 +210,16 @@
                             <ul>
                                 @foreach( $provinces as $province)
                                 <li>
-                                    <a href="{{Route('searchProvince',$province->code)}} " title="{{ $province->name }}" p_code="{{ $province->code }}" class="province" >
-                                        {{ $province->name }} ({{ $province->count_companies }})
-                                    </a>
+                                 
+                                        <a href="{{route('searchProvince',$province->provinces_code)}}"> 
+                                         @foreach($pro as $p)
+                                         <!-- @if($loop->first) -->
+                                                {{$p->where('code',$province->provinces_code)->first()->name}}
+                                                <!-- @endif -->
+                                         @endforeach
+                                         ({{ $province->count}})
+                                         </a>  
+                                    
                                 </li>
                                 @endforeach
                             </ul>
@@ -232,17 +239,19 @@
                         </div>
                         <div id="dntb" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 714px;">
                             <div class="dntb-row">
+                                @foreach($brokers as $broker)
                                 <div class="avatar">
-                                    <a href="/ban-dat/bat-dong-san-duc-phat-eb2729" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
-                                        <img class="img childbox" src="https://file4.batdongsan.com.vn/resize/200x200/2019/07/18/3ZsSL6gy/20190718101137-51a6.jpg" />
+                                    <a href="{!! route ('singlepost1',$broker->id) !!}" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
+                                        <img class="img childbox" src="{!! $broker->broker_images !!}" />
                                     </a>
                                 </div>
                                 <div class="info-row">
-                                    <a class="link colorboldblue" href="/ban-dat/bat-dong-san-duc-phat-eb2729" rel="nofollow">B&#x1EA4;T &#x110;&#x1ED8;NG S&#x1EA2;N &#x110;&#x1EE8;C PH&#xC1;T</a>
+                                    <a class="link colorboldblue" href="{!! route ('singlepost1',$broker->id) !!}" rel="nofollow">{!! $broker->name !!}</a>
                                     <div class="fone"></div>
                                     <div class="intro"></div>
                                 </div>
                                 <div class="clear"></div>
+                                @endforeach
                             </div>
                             <div class="dntb-row">
                                 <div class="avatar">
@@ -821,44 +830,13 @@ input.addEventListener("keyup", function(event) {
 
             });
         });
-        // $('.province').click(function() {
-        //     var code = $(this).attr('p_code');
-        //     $.ajax({
-        //         type: "GET",
-        //         url: "/nha-moi-gioi",
-        //         data: {
-        //             code: code
-        //         },
-        //         dataType: 'html',
-        //         success: function(data) {}
-        //     }).done(function(data) {
-        //         $('#contentPage').html(data);
-
-        //     });
-        // });
-        // $('.person').click(function() {
-        //     var type = $(this).attr('did');
-
-        //     $.ajax({
-        //         type: "GET",
-        //         url: "/nha-moi-gioi",
-        //         data: {
-        //             type: type
-        //         },
-        //         dataType: 'html',
-        //         success: function(data) {}
-        //     }).done(function(data) {
-        //         $('#contentPage').html(data);
-
-        //     });
-        // });
+        
     })
     </script>
     <script>
     
     $(document).ready(function() {
-        // $('.province').on('click',function(){
-        //     var p_code = $(this).attr('p_code');
+        
             
             $('.company').on('click',function(){
             var type = $(this).attr('did');
