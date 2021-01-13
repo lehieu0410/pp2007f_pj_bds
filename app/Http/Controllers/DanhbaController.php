@@ -32,15 +32,22 @@ class DanhBaController extends Controller
         //Filter theo type
         if(!isset($_GET['type']) && !isset($_GET['code'])){
             $brokers = Broker::Paginate(10);
-            $provinces = Province::get()->sortByDesc('count_companies');
+            $provinces = DB::table('brokers')
+                ->select(DB::raw('count(*) as count,provinces_code'))
+                ->groupBy('provinces_code')->get();
+            $pro = Province::all();
+                
             $sidebars = Slide::where('type','sidebar')->get();
             
-            return view ('pages.danhba.nhamoigioi',compact('brokers','sidebars','provinces'));
+            return view ('pages.danhba.nhamoigioi',compact('brokers','sidebars','provinces','pro'));
             
         } elseif (isset($_GET['type']) && !isset($_GET['code'])){
 
             $brokers = Broker::where('type', $_GET['type'])->Paginate(10);
-            $provinces = Province::get()->sortByDesc('count_companies');
+            $provinces = DB::table('brokers')
+                ->select(DB::raw('count(*) as count,provinces_code'))
+                ->groupBy('provinces_code')->get();
+            $pro = Province::all();
             $sidebars = Slide::where('type','sidebar')->get();
             if ($request->ajax()) {
                 echo view('pages.danhba.resuitl', compact('brokers','sidebars','provinces'));
@@ -49,7 +56,10 @@ class DanhBaController extends Controller
 
         elseif (!isset($_GET['type']) && isset($_GET['code'])){
             $brokers = Broker::where('provinces_code', $_GET['code'])->Paginate(10);
-            $provinces = Province::get()->sortByDesc('count_companies');
+            $provinces = DB::table('brokers')
+                ->select(DB::raw('count(*) as count,provinces_code'))
+                ->groupBy('provinces_code')->get();
+            $pro = Province::all();
             $sidebars = Slide::where('type','sidebar')->get();
             if ($request->ajax()) {
                 echo view('pages.danhba.resuitl', compact('brokers','sidebars','provinces'));
@@ -57,7 +67,10 @@ class DanhBaController extends Controller
         }
          else {
             $brokers = Broker::where('type', $_GET['type'])->where('province_code', $_GET['code'])->Paginate(10);
-            $provinces = Province::get()->sortByDesc('count_companies');
+            $provinces = DB::table('brokers')
+                ->select(DB::raw('count(*) as count,provinces_code'))
+                ->groupBy('provinces_code')->get();
+            $pro = Province::all();
             $sidebars = Slide::where('type','sidebar')->get();
             if ($request->ajax()) {
                 echo view('pages.danhba.resuitl', compact('brokers','sidebars','provinces'));
@@ -83,7 +96,9 @@ class DanhBaController extends Controller
 
     public function singlepost1($id) {
         $brokers = Broker::where('id', '=', $id)->get();
-        return view ('pages.danhba.singlepost1', compact('brokers'));
+        $provinces = Province::where('id', '=', $id)->get();
+        $sidebars = Slide::where('type','sidebar')->get();
+        return view ('pages.danhba.singlepost1', compact('brokers','provinces', 'sidebars'));
     }
 
     // public function singlepost2($id) {
@@ -102,28 +117,40 @@ class DanhBaController extends Controller
 
     public function searchProvince($id) {
         
-        $provinces = Province::get()->sortByDesc('count_companies');
         $brokers = Broker::where('provinces_code', $id)->Paginate(10);
+        $provinces = DB::table('brokers')
+            ->select(DB::raw('count(*) as count,provinces_code'))
+            ->groupBy('provinces_code')->get();
+            // dd($provinces);
+        $pro = Province::all();
+            
         $sidebars = Slide::where('type','sidebar')->get();
-        return view ('pages.danhba.nhamoigioi', compact('brokers', 'sidebars', 'provinces', 'id'));
+        // $count = Broker::where('provinces_code', '=', 1);
+        
+        return view ('pages.danhba.nhamoigioi',compact('brokers','sidebars','provinces','pro'));
+
+
 
     }
 
     public function searchProvinceAjax(Request $request) {
         if(isset($request->code)){
-        $brokers = Broker::where('provinces_code', $request->code)->where('type',$request->type)->paginate(10);
-        echo view ('pages.danhba.resuitl', compact('brokers'));
-        } else {
-        $brokers = Broker::where('type',$request->type)->paginate(10);
-        echo view ('pages.danhba.resuitl', compact('brokers'));
-        }
+            $brokers = Broker::where('provinces_code', $request->code)->where('type',$request->type)->paginate(10);
+            echo view ('pages.danhba.resuitl', compact('brokers'));
+            } else {
+            $brokers = Broker::where('type',$request->type)->paginate(10);
+            echo view ('pages.danhba.resuitl', compact('brokers'));
+            }
     }
 
     public function fullTextSearch (Request $request) {
-        $provinces = Province::get()->sortByDesc('count_companies');
+        $provinces = DB::table('brokers')
+            ->select(DB::raw('count(*) as count,provinces_code'))
+            ->groupBy('provinces_code')->get();
+        $pro = Province::all();
         $sidebars = Slide::where('name','AVPE')->get();
         $brokers = Broker::search($request->key)->paginate(10);
-        return view ('pages.danhba.nhamoigioi', compact('brokers', 'sidebars', 'provinces'));
+        return view ('pages.danhba.nhamoigioi', compact('brokers', 'sidebars', 'provinces', 'pro'));
         
 
     }
