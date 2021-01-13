@@ -185,7 +185,7 @@ class UserController extends Controller
         $user = Auth::user();
         $year1 = $request->year;
         $year = Date('Y');
-        if($year = $year1) {
+        if($year == $year1) {
             return redirect()->route('dash');
         }
         elseif(DB::table('products')->whereYear(('created_at'), $year1)->get()->count()==0)
