@@ -51,7 +51,7 @@
     <div class="home-top-search-keyword">
     <form role="search" method="get" id="searchform" action="{{route('searchTinTuc')}}">
             <input type="text" value="" name="timtintuc" id="searchnews" placeholder="Nhap Tu Khoa..."/>
-            <button type="submit" id="searchsubmit">Tim Kiem<button>
+            <button type="submit" id="searchsubmit">Tim Kiem</button>
         </form> 
     </div>
     <div class="advance-select-box" id="home-top-search">
@@ -90,42 +90,38 @@
             <div class="clear line"></div>
 
 
-            @foreach ($articles as $articles)
+            @foreach ($articles as $article)
             
             <div class="tintuc-row1 tintuc-list tc-tit">
                 <div class="tc-img list-news-image-title">
-                    <a href="{!! Route('tintuc_single_post', $articles->id) !!}" title="{!! $articles->title !!}">
-                        <img class="bor_img" style="width: 132px; height: 100px;" alt="{!! $articles->title !!}" src="{!! $articles->image_link !!}">
+                    <a href="{!! Route('tintuc_single_post', $article->id) !!}" title="{!! $article->title !!}">
+                        <img class="bor_img" style="width: 132px; height: 100px;" alt="{!! $article->title !!}" src="{!! $article->image_link !!}">
                     </a>&nbsp;&nbsp;
                 </div>
                 <h3>
-                    <a class="link_blue" href="{!! Route('tintuc_single_post', $articles->id) !!}" title="{!! $articles->title !!}">
-                        {!! $articles->title !!}
+                    <a class="link_blue" href="{!! Route('tintuc_single_post', $article->id) !!}" title="{!! $article->title !!}">
+                        {!! $article->title !!}
                     </a>
                 </h3>
                 <div class="datetime">
-                    {!! $articles->updated_at !!}
+                    {!! $article->updated_at !!}
                 </div>
                 <p style="text-rendering:geometricPrecision;">
-                    {!! $articles->title !!}
+                    {!! $article->title !!}
                 </p>
             </div>
+
+            
             
             @endforeach
-
+            <div style="float: right; color: blue;">
+            {{ $articles->links() }}
+            </div>
             
     <div class="clear">
     </div>
     <div class="margit5">
         <div class="tc-tit-bottom">
-                <div class="ks-pagination-links" align="center" stype="float: right">
-<a pId="1" href="/tin-tuc"><div class="style-pager-row-selected">1</div></a>
-<a pId="2" href="/tin-tuc/p2"><div class="">2</div></a>
-<a pId="3" href="/tin-tuc/p3"><div class="">3</div></a>
-<a pId="4" href="/tin-tuc/p4"><div class="">4</div></a>
-<a pId="5" href="/tin-tuc/p5"><div class="">5</div></a>
-</div>
-
         </div>
     </div>
 
@@ -134,32 +130,9 @@
         </div>
     </div>
 </div>
-<div style= "width: 400px" id="RightMainContent" class="body-right" >
+<div style= "width: 400px ; float: left ; margin-top: 25px" id="RightMainContent" class="body-right"  >
     <div>
             <div class="container-common">
-        <div>
-            <div>
-                <div class="newsletter-form-small">
-                    <div class="mb5">
-                        <div class="fl">
-                            <img src="https://file4.batdongsan.com.vn/images/icon-newsletter-small.jpg">
-                        </div>
-                        <div class="fl news-text">Nhận bản tin từ Batdongsan.com.vn</div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="newsletter-content">
-                        <div class="newsletter-bound">
-                            <div class="fl input">
-                                <input type="text" id="email" placeholder="Nhập email của bạn">
-                            </div>
-                            <div class="fl a"><a href="#" class="newsletter-register" id="newsletterRegister">Đăng ký</a></div>
-                            <div class="clear">&nbsp;</div>
-                            <div id="emailValid"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     </div>
@@ -282,68 +255,51 @@
     </div>
     <div class="bor_box">
         <div class="list">
+
             <ul>
-                        <li>
-                            <a href="/Covid-19" title="B&#x110;S &amp; Covid-19">
-                                <span class="faq-name">
-                                    B&#x110;S &amp; Covid-19
-                                </span>
-                            </a>
+
+                        <li>    
+                            <button onclick="topic('kinh nghiem')">Kinh nghiệm mua bán nhà</button>
                         </li>
-                        <li>
-                            <a href="/kinh-nghiem-mua-ban-nha" title="Kinh nghi&#x1EC7;m mua b&#xE1;n nh&#xE0;">
-                                <span class="faq-name">
-                                    Kinh nghi&#x1EC7;m mua b&#xE1;n nh&#xE0;
-                                </span>
-                            </a>
+
+                        <li>    
+                            <button onclick="topic('bao cao')">Báo cáo thị trường ThangLongland.vn</button>
+
                         </li>
-                        <li>
-                            <a href="/bao-cao-thi-truong-batdongsancomvn" title="B&#xE1;o c&#xE1;o th&#x1ECB; tr&#x1B0;&#x1EDD;ng Batdongsan.com.vn">
-                                <span class="faq-name">
-                                    B&#xE1;o c&#xE1;o th&#x1ECB; tr&#x1B0;&#x1EDD;ng Batdongsan.com.vn
-                                </span>
-                            </a>
+
+                        <li>    
+                            <button onclick="topic('tu van')">Có hẹn với chuyên gia bất động sản</button>
+
                         </li>
-                        <li>
-                            <a href="/co-hen-voi-chuyen-gia-bat-dong-san" title="C&#xF3; h&#x1EB9;n v&#x1EDB;i chuy&#xEA;n gia b&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n">
-                                <span class="faq-name">
-                                    C&#xF3; h&#x1EB9;n v&#x1EDB;i chuy&#xEA;n gia b&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n
-                                </span>
-                            </a>
+
+                        <li>    
+                            <button onclick="topic('tinh hinh')">Diễn biến thị trường BĐS năm 2020</button>
+
                         </li>
-                        <li>
-                            <a href="/dien-bien-thi-truong-bds-nam-2020" title="Di&#x1EC5;n bi&#x1EBF;n th&#x1ECB; tr&#x1B0;&#x1EDD;ng B&#x110;S n&#x103;m 2020">
-                                <span class="faq-name">
-                                    Di&#x1EC5;n bi&#x1EBF;n th&#x1ECB; tr&#x1B0;&#x1EDD;ng B&#x110;S n&#x103;m 2020
-                                </span>
-                            </a>
+
+                        <li>    
+                            <button onclick="topic('chinh sach')">Bảo vệ người mua nhà, đất</button>
+
                         </li>
-                        <li>
-                            <a href="/bao-ve-nguoi-mua-nha-dat" title="B&#x1EA3;o v&#x1EC7; ng&#x1B0;&#x1EDD;i mua nh&#xE0;, &#x111;&#x1EA5;t">
-                                <span class="faq-name">
-                                    B&#x1EA3;o v&#x1EC7; ng&#x1B0;&#x1EDD;i mua nh&#xE0;, &#x111;&#x1EA5;t
-                                </span>
-                            </a>
+
+                        <li>    
+                            <button onclick="topic('bieu do')">Infographic</button>
+
                         </li>
-                        <li>
-                            <a href="/bai-infographic" title="Infographic">
-                                <span class="faq-name">
-                                    Infographic
-                                </span>
-                            </a>
+
+                        <li>    
+                            <button onclick="topic('covid')">BĐS & Covid-19</button>
+
                         </li>
-                        <li>
-                            <a href="/bat-dong-san-tai-cac-dac-khu-kinh-te" title="B&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n t&#x1EA1;i c&#xE1;c &quot;&#x111;&#x1EB7;c khu&quot; kinh t&#x1EBF;">
-                                <span class="faq-name">
-                                    B&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n t&#x1EA1;i c&#xE1;c &quot;&#x111;&#x1EB7;c khu&quot; kinh t&#x1EBF;
-                                </span>
-                            </a>
+
+                        <li>    
+                            <button onclick="topic('du an')">Dự án mới</button>
+
                         </li>
+                        
+                        
             </ul>
         </div>
-            <div style="padding-left: 20px; padding-top: 5px; border-top: 1px solid #ccc; margin-top: 10px;">
-                <a href="/chu-de-trong-chu-de-ve-thong-tin-thi-truong" class="linktoall">Xem tất cả</a>
-            </div>
     </div>
 </div>
     <div style="clear: both; margin-bottom: 10px;"></div>
@@ -380,21 +336,6 @@
         <div class="clear10"></div>
     </div>
     <div style="clear:both;"></div>
-    <div class="fb-fanpage">
-    <div id="fb-root"></div>    
-    <script>
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=302507473246792";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-    <div class="fb-page" data-href="https://www.facebook.com/Batdongsandv/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-        <blockquote cite="https://www.facebook.com/Batdongsandv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Batdongsandv/">Batdongsan.com.vn</a></blockquote>
-    </div>
-</div>
 
     <div style="clear:both;"></div>
 </div>
@@ -409,68 +350,6 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <div class="boxLinkFooter">
-                        <div id="boxLink" class="footer-link-new">
-        <ul>
-<li>
-<h4>Tìm kiếm nhiều</h4>
-<ul>
-<li><a href=""></a></li>
-<li><a href="/ban-can-ho-chung-cu-vinhomes-grand-park-quan-9">Vinhomes Grand Park quận 9</a></li>
-<li><a href="/ban-dat-nen-du-an-phuc-an-garden">Phúc An Garden</a></li>
-<li><a href="/ban-nha-biet-thu-lien-ke-sun-plaza-grand-world">Sun Plaza Grand World</a></li>
-<li><a href="/ban-can-ho-chung-cu-vinhomes-central-park">Vinhomes Central Park</a></li>
-<li><a href="/ban-can-ho-chung-cu-apec-mandala-wyndham-binh-thuan">Apec Mandala Wyndham</a></li>
-<li><a href="/ban-nha-biet-thu-lien-ke-novaworld-phan-thiet">Biệt thự NovaWorld Phan Thiết</a></li>
-<li><a href="/ban-nha-biet-thu-lien-ke-novaworld-ho-tram">Biệt thự NovaWorld Hồ Tràm</a></li>
-<li><a href="/ban-nha-biet-thu-lien-ke-thanh-long-bay">Biệt thự Thanh Long Bay</a></li>
-</ul>
-</li>
-<li>
-<h4>Hà Nội</h4>
-<ul>
-<li><a href="/ban-can-ho-chung-cu-vinhomes-metropolis-lieu-giai">Vinhomes Metropolis</a></li>
-<li><a href="/ban-can-ho-chung-cu-sunshine-city">Sunshine City</a></li>
-<li><a href="/ban-can-ho-chung-cu-tsg-lotus-sai-dong">TSG Lotus Sài Đồng</a></li>
-<li><a href="/ban-can-ho-chung-cu-imperia-sky-garden">Imperia Sky Garden</a></li>
-<li><a href="/ban-can-ho-chung-cu-vinhomes-gardenia">Vinhomes Gardenia</a></li>
-<li><a href="/ban-can-ho-chung-cu-vinhomes-ocean-park-gia-lam">Vinhomes Ocean Park Gia Lâm</a></li>
-<li><a href="/tags/ban/ban-chung-cu-mini-ha-noi">Chung cư mini</a></li>
-<li><a href="/ban-can-ho-chung-cu-ha-noi">Chung cư giá rẻ Hà Nội</a></li>
-</ul>
-</li>
-<li>
-<h4>Hồ Chí Minh</h4>
-<ul>
-<li><a href="/ban-nha-rieng-quan-7">Bán nhà Quân 7</a></li>
-<li><a href="/nha-dat-ban-binh-thanh">Bán nhà Bình Thạnh</a></li>
-<li><a href="/nha-dat-ban-tan-binh">Bán nhà Tân Bình</a></li>
-<li><a href="/ban-nha-rieng-tan-phu">Bán nhà Tân Phú</a></li>
-<li><a href="/ban-nha-rieng-quan-1">Bán nhà Quận 1</a></li>
-<li><a href="/nha-dat-ban-quan-12">Bán nhà Quận 12</a></li>
-<li><a href="/tags/ban/ban-can-ho-mini-tp-hcm">Căn hộ mini</a></li>
-<li><a href="/ban-can-ho-chung-cu-tp-hcm">Căn hộ giá rẻ TPHCM</a></li>
-</ul>
-</li>
-<li>
-<h4>Nhà đất bán</h4>
-<ul>
-<li><a href="/ban-dat-binh-phuoc">Bán đất Bình Phước</a></li>
-<li><a href="/ban-nha-biet-thu-lien-ke-da-lat-ldd">Bán biệt thự Đà Lạt</a></li>
-<li><a href="/ban-nha-mat-pho-lavilla-green-city">Lavilla Green City</a></li>
-<li><a href="/nha-dat-ban-cau-giay">Nhà đất Cầu Giấy</a></li>
-<li><a href="/nha-dat-ban-quy-nhon-bdd">Nhà đất Quy Nhơn</a></li>
-<li><a href="/ban-can-ho-chung-cu-vung-tau-pearl">Vũng Tàu Pearl</a></li>
-</ul>
-</li>
-</ul>
-
-    </div>
-
-
-
-                </div>
-            </div>
 
         <div id="SiteRight" class="banner-right clearfix">
             <div class="container-default">
@@ -517,5 +396,13 @@
     </div>
     
 </body>
+<script>
+    function topic(key) {
+      document.getElementById('searchnews').value= key;
+      document.getElementById('searchform').submit();
+    }
+
+
+</script>
 
 @endsection
