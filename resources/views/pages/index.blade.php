@@ -282,23 +282,24 @@
                             <div class="clear"></div>
                         </div>
                         <div id="hometab4" class="hidden newscontain">
-                            <div class="home-small-main-1 news-show" javascript-location-value="newNews">
+                            <div class="home-small-main-1 news-show" javascript-location-value="fengshuiNews">
                                 @foreach ($articles as $article)
-                                    <div id="hottab-{{ $k++ }}" class="" style="display: none;">
-                                        <h3>
-                                            <a title="{{ $article->title }}"
-                                                href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/-infographic-nhung-quy-dinh-phap-ly-khong-the-bo-qua-khi-mua-ban-bat-dong-san-ar103077">
-                                                <span>
-                                                    <img noloaderror="true" imgerr="1" src="{{ $article->image_link }}"
-                                                        is-lazy-image="true" lazy-id="0">
-                                                </span>
-                                                {{ $article->title }}
-                                            </a>
-                                        </h3>
-                                        <div class="news-time">
-                                            <img src="./assets/image/clock.png">4 giờ trước
+                                    @if ($loop->first)
+                                        <div id="fstab-{{ $k++ }}" class="" style="display: block;">
+                                            <h3>
+                                                <a title="{{ $article->title }}" href="{{ $article->slug }}">
+                                                    <span>
+                                                        <img noloaderror="true" imgerr="1" src="{{ $article->image_link }}"
+                                                            is-lazy-image="true" lazy-id="0">
+                                                    </span>
+                                                    {{ $article->title }}
+                                                </a>
+                                            </h3>
+                                            <div class="news-time">
+                                                <img src="./assets/image/clock.png">4 giờ trước
+                                            </div>
                                         </div>
-                                    </div>
+                                    @endif
                                 @endforeach
                             </div>
                             <div class="home-small-main-2">
@@ -308,7 +309,7 @@
 
                                             <li class="">
                                                 <h3>
-                                                    <a title="{{ $article->title }}" data-index="#hottab-{{ $l++ }}"
+                                                    <a title="{{ $article->title }}" data-index="#fstab-{{ $l++ }}"
                                                         href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/-infographic-nhung-quy-dinh-phap-ly-khong-the-bo-qua-khi-mua-ban-bat-dong-san-ar103077">
                                                         {{ $article->title }}
                                                     </a>
@@ -324,10 +325,11 @@
                         <div id="hometab3" class="hidden newscontain">
                             <div class="clear"></div>
                         </div>
-                        <div id="hometab4" class="hidden newscontain">
+                        {{-- <div id="hometab4" class="hidden newscontain">
                             <div class="clear"></div>
-                        </div>
+                        </div> --}}
                     </div>
+                    <script src="https://log.batdongsan.com.vn/js/bds/bds-msv-log.min.js?hv=2&amp;dv=2021-01-13"></script>
 
                 </div>
                 <div class="home-small-banner">
@@ -429,23 +431,7 @@
                                             Hôm nay
                                             <span class="tooltip-time">{{ $date }}</span>
                                         </div>
-                                        <span class="tooltipMarking" aria-label="Bấm để lưu tin"
-                                            data-microtip-position="bottom" role="tooltip"><i class="iconSave"
-                                                data-productid="26878040"
-                                                data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Ch&amp;#237;nh chủ b&amp;#225;n mảnh đất đấu gi&amp;#225; T&amp;#234; Quả, X&amp;#227; Tam Hưng, mặt Tỉnh Lộ 427, c&amp;#225;ch ng&amp;#227; ba B&amp;#236;nh Đ&amp;#224; 500m&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/09/01/20200901151848-9e49_wm.jpg&quot;/&gt;&lt;img error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg&quot; src=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/09/01/20200901151940-a55a_wm.jpg&quot;/&gt;&lt;img error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg&quot; src=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/09/01/20200901152034-890a_wm.jpg&quot;/&gt;"
-                                                data-avatarwap="https://file4.batdongsan.com.vn/crop/640x430/2020/09/01/20200901151848-9e49_wm.jpg"
-                                                data-vipclass="vip5 vipaddon" data-isaddon="false" data-has3d="false"
-                                                data-has360="false" data-hasvideo="false"
-                                                data-title="Chính chủ bán mảnh đất đấu giá Tê Quả, Xã Tam Hưng, mặt Tỉnh Lộ 427, cách ngã ba Bình Đà 500m"
-                                                data-price="19.5 triệu/m²" data-area="68.8 m²" data-pricesort="0"
-                                                data-areasort="0" data-room="" data-toilets="0"
-                                                data-address="Thanh Oai, Hà Nội"
-                                                data-description="Chính chủ bán mảnh đất đấu giá Tê Quả, Xã Tam Hưng, mặt Tỉnh Lộ 427, cách ngã ba Bình Đà 500m, đối diện trường cấp 3 Thanh Oai B, Tỉnh Lộ đã trải thảm đường vỉa hè 24m, cách đường Cienco 5, 1,5km, đô thị Thanh Hà 4km, trung tâm Hà Đông 9km, bán mảnh đất lô góc 68,8m2. 3 mặt thoáng, mặt tiền 4,5m đườ..."
-                                                data-duration="Hôm nay" data-updatedtime="09/11/2020"
-                                                data-datesort="11/09/2020 22:58:26" data-contactname=""
-                                                data-contactmobile=""
-                                                data-url="/ban-dat-duong-tinh-lo-427-xa-tam-hung-1/chinh-chu-ban-manh-dau-gia-te-qua-mat-427-cach-nga-ba-binh-da-500m-pr26878040"
-                                                data-totalmedia="3" data-createbyuser="328276"></i></span>
+
                                     </div>
                                 </div>
                             </li>
@@ -480,102 +466,121 @@
 
                     <h2>Bất động sản theo địa điểm</h2>
                     <div>
-                        <div class="place-big">
-                            <div class="place-img slick-initialized slick-slider">
-                                <div aria-live="polite" class="slick-list draggable">
-                                    <div class="slick-track" style="opacity: 1; width: 1680px;" role="listbox"><img
-                                            src="./assets/image/HCM-web-1.jpg" is-lazy-image="true" lazy-id="6"
-                                            class="slick-slide slick-current slick-active" data-slick-index="0"
-                                            aria-hidden="false"
-                                            style="width: 560px; position: relative; left: 0px; top: 0px; z-index: 1000; opacity: 1; transition: opacity 500ms ease 0s;"
-                                            tabindex="-1" role="option" aria-describedby="slick-slide00"><img
-                                            src="./assets/image/HCM-web-2.jpg" is-lazy-image="true" lazy-id="7"
-                                            class="slick-slide" data-slick-index="1" aria-hidden="true"
-                                            style="width: 560px; position: relative; left: -560px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                            tabindex="-1" role="option" aria-describedby="slick-slide01"><img
-                                            src="./assets/image/HCM-web-3.jpg" is-lazy-image="true" lazy-id="8"
-                                            class="slick-slide" data-slick-index="2" aria-hidden="true"
-                                            style="width: 560px; position: relative; left: -1120px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                            tabindex="-1" role="option" aria-describedby="slick-slide02"></div>
-                                </div>
-
-
-                            </div>
-                            <div class="place-info buy-info">
-                                <h3>
-                                    <a href="https://batdongsan.com.vn/nha-dat-ban-tp-hcm">
-                                        <span class="place-name"> {{ $province1[0]->name }} </span>
-                                        <span class="place-number">{{ $province1[0]->count_posts }} tin đăng</span>
-                                    </a>
-                                </h3>
-                            </div>
-
-                        </div>
-                        <div class="place-small">
-                            @foreach ($province2 as $province2)
-                                <div class="place-item">
+                        @foreach ($provinceCounts as $provinceCount)
+                            @if ($loop->first)
+                                <div class="place-big">
                                     <div class="place-img slick-initialized slick-slider">
                                         <div aria-live="polite" class="slick-list draggable">
-                                            <div class="slick-track" style="opacity: 1; width: 810px;" role="listbox"><img
-                                                    src="./assets/image/HN-web-1.jpg" is-lazy-image="true" lazy-id="9"
-                                                    class="slick-slide" data-slick-index="0" aria-hidden="true"
-                                                    style="width: 270px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                                    tabindex="-1" role="option" aria-describedby="slick-slide10"><img
-                                                    src="./assets/image/HN-web-2.jpg" is-lazy-image="true" lazy-id="10"
-                                                    class="slick-slide" data-slick-index="1" aria-hidden="true"
-                                                    style="width: 270px; position: relative; left: -270px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                                    tabindex="-1" role="option" aria-describedby="slick-slide11"><img
-                                                    src="./assets/image/HN-web-3.jpg" is-lazy-image="true" lazy-id="11"
-                                                    class="slick-slide slick-current slick-active" data-slick-index="2"
-                                                    aria-hidden="false"
-                                                    style="width: 270px; position: relative; left: -540px; top: 0px; z-index: 999; opacity: 1;"
-                                                    tabindex="-1" role="option" aria-describedby="slick-slide12"></div>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="place-info buy-info">
-                                        <h3>
-                                            <a href="https://batdongsan.com.vn/nha-dat-ban-ha-noi">
-                                                <span class="place-name">{!! $province2->name !!}</span>
-                                                <span class="place-number">{!! $province2->count_posts !!} tin đăng</span>
-                                            </a>
-                                        </h3>
-                                    </div>
-
-                                </div>
-                            @endforeach
-                            @foreach ($province3 as $province3)
-                                <div class="place-item nomargin">
-                                    <div class="place-img slick-initialized slick-slider">
-                                        <div aria-live="polite" class="slick-list draggable">
-                                            <div class="slick-track" style="opacity: 1; width: 540px;" role="listbox"><img
-                                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
-                                                    src-lazy="https://file4.batdongsan.com.vn/images/newhome/cities1/BD-web-1.jpg"
-                                                    is-lazy-image="true" lazy-id="15"
+                                            <div class="slick-track" style="opacity: 1; width: 1680px;" role="listbox"><img
+                                                    src="./assets/image/HCM-web-1.jpg" is-lazy-image="true" lazy-id="6"
                                                     class="slick-slide slick-current slick-active" data-slick-index="0"
                                                     aria-hidden="false"
-                                                    style="width: 270px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
-                                                    tabindex="-1" role="option" aria-describedby="slick-slide30"><img
-                                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
-                                                    src-lazy="https://file4.batdongsan.com.vn/images/newhome/cities1/BD-web-2.jpg"
-                                                    is-lazy-image="true" lazy-id="16" class="slick-slide"
-                                                    data-slick-index="1" aria-hidden="true"
-                                                    style="width: 270px; position: relative; left: -270px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                                    tabindex="-1" role="option" aria-describedby="slick-slide31"></div>
+                                                    style="width: 560px; position: relative; left: 0px; top: 0px; z-index: 1000; opacity: 1; transition: opacity 500ms ease 0s;"
+                                                    tabindex="-1" role="option" aria-describedby="slick-slide00"><img
+                                                    src="./assets/image/HCM-web-2.jpg" is-lazy-image="true" lazy-id="7"
+                                                    class="slick-slide" data-slick-index="1" aria-hidden="true"
+                                                    style="width: 560px; position: relative; left: -560px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                                    tabindex="-1" role="option" aria-describedby="slick-slide01"><img
+                                                    src="./assets/image/HCM-web-3.jpg" is-lazy-image="true" lazy-id="8"
+                                                    class="slick-slide" data-slick-index="2" aria-hidden="true"
+                                                    style="width: 560px; position: relative; left: -1120px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                                    tabindex="-1" role="option" aria-describedby="slick-slide02"></div>
                                         </div>
+
 
                                     </div>
                                     <div class="place-info buy-info">
                                         <h3>
-                                            <a href="https://batdongsan.com.vn/nha-dat-ban-binh-duong">
-                                                <span class="place-name">{!! $province3->name !!}</span>
-                                                <span class="place-number">{!! $province3->count_posts !!} tin đăng</span>
-                                            </a>
+                                            <form id = "my_form2" action="{{ route('nha_dat_ban') }}" method="get" >
+                                                <a href="javascript:;" onclick="parentNode.submit();">
+                                                    <span class="place-name"> {{ $provinceCount->name }} </span>
+                                                    <span class="place-number">{{ $provinceCount->count_posts }} tin đăng</span>
+                                                </a>
+                                                <input type="hidden" name="province" value = {!! $provinceCount->code !!}>
+                                            </form>
                                         </h3>
                                     </div>
 
                                 </div>
+                            @endif
+                        @endforeach
+                        <div class="place-small">
+                            @foreach ($provinceCounts as $value=>$provinceCount)
+                                
+                                @continue($value==0 || $value==4 || $value==3)
+                                
+                                    <div class="place-item">
+                                        <div class="place-img slick-initialized slick-slider">
+                                            <div aria-live="polite" class="slick-list draggable">
+                                                <div class="slick-track" style="opacity: 1; width: 810px;" role="listbox">
+                                                    <img src="./assets/image/HN-web-1.jpg" is-lazy-image="true" lazy-id="9"
+                                                        class="slick-slide" data-slick-index="0" aria-hidden="true"
+                                                        style="width: 270px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                                        tabindex="-1" role="option" aria-describedby="slick-slide10"><img
+                                                        src="./assets/image/HN-web-2.jpg" is-lazy-image="true" lazy-id="10"
+                                                        class="slick-slide" data-slick-index="1" aria-hidden="true"
+                                                        style="width: 270px; position: relative; left: -270px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                                        tabindex="-1" role="option" aria-describedby="slick-slide11"><img
+                                                        src="./assets/image/HN-web-3.jpg" is-lazy-image="true" lazy-id="11"
+                                                        class="slick-slide slick-current slick-active" data-slick-index="2"
+                                                        aria-hidden="false"
+                                                        style="width: 270px; position: relative; left: -540px; top: 0px; z-index: 999; opacity: 1;"
+                                                        tabindex="-1" role="option" aria-describedby="slick-slide12">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="place-info buy-info">
+                                            <h3>
+                                                <form id = "my_form" action="{{ route('nha_dat_ban') }}" method="get" >
+                                                    <a href="javascript:;" onclick="parentNode.submit();">
+                                                        <span class="place-name"> {{ $provinceCount->name }} </span>
+                                                        <span class="place-number">{{ $provinceCount->count_posts }} tin đăng</span>
+                                                    </a>
+                                                    <input type="hidden" name="province" value = {!! $provinceCount->code !!}>
+                                                </form>
+                                            </h3>
+                                        </div>
+
+                                    </div>
+                                
+                            @endforeach
+                            @foreach ($provinceCounts as $value=>$provinceCount)
+                            @continue($value<3)
+                                    <div class="place-item nomargin">
+                                        <div class="place-img slick-initialized slick-slider">
+                                            <div aria-live="polite" class="slick-list draggable">
+                                                <div class="slick-track" style="opacity: 1; width: 540px;" role="listbox">
+                                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
+                                                        src-lazy="https://file4.batdongsan.com.vn/images/newhome/cities1/BD-web-1.jpg"
+                                                        is-lazy-image="true" lazy-id="15"
+                                                        class="slick-slide slick-current slick-active" data-slick-index="0"
+                                                        aria-hidden="false"
+                                                        style="width: 270px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
+                                                        tabindex="-1" role="option" aria-describedby="slick-slide30"><img
+                                                        src="/assets/image/lazy-preview-image-DFE3E8.png"
+                                                        src-lazy="https://file4.batdongsan.com.vn/images/newhome/cities1/BD-web-2.jpg"
+                                                        is-lazy-image="true" lazy-id="16" class="slick-slide"
+                                                        data-slick-index="1" aria-hidden="true"
+                                                        style="width: 270px; position: relative; left: -270px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                                        tabindex="-1" role="option" aria-describedby="slick-slide31"></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="place-info buy-info">
+                                            <h3>
+                                                <form id = "my_form1" action="{{ route('nha_dat_ban') }}" method="get" >
+                                                    <a href="javascript:;" onclick="parentNode.submit();">
+                                                        <span class="place-name"> {{ $provinceCount->name }} </span>
+                                                        <span class="place-number">{{ $provinceCount->count_posts }} tin đăng</span>
+                                                    </a>
+                                                    <input type="hidden" name="province" value = {!! $provinceCount->code !!}>
+                                                </form>
+                                            </h3>
+                                        </div>
+
+                                    </div>
                             @endforeach
                         </div>
                         <div class="clear"></div>
@@ -608,7 +613,7 @@
                 <div class="home-enterprise m-b-30">
                     <h2 class="fl">Doanh nghiệp tiêu biểu</h2>
                     <div class="home-more-link">
-                        <a href="https://batdongsan.com.vn/doanh-nghiep">Xem thêm&nbsp;&nbsp;<img
+                        <a href="{{ Route('nhamoigioi') }}">Xem thêm&nbsp;&nbsp;<img
                                 src="./assets/image/icon-arrow-right.png"></a>
                     </div>
                     <div class="clear"></div>
