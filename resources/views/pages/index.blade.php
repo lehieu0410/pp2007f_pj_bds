@@ -1499,6 +1499,7 @@
     @endsection
 
     @section('scripts')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
         <script src="/assets/js/app.min.js"></script>
@@ -1543,7 +1544,7 @@
             $('#filter-area').val('0');
         });
 
-        $(".province").on('change', function() {
+        $(".province").on('click', function() {
             var id = $(this).val();
             $.ajax({
                 type: "get",
