@@ -87,15 +87,18 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        <h3 style="text-align: center">- OR -</h3>
+                            
+                                    <hr>
+                                        
                                         <div class="form-group row mb-0">
-                                            <div class="col-md-8 offset-md-4">
+                                            <div class="col-md-4">
+                                                <h5>Login VIA </h5>
+                                            </div>
+                                            <div class="col-md-4">
                                                 <a href="{{ route('fbRedirect', ['facebook']) }}" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</a>
                                             </div>
-                                        </div>
-                                        <div class="form-group row mb-0">
-                                            <div class="col-md-8 offset-md-4">
-                                                <a href="{{ route('ggRedirect', ['google']) }}" class="btn btn-danger"><i class="fa fa-google"></i> Google</a>
+                                            <div class="col-md-4">
+                                                <a href="{{ URL::to('/google-login/google') }}" class="btn btn-danger"><i class="fa fa-google"></i> Google</a>
                                             </div>
                                         </div>
                                 </div>

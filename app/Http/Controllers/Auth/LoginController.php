@@ -11,9 +11,12 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\url;
 use Laravel\Socialite\Facades\Socialite;
+
 use App\Models\User;
 use Exception;
+use Redirect;
 
 class LoginController extends Controller
 {
@@ -51,6 +54,16 @@ class LoginController extends Controller
     {
         return view('auth/login');
     }
+
+    public function redirectToProvider($provider)
+    {
+        if(!Session::has('pre_url')){
+            Session::put('pre_url', URL::previous());
+        }else{
+            if(URL::previous() != URL::t0o('login')) Session::put('pre_url', URL::previous());
+        }
+        return Socialite::driver($provider)->redirect();
+    }  
 
     public function postLogin(Request $request)
     {
