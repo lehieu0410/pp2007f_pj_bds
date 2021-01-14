@@ -146,102 +146,31 @@
         <div class="box-header">
             <div class="name_tit" align="center">
                 <h2 style="color: White;">
-                    Tin nhiều người đọc
+                    Có thể bạn quan tâm
                 </h2>
             </div>
         </div>
 
         <div class="bor_box">
-
-                <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-                    <div class="many-readers-title-icon">
-                        <a title="&#xCA; ch&#x1EC1; v&#x1EDB;i &#x111;&#x1EA7;u t&#x1B0; c&#x103;n h&#x1ED9; cho thu&#xEA;"  href="/tin-thi-truong/e-che-voi-dau-tu-can-ho-cho-thue-ar105243">
-                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/10/08/FTnaKngu/20201008174552-f554.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
-                        <a class="controls-view-date-contents-link"  href="/tin-thi-truong/e-che-voi-dau-tu-can-ho-cho-thue-ar105243" title="&#xCA; ch&#x1EC1; v&#x1EDB;i &#x111;&#x1EA7;u t&#x1B0; c&#x103;n h&#x1ED9; cho thu&#xEA;">
-                            &#xCA; ch&#x1EC1; v&#x1EDB;i &#x111;&#x1EA7;u t&#x1B0; c&#x103;n h&#x1ED9; cho thu&#xEA;
-                                                    </a>
-                    </p>
-                </div>
+            @foreach ($recommend as $rec)
+                
+            
                 <div style="clear: both;"></div>
                 <div style="padding: 5px; width: 60px; height: 60px; float: left;">
                     <div class="many-readers-title-icon">
-                        <a title="Gi&#xE1; B&#x110;S kh&#xF4;ng gi&#x1EA3;m m&#x1EA1;nh, chuy&#xEA;n gia kh&#x1EB3;ng &#x111;&#x1ECB;nh &#x201C;l&#xE0;m g&#xEC; c&#xF3; &#x111;&#xE1;y m&#xE0; d&#xF2;&#x201D;"  href="/tin-thi-truong/gia-bds-khong-giam-manh-chuyen-gia-khang-dinh-lam-gi-co-day-ma-do-ar105240">
-                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/10/08/zk7ggeWN/20201008154357-9653.jpg">
+                        <a title={!! $rec->title !!}>
+                            <img style="width: 60px; height: 60px;" src={!! $rec->image_link !!}>
                         </a>
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
                     <p style="padding: 0px; margin: 5px 5px 0 5px;">
-                        <a class="controls-view-date-contents-link"  href="/tin-thi-truong/gia-bds-khong-giam-manh-chuyen-gia-khang-dinh-lam-gi-co-day-ma-do-ar105240" title="Gi&#xE1; B&#x110;S kh&#xF4;ng gi&#x1EA3;m m&#x1EA1;nh, chuy&#xEA;n gia kh&#x1EB3;ng &#x111;&#x1ECB;nh &#x201C;l&#xE0;m g&#xEC; c&#xF3; &#x111;&#xE1;y m&#xE0; d&#xF2;&#x201D;">
-                            Gi&#xE1; B&#x110;S kh&#xF4;ng gi&#x1EA3;m m&#x1EA1;nh, chuy&#xEA;n gia kh&#x1EB3;ng &#x111;&#x1ECB;nh &#x201C;l&#xE0;m g&#xEC; c&#xF3; &#x111;&#xE1;y m&#xE0; d&#xF2;&#x201D;
-                                                    </a>
-                    </p>
-                </div>
-                <div style="clear: both;"></div>
-                <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-                    <div class="many-readers-title-icon">
-                        <a title="Hai &#x111;&#x1EE3;t s&#x1ED1;t &#x111;&#x1EA5;t m&#x1EDB;i c&#xF3; th&#x1EC3; s&#x1EBD; xu&#x1EA5;t hi&#x1EC7;n trong qu&#xFD; 4/2020?"  href="/tin-thi-truong/sot-dat-o-dau-ar105210">
-                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/10/06/zk7ggeWN/20201006161417-ec87.jpg">
+                        <a class="controls-view-date-contents-link"  href="{!! Route('tintuc_single_post', $rec->id) !!}" title={!! $rec->title !!}>
+                            {!! $rec->title !!}
                         </a>
-                    </div>
-                </div>
-                <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
-                        <a class="controls-view-date-contents-link"  href="/tin-thi-truong/sot-dat-o-dau-ar105210" title="Hai &#x111;&#x1EE3;t s&#x1ED1;t &#x111;&#x1EA5;t m&#x1EDB;i c&#xF3; th&#x1EC3; s&#x1EBD; xu&#x1EA5;t hi&#x1EC7;n trong qu&#xFD; 4/2020?">
-                            Hai &#x111;&#x1EE3;t s&#x1ED1;t &#x111;&#x1EA5;t m&#x1EDB;i c&#xF3; th&#x1EC3; s&#x1EBD; xu&#x1EA5;t hi&#x1EC7;n trong qu&#xFD; 4/2020?
-                                                    </a>
                     </p>
                 </div>
-                <div style="clear: both;"></div>
-                <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-                    <div class="many-readers-title-icon">
-                        <a title="Ng&#x1B0;&#x1EDD;i d&#xE2;n &#x111;&#xE3; h&#x1EBF;t c&#x1A1; h&#x1ED9;i mua c&#x103;n h&#x1ED9; gi&#xE1; b&#xEC;nh d&#xE2;n?"  href="/tin-thi-truong/nguoi-dan-het-co-hoi-mua-can-ho-binh-dan-ar105357">
-                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/10/26/FTnaKngu/20201026094325-c5ee.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
-                        <a class="controls-view-date-contents-link"  href="/tin-thi-truong/nguoi-dan-het-co-hoi-mua-can-ho-binh-dan-ar105357" title="Ng&#x1B0;&#x1EDD;i d&#xE2;n &#x111;&#xE3; h&#x1EBF;t c&#x1A1; h&#x1ED9;i mua c&#x103;n h&#x1ED9; gi&#xE1; b&#xEC;nh d&#xE2;n?">
-                            Ng&#x1B0;&#x1EDD;i d&#xE2;n &#x111;&#xE3; h&#x1EBF;t c&#x1A1; h&#x1ED9;i mua c&#x103;n h&#x1ED9; gi&#xE1; b&#xEC;nh d&#xE2;n?
-                                                    </a>
-                    </p>
-                </div>
-                <div style="clear: both;"></div>
-                <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-                    <div class="many-readers-title-icon">
-                        <a title="Gi&#xE1; nh&#xE0; S&#xE0;i G&#xF2;n &#x111;ang cao h&#x1A1;n bao nhi&#xEA;u so v&#x1EDB;i H&#xE0; N&#x1ED9;i?"  href="/tin-thi-truong/so-sanh-gia-nha-sai-gon-va-ha-noi-ar105410">
-                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/11/03/FTnaKngu/20201103092712-fabb.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
-                        <a class="controls-view-date-contents-link"  href="/tin-thi-truong/so-sanh-gia-nha-sai-gon-va-ha-noi-ar105410" title="Gi&#xE1; nh&#xE0; S&#xE0;i G&#xF2;n &#x111;ang cao h&#x1A1;n bao nhi&#xEA;u so v&#x1EDB;i H&#xE0; N&#x1ED9;i?">
-                            Gi&#xE1; nh&#xE0; S&#xE0;i G&#xF2;n &#x111;ang cao h&#x1A1;n bao nhi&#xEA;u so v&#x1EDB;i H&#xE0; N&#x1ED9;i?
-                                                    </a>
-                    </p>
-                </div>
-                <div style="clear: both;"></div>
-                <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-                    <div class="many-readers-title-icon">
-                        <a title="&quot;Tuy&#x1EC7;t ch&#x1EE7;ng&quot; nh&#xE0; gi&#xE1; r&#x1EBB;, ng&#x1B0;&#x1EDD;i mua s&#x103;n nh&#xE0; th&#x1EE9; c&#x1EA5;p"  href="/tin-thi-truong/tuyet-chung-nha-gia-re-nguoi-mua-san-nha-thu-cap-ar105486">
-                            <img style="width: 60px; height: 60px;" src="https://file4.batdongsan.com.vn/crop/60x60/2020/11/11/YSUn3oGJ/20201111090801-0feb.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
-                        <a class="controls-view-date-contents-link"  href="/tin-thi-truong/tuyet-chung-nha-gia-re-nguoi-mua-san-nha-thu-cap-ar105486" title="&quot;Tuy&#x1EC7;t ch&#x1EE7;ng&quot; nh&#xE0; gi&#xE1; r&#x1EBB;, ng&#x1B0;&#x1EDD;i mua s&#x103;n nh&#xE0; th&#x1EE9; c&#x1EA5;p">
-                            &quot;Tuy&#x1EC7;t ch&#x1EE7;ng&quot; nh&#xE0; gi&#xE1; r&#x1EBB;, ng&#x1B0;&#x1EDD;i mua s&#x103;n nh&#xE0; th&#x1EE9; c&#x1EA5;p
-                                                    </a>
-                    </p>
-                </div>
+            @endforeach
                 <div style="clear: both;"></div>
         </div>
     </div>
