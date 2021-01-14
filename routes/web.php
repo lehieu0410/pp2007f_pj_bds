@@ -24,6 +24,7 @@ Auth::routes(['verify' => true]);
 
 //Đăng nhập và xử lý đăng nhập
 
+
 Route::get('login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
 Route::post('login', ['as' => 'login', 'uses' => 'Auth\LoginController@postLogin']);
 
@@ -244,5 +245,5 @@ Route::get('test', function(){
 Route::get('/facebook-login/{provider}', 'Auth\SocialController@facebookRedirect')->name('fbRedirect');
 Route::get('facebook-callback/{provider}', 'Auth\SocialController@facebookCallback')->name('fbCallback');
 // gg login
-Route::get('/google-login', 'Auth\SocialController@googleRedirect')->name('ggRedirect');
-Route::get('google-callback', 'Auth\SocialController@googleCallback')->name('ggCallback');
+Route::get('/google-login/{provider}', 'Auth\SocialController@redirectToProvider')->name('ggRedirect');
+Route::get('/callback/{provider}', 'Auth\SocialController@handleProviderCallback')->name('ggCallback');
