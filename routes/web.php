@@ -99,7 +99,7 @@ Route::get('/bds-the-gioi','TinTucController@bdsthegioi')->name('tintucbds_tg');
 Route::get('/tai-chinh-chung-khoan-bds','TinTucController@taichinhbds')->name('tai_chinh');
 //Tintucsinglepost
 Route::get('/tin-tuc-{id}', 'TinTucController@articles')->name('tintuc_single_post');
-Route::get('/tin-tuc-search', 'TinTucController@searchTinTuc')->name('searchTinTuc');
+Route::get('/search', 'TinTucController@searchTinTuc')->name('searchTinTuc');
 
 //NhaDatBanController -----TAI ANH
 Route::get('/nha-dat-ban', 'NhaDatBanController@index')->name('nha_dat_ban');
